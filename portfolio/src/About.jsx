@@ -1,12 +1,6 @@
 import React from 'react';
 import './Base.css';
-
-const fs = require('fs');
-const path = require('path');
-
-// get info object
-const infoPath = path.join(__dirname, 'Info.json');
-const info = JSON.parse(fs.readFileSync(infoPath, 'utf8'));
+import info from './Info.json'
 
 const About = () => {
 
