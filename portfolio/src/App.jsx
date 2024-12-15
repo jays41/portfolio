@@ -1,15 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Base from './Base'
+import ContactForm from './ContactForm'
+import About from './About'
+import Education from './Education'
+import Experience from './Experience'
+import Projects from './Projects'
+import Skills from './Skills'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Base />
+      <About />
+      <Skills />
+      <Education />
+      <Experience />
+      <Projects />
+      <ContactForm />
     </>
   )
 }
