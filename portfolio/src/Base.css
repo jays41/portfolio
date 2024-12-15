@@ -1,0 +1,111 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header .contact-info {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+/* Container and Sections */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+    color: #16a085;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.sublist {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li strong {
+    font-weight: bold;
+    color: #16a085;
+}
+
+/* Experience and Projects Styling */
+ul li ul.sublist li {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+}
+
+ul li ul.sublist li strong {
+    color: #2c3e50;
+}
+
+/* Technical Skills */
+ul li {
+    font-size: 1.1rem;
+}
+
+ul li:before {
+    content: '•';
+    color: #16a085;
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .contact-info {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+}
