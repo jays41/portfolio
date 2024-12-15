@@ -5,6 +5,7 @@ import Education from './Education'
 import Experience from './Experience'
 import Projects from './Projects'
 import Skills from './Skills'
+import Links from './Links'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Experience />
       <Projects />
       <ContactForm />
+      <Links />
     </>
   )
 }
