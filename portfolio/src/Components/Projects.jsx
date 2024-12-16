@@ -1,5 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
+import ProjectTile from './ProjectTile';
+import Carousel from './Carousel';
+import info from '../Info.json'
 
 const Projects = () => {
 
@@ -18,6 +21,9 @@ return (
             <p>Built a sentiment analysis tool for evaluating investor sentiment based on news and social media.</p>
             <p>Designed a UI with JavaScript and a backend in Python using Flask.</p>
             <button onClick={() => {show(true)}}>Hide</button>
+            <Carousel content={info.projects.personal} />
+            <Carousel content={info.projects.kcap} />
+            <Carousel content={info.projects.university} />
         </>
         }
     </section>

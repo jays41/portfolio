@@ -1,0 +1,79 @@
+/* Wrapper for the carousel to position buttons */
+.carousel-wrapper {
+  position: relative; /* This will allow positioning of buttons inside this container */
+  display: flex;
+  justify-content: center; /* Center the carousel horizontally */
+  align-items: center; /* Center the carousel vertically */
+}
+
+/* Container for the carousel */
+.carousel-container {
+  display: flex;
+  overflow-x: auto;  /* Allow horizontal scrolling */
+  scroll-snap-type: x mandatory;  /* Snap to the nearest tile on scroll */
+  gap: 20px;
+  padding: 20px 0;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  -ms-overflow-style: none;  /* For IE and Edge */
+  scrollbar-width: none;  /* For Firefox */
+  flex-grow: 1; /* Ensure the carousel container takes up remaining space */
+}
+
+/* Hide the scrollbar in WebKit browsers (Chrome, Safari, etc.) */
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Tile */
+.tile {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  flex-shrink: 0;  /* Prevent tiles from shrinking */
+  scroll-snap-align: start;  /* Snap the tile to the start of the container */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Heading Styling */
+.tile-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Description Styling */
+.tile-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-nav-left {
+  left: -40px; /* Position the left arrow outside */
+}
+
+.carousel-nav-right {
+  right: -40px; /* Position the right arrow outside */
+}

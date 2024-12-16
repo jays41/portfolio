@@ -1,0 +1,32 @@
+/* Basic Styling for the Tile */
+.tile {
+    background-color: #fff;  /* White background */
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+    padding: 20px;  /* Padding inside the tile */
+    max-width: 300px;  /* Limit the tile size */
+    text-align: center;  /* Center text horizontally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for hover effects */
+    margin: 10px;  /* Space between tiles */
+}
+
+.tile:hover {
+    transform: translateY(-5px);  /* Slight lift effect when hovered */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
+}
+
+/* Heading Styling */
+.tile-heading {
+    font-size: 1.5rem;  /* Larger font size for the heading */
+    font-weight: bold;  /* Make the heading bold */
+    color: #333;  /* Dark grey color */
+    margin-bottom: 10px;  /* Space below the heading */
+}
+
+/* Description Styling */
+.tile-description {
+    font-size: 1rem;  /* Normal font size for the description */
+    color: #659;  /* Lighter grey color for the description */
+    line-height: 1.5;  /* Increase line height for readability */
+}
+  
