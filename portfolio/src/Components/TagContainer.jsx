@@ -5,7 +5,7 @@ import './Tag.css'
 const TagContainer = ({ tags }) => {
   return (
     <div className="tags-container">
-        {tags.map((tag) => <Tag content={tag} />)}
+        {tags.map((tag) => <Tag key={tag} content={tag} />)}
     </div>
   )
 }
