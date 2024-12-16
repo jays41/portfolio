@@ -1,15 +1,15 @@
 import React from 'react'
 import './Skills.css'
-import python from '../assets/images/python.png';
-import javascript from '../assets/images/javascript.png';
-import java from '../assets/images/java.png';
-import cpp from '../assets/images/cpp.png';
-import htmlcss from '../assets/images/html-css.png';
-import react from '../assets/images/react.png';
-import node from '../assets/images/node.png';
-import django from '../assets/images/django.png';
-import tf from '../assets/images/tf.png';
-import scala from '../assets/images/scala.png'
+import python from '../assets/images/skills/python.png';
+import javascript from '../assets/images/skills/javascript.png';
+import java from '../assets/images/skills/java.png';
+import cpp from '../assets/images/skills/cpp.png';
+import htmlcss from '../assets/images/skills/html-css.png';
+import react from '../assets/images/skills/react.png';
+import node from '../assets/images/skills/node.png';
+import django from '../assets/images/skills/django.png';
+import tf from '../assets/images/skills/tf.png';
+import scala from '../assets/images/skills/scala.png'
 
 const Skills = () => {
   const languages_images = [
