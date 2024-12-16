@@ -1,0 +1,19 @@
+/* Tag container: wraps all the tags */
+.tags-container {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Adds spacing between tags */
+  }
+  
+  /* Tag: individual tag styling */
+  .tag {
+    background-color: #e0f7fa; /* Light blue background */
+    color: #00796b; /* Darker teal text */
+    font-size: 12px; /* Small text size */
+    padding: 4px 8px; /* Space inside the tag */
+    border-radius: 16px; /* Rounded edges for the badge look */
+    font-weight: bold; /* Bold text */
+    white-space: nowrap; /* Prevents the tag text from wrapping */
+  }
+  

@@ -26,7 +26,7 @@ const Carousel = ({ content }) => {
   return (
     <div className="carousel-wrapper" style={{ position: 'relative' }}>
       <div className="carousel-container" ref={carouselRef}>
-      {content.map(({ heading, description }) => (<ProjectTile key={heading} heading={heading} description={description} />))}
+      {content.map(({ heading, description, tags }) => (<ProjectTile key={heading} heading={heading} description={description} tags={tags} />))}
       </div>
 
 
