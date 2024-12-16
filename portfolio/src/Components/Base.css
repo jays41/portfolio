@@ -6,6 +6,10 @@
     font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     background-color: #f4f4f9;
     color: #333;

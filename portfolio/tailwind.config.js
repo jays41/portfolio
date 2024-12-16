@@ -2,8 +2,9 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      scrollBehavior: ['smooth'],
+    },
   },
   plugins: [],
 }
-
