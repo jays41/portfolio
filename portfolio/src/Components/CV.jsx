@@ -13,10 +13,10 @@ const CV = () => {
     }
 
     return (
-        <>
-            <div>My CV</div>
+        <section className="section">
+            <h2>My CV</h2>
             <button onClick={handleDownload}>Download File</button>
-        </>
+        </section>
     )
 }
 
