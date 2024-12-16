@@ -7,19 +7,39 @@ import Projects from './Components/Projects'
 import Skills from './Components/Skills'
 import Links from './Components/Links'
 import CV from './Components/CV'
+import Sidebar from './Components/Sidebar'
 
 function App() {
 
   return (
     <>
-      <About />
-      <Skills />
-      <Education />
-      <Experience />
-      <Projects />
-      <CV />
-      <ContactForm />
-      <Links />
+      <Sidebar />
+      <main>
+        <div id="About">
+          <About />
+        </div>
+        <div id="Skills">
+          <Skills />
+        </div>
+        <div id="Education">
+          <Education />
+        </div>
+        <div id="Experience">
+          <Experience />
+        </div>
+        <div id="Projects">
+          <Projects />
+        </div>
+        <div id="CV">
+          <CV />
+        </div>
+        <div id="ContactForm">
+          <ContactForm />
+        </div>
+        <div id="Links">
+          <Links />
+        </div>
+      </main>
     </>
   )
 }
