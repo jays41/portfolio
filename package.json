@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@types/downloadjs": "^1.4.6",
+    "downloadjs": "^1.4.7"
+  }
+}
