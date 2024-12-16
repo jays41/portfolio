@@ -14,8 +14,7 @@ const About = () => {
             </header>
 
             <div className="container">
-
-                
+                <p>Description...</p>
             </div>
         </div>
     );
