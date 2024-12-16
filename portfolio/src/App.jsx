@@ -1,11 +1,11 @@
 import './App.css'
-import ContactForm from './ContactForm'
-import About from './About'
-import Education from './Education'
-import Experience from './Experience'
-import Projects from './Projects'
-import Skills from './Skills'
-import Links from './Links'
+import ContactForm from './Components/ContactForm'
+import About from './Components/About'
+import Education from './Components/Education'
+import Experience from './Components/Experience'
+import Projects from './Components/Projects'
+import Skills from './Components/Skills'
+import Links from './Components/Links'
 
 function App() {
 

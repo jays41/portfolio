@@ -1,6 +1,6 @@
 import React from 'react';
 import './Base.css';
-import info from './Info.json'
+import info from '../Info.json'
 
 const About = () => {
 
