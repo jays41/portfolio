@@ -5,7 +5,7 @@ import info from '../Info.json'
 const About = () => {
 
     return (
-        <div>
+        <section className="section">
             <header>
                 <h1>{info.name}</h1>
                 <p className="contact-info">
@@ -16,7 +16,7 @@ const About = () => {
             <div className="container">
                 <p>Description...</p>
             </div>
-        </div>
+        </section>
     );
 }
 
