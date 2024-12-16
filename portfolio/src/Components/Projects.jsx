@@ -10,7 +10,7 @@ const Projects = () => {
 
 return (
     <section className="section">
-        <h2>PERSONAL PROJECTS</h2>
+        <h2>PROJECTS</h2>
         {isShowing ? <button onClick={() => {show(false)}}>Show</button> : 
         <>
             <p><strong>King’s Capital (King’s Business Club)</strong> - London, Quantitative Trading Associate, October 2024 - Present</p>
@@ -21,8 +21,11 @@ return (
             <p>Built a sentiment analysis tool for evaluating investor sentiment based on news and social media.</p>
             <p>Designed a UI with JavaScript and a backend in Python using Flask.</p>
             <button onClick={() => {show(true)}}>Hide</button>
+            <h3>Personal Projects</h3>
             <Carousel content={info.projects.personal} />
+            <h3>King's Capital Projects</h3>
             <Carousel content={info.projects.kcap} />
+            <h3>University Projects</h3>
             <Carousel content={info.projects.university} />
         </>
         }
