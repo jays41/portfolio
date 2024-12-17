@@ -6,7 +6,7 @@ const Education = () => {
   const [isShowing, show] = useState(false);
 
   return (
-    <section className="section">
+    <section className="section" id="Education">
         <h2>EDUCATION</h2>
         {isShowing ? <button onClick={() => {show(false)}}>Show</button> : 
         <>

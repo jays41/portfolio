@@ -5,7 +5,7 @@ import info from '../Info.json'
 const About = () => {
 
     return (
-        <section className="section">
+        <section className="section" id="About">
             <header>
                 <h1>{info.name}</h1>
                 <p className="contact-info">

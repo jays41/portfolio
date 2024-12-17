@@ -6,7 +6,7 @@ import info from '../Info.json'
 const Links = () => {
 
   return (
-    <footer>
+    <footer id="Links">
         <h4>My Links:</h4>
         <br />
         <div className="images">
