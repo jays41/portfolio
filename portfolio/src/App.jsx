@@ -1,4 +1,6 @@
 import './App.css'
+import ReactDOM from 'react-dom'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import ContactForm from './Components/ContactForm'
 import About from './Components/About'
 import Education from './Components/Education'
@@ -15,30 +17,14 @@ function App() {
     <>
       <Sidebar />
       <main>
-        <div id="About">
-          <About />
-        </div>
-        <div id="Skills">
-          <Skills />
-        </div>
-        <div id="Education">
-          <Education />
-        </div>
-        <div id="Experience">
-          <Experience />
-        </div>
-        <div id="Projects">
-          <Projects />
-        </div>
-        <div id="CV">
-          <CV />
-        </div>
-        <div id="ContactForm">
-          <ContactForm />
-        </div>
-        <div id="Links">
-          <Links />
-        </div>
+        <About />
+        <Skills />
+        <Education />
+        <Experience />
+        <Projects />
+        <CV />
+        <ContactForm />
+        <Links />
       </main>
     </>
   )
