@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@types/downloadjs": "^1.4.6",
-    "downloadjs": "^1.4.7"
+    "downloadjs": "^1.4.7",
+    "react-anchor-link-smooth-scroll": "^1.0.12"
   }
 }
