@@ -3,13 +3,9 @@ import { useState } from 'react'
 
 const Experience = () => {
 
-    const [isShowing, show] = useState(false);
-
 return (
     <section className="section" id="Experience">
         <h2>EXPERIENCE</h2>
-        {isShowing ? <button onClick={() => {show(false)}}>Show</button> : 
-        <>
             <p><strong>Ashbury Global</strong> - London / Remote, Data Administrator, July – September 2024</p>
             <p>Cleansed and validated client data for major retailers such as Aldi, Tesco, Waitrose, and Greggs.</p>
             <p>Automated data validation using Python, improving efficiency by up to 12 times.</p>
@@ -25,9 +21,6 @@ return (
             <p>Taught students from KS1 to A-Level in groups of up to 25 both in person and online.</p>
             <p><strong>Private Tutoring</strong> - Remote, Maths and Computer Science Tutor, May 2024 – Present</p>
             <p>Provided tutoring to GCSE and A-Level students, creating lesson plans and interactive materials.</p>
-            <button onClick={() => {show(true)}}>Hide</button>
-        </>
-        }
     </section>
 )
 }
