@@ -1,17 +1,19 @@
 .images {
   display: flex;
-  justify-content: center; /* Center images horizontally */
-  align-items: center; /* Center images vertically (if needed) */
-  flex-wrap: wrap; /* Allow images to wrap to the next line if there's not enough space */
-  gap: 10px; /* Add space between images */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .images img {
   max-width: 100px;
   height: auto;
-  transition: transform 0.3s ease-in-out; /* Apply smooth scaling */
+  transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
 }
 
 .images img:hover {
-  transform: scale(1.15); /* Scale the image to 110% of its original size */
+  transform: scale(1.25);
+  margin: 10px;
+  z-index: 1;
 }
