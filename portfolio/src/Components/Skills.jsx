@@ -1,5 +1,7 @@
 import React from 'react'
+import { useState } from 'react'
 import './Skills.css'
+import info from '../Info.json'
 import python from '../assets/images/skills/python.png';
 import javascript from '../assets/images/skills/javascript.png';
 import java from '../assets/images/skills/java.png';
@@ -27,11 +29,17 @@ const Skills = () => {
     {src: tf, title: 'TensorFlow'}
   ];
   const languages = languages_images.map((image, index) => (
-    <img key={index} src={image.src} alt={`Skill ${index}`} title={image.title} />
+    <img key={index} src={image.src} alt={`Skill ${index}`} title={image.title} onMouseEnter={()=>{show(image.title)}} onMouseLeave={()=>{show(null)}} />
   ));
   const frameworks = framework_images.map((image, index) => (
-    <img key={index} src={image.src} alt={`Skill ${index}`} title={image.title} />
+    <img key={index} src={image.src} alt={`Skill ${index}`} title={image.title} onMouseEnter={()=>{show(image.title)}} onMouseLeave={()=>{show(null)}} />
   ));
+
+  const [language, show] = useState(null)
+
+  const getSkills = async () => {
+    return ;
+  }
 
   return (
     <section className="section" id="Skills">
@@ -41,6 +49,22 @@ const Skills = () => {
         </div>
         <div className="images">
           {frameworks}
+        </div>
+        <div>
+          {
+            language ?
+            <>
+              <h1>{language}</h1>
+              <ul>
+                {
+                  info.skills[language] ? 
+                  info.skills[language].map((e) => (<li>{e}</li>))
+                  : <></>
+                }
+              </ul>
+            </>
+            : <></>
+          }
         </div>
     </section>
   )
