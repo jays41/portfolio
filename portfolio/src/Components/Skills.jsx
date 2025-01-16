@@ -30,10 +30,10 @@ const Skills = () => {
     {src: tf, title: 'TensorFlow'}
   ];
   const languages = languages_images.map((image, index) => (
-    <img key={index} src={image.src} alt={`Skill ${index}`} title={image.title} onMouseEnter={()=>{showLanguage(image.title)}} onMouseLeave={()=>{showLanguage(null)}} />
+    <img key={index} src={image.src} alt={image.title} title={image.title} onMouseEnter={()=>{showLanguage(image.title)}} onMouseLeave={()=>{showLanguage(null)}} />
   ));
   const frameworks = framework_images.map((image, index) => (
-    <img key={index} src={image.src} alt={`Skill ${index}`} title={image.title} onMouseEnter={()=>{showFramework(image.title)}} onMouseLeave={()=>{showFramework(null)}} />
+    <img key={index} src={image.src} alt={image.title} title={image.title} onMouseEnter={()=>{showFramework(image.title)}} onMouseLeave={()=>{showFramework(null)}} />
   ));
 
   const [language, showLanguage] = useState(null)
