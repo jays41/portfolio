@@ -1,0 +1,19 @@
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+
+    .images img {
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+    }
+
+    .images img:hover {
+    transform: scale(1.2);
+    margin: 10px;
+    z-index: 1;
+    }
