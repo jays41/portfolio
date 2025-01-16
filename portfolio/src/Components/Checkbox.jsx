@@ -32,7 +32,7 @@ const Burger = styled.label`
     position: absolute;
     height: 4px;
     width: 100%;
-    background: black;
+    background: white;
     border-radius: 9px;
     transition: 0.25s ease-in-out;
   }
