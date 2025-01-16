@@ -1,37 +1,52 @@
-/* Floating Sidebar Container */
 .sidebar {
-    position: fixed; /* Keeps it floating */
-    top: 50%; /* Center vertically */
-    right: 20px; /* Distance from the right */
-    transform: translateY(-50%); /* Centers it perfectly */
-    width: 200px; /* Sidebar width */
-    background-color: #2c3e50; /* Dark background */
-    padding: 10px 0; /* Top and bottom padding */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Floating shadow */
-    color: white; /* Text color */
-    z-index: 1000; /* Stays above other content */
-}
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 200px;
+    background-color: #2c3e50;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    z-index: 1000;
+    transition: width 0.3s ease, height 0.3s ease; /* Smooth shrinking animation */
+  }
+  
+  .sidebar.collapsed {
+    width: 50px;
+    padding: 10px 0;
+  }
 
-/* Sidebar links */
-.sidebar a {
+  .sidebar.in-corner {
+    position: fixed;
+    top: 75px;
+    right: 0;
+    transition: 1.5s 1.5s;
+  }
+  
+  .sidebar.expanded {
+    position: fixed;
+    top: 50%;
+    transition: 1.5s;
+  }
+  
+  .links {
+    overflow: hidden;
+  }
+  
+  .sidebar a {
     display: block;
-    color: #ecf0f1; /* Light text color */
-    padding: 15px 20px; /* Spacing inside links */
-    text-decoration: none; /* Remove underline */
+    color: #ecf0f1;
+    padding: 15px 20px;
+    text-decoration: none;
     font-size: 16px;
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-/* Sidebar link hover */
-.sidebar a:hover {
-    background-color: #34495e; /* Darker background on hover */
-    color: #ffffff; /* Ensure the text remains readable */
-}
-
-/* Main content */
-main {
-    margin-left: 50px; /* Space around sidebar */
-    padding: 20px;
-}  
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar a:hover {
+    background-color: #34495e;
+    color: #ffffff;
+  }
+  
