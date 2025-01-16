@@ -1,28 +1,79 @@
-import React from 'react'
-import { useState } from 'react'
+import React from 'react';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import info from '../Info.json';
+import ashbury from '../assets/images/experience/ashbury.webp';
+import valtech from '../assets/images/experience/valtech.png';
+import armalytix from '../assets/images/experience/armalytix.png';
+import kumon from '../assets/images/experience/kumon.png';
+
+const MotionSection = ({ content, delay }) => (
+    <motion.div
+      className="md:w-1/3 mt-10"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ delay, duration: 0.5 }}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+    >
+      <p className="mt-5">{content}</p>
+    </motion.div>
+  );
 
 const Experience = () => {
 
+const images = {
+    'Ashbury Global': ashbury,
+    'Valtech': valtech,
+    'Armalytix': armalytix,
+    'Kumon': kumon
+};
+
+const experiences = info.experience.map((e) => (
+    <div className="side-by-side">
+        <div className="md:flex md:justify-between md:gap-16 mt-32">
+        <motion.div
+            className="md:w-1/3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+            }}
+        >
+            <img
+                alt={e.name}
+                src={images[e.name]}
+                width="250px"
+                />
+        </motion.div>
+
+        </div>
+
+        <div className="md:flex md:justify-between mt-16 gap-32">
+        <MotionSection content={e.name} delay={0.5} />
+        <MotionSection content="London, Software Developer Intern, June 2024" delay={0.75} />
+        {e.points.map((point, d)=>(
+            <MotionSection
+            content={point}
+            delay={1 + d * 0.25}
+        />
+        ))}
+        </div>
+    </div>
+))
+
 return (
-    <section className="section" id="Experience">
+    <section className="section pt-10 pb-24" id="Experience">
         <h2>EXPERIENCE</h2>
-            <p><strong>Ashbury Global</strong> - London / Remote, Data Administrator, July – September 2024</p>
-            <p>Cleansed and validated client data for major retailers such as Aldi, Tesco, Waitrose, and Greggs.</p>
-            <p>Automated data validation using Python, improving efficiency by up to 12 times.</p>
-            <p><strong>Valtech</strong> - London, Software Developer Intern, June 2024</p>
-            <p>Collaborated in a team developing front-end components for Ocado Technologies.</p>
-            <p>Designed and implemented new features using React.js.</p>
-            <p>Critiqued code solutions and designed tests using Jest with TypeScript.</p>
-            <p><strong>Armalytix</strong> - London, Software Developer Work Experience, May 2022</p>
-            <p>Conducted research on machine learning algorithms with TensorFlow to categorize transactions.</p>
-            <p>Automated API testing using Postman, enabling scalable test suites.</p>
-            <p>Developed and automated end-to-end tests using Playwright in Python.</p>
-            <p><strong>Kumon</strong> - Hertfordshire, Teaching Assistant, June 2023 – September 2024</p>
-            <p>Taught students from KS1 to A-Level in groups of up to 25 both in person and online.</p>
-            <p><strong>Private Tutoring</strong> - Remote, Maths and Computer Science Tutor, May 2024 – Present</p>
-            <p>Provided tutoring to GCSE and A-Level students, creating lesson plans and interactive materials.</p>
-    </section>
-)
-}
+        {experiences}
+  </section>
+);
+};
 
 export default Experience
