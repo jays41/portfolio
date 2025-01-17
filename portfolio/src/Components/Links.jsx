@@ -28,8 +28,8 @@ const Links = () => {
   const [showingGitHub, setShowingGitHub] = useState(false);
 
   return (
-    <footer id="Links">
-        <h4>My Links:</h4>
+    <section className="section" id="Links">
+        <h2>My Links</h2>
         <br />
         <div className="images">
           <div className="images">
@@ -45,7 +45,7 @@ const Links = () => {
             </a>
           </div>
         </div>
-    </footer>
+    </section>
   )
 }
 
