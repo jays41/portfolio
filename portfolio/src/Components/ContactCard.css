@@ -1,0 +1,142 @@
+/* From Uiverse.io by joe-watson-sbf */ 
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    position: relative; /* Ensure children are positioned relative to this container */
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.flip-card-inner {
+    position: absolute; /* Position absolute within .flip-card */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+    transform-origin: 50% 50%;
+    transform: rotateY(180deg); /* Flip when 'flipped' class is added */
+}
+
+.flip-card-inner2 {
+    position: absolute; /* Position absolute within .flip-card */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: opacity 0.5s ease, transform 0.8s;
+    opacity: 0; /* Initially transparent */
+    transform-style: preserve-3d;
+}
+
+.flip-card-inner2.flipped2 {
+    transform-origin: 100% 100%;
+    transform: rotateY(180deg); /* Flip when 'flipped2' class is added */
+    opacity: 1; /* Becomes opaque after 0.5s */
+    transition-delay: 0.5s; /* Delay the opacity change */
+}
+
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid '#9b4dfa';
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background: linear-gradient(120deg, #6a5acd 60%, #8a2be2 88%, 
+    #9370db 40%, rgba(123, 104, 238, 0.603) 48%);
+    color: #f0f8ff;
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, #8a2be2 30%, #6a5acd 88%, 
+    #9370db 40%, #8a2be2 78%);
+    color: #f0f8ff;
+    transform: rotateY(180deg);
+}
+
+/* To make sure the flip-card-inner divs are stacked on top of each other */
+.flip-card .absolute {
+    position: absolute; /* Stack them on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-inner {
+    z-index: 1; /* Make sure both flip-card-inner divs are stacked correctly */
+}
+
+.flip-card-inner.flipped, .flip-card-inner2.flipped2 {
+    z-index: 2; /* Make sure flipped elements appear on top */
+}
+
+.flip-card-back form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.flip-card-back input, .flip-card-back textarea {
+    margin: 10px 0;
+    padding: 8px;
+    width: 80%;
+    border: 1px solid #9b4dfa;
+    border-radius: 5px;
+}
+
+.flip-card-back button[type="submit"] {
+    background-color: #9b4dfa;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.flip-card-back button[type="submit"]:hover {
+    background-color: #9b4dba;
+}
+
+.button {
+    background: linear-gradient(120deg, #8a2be2 30%, #6a5acd 88%, 
+    #9370db 40%, #8a2be2 78%);
+    color: #f0f8ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
