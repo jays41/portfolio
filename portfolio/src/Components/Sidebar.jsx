@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import './Sidebar.css';
 import Checkbox from './Checkbox';
 
@@ -30,14 +29,14 @@ const Sidebar = () => {
             transition={{ duration: 0.4, ease: "easeInOut", delay: 0.75 }}
             
           >
-      <AnchorLink smooth="true" href="#About">About</AnchorLink>
-      <AnchorLink smooth="true" href="#Skills">Skills</AnchorLink>
-      <AnchorLink smooth="true" href="#Experience">Experience</AnchorLink>
-      <AnchorLink smooth="true" href="#Education">Education</AnchorLink>
-      <AnchorLink smooth="true" href="#Projects">Projects</AnchorLink>
-      <AnchorLink smooth="true" href="#CV">CV</AnchorLink>
-      <AnchorLink smooth="true" href="#ContactForm">Contact</AnchorLink>
-      <AnchorLink smooth="true" href="#Links">Links</AnchorLink>
+      <a href="#About">About</a>
+      <a href="#Skills">Skills</a>
+      <a href="#Experience">Experience</a>
+      <a href="#Education">Education</a>
+      <a href="#Projects">Projects</a>
+      <a href="#CV">CV</a>
+      <a href="#ContactForm">Contact</a>
+      <a href="#Links">Links</a>
       </motion.div>
     )}
     </AnimatePresence>
