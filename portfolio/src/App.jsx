@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <Sidebar />
-      <main>
+      <main className="scroll-container">
         <About />
         <Skills />
         <Experience />
