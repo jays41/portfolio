@@ -8,13 +8,10 @@ const About = () => {
         <section className="section" id="About">
             <header>
                 <h1>{info.name}</h1>
-                <p className="contact-info">
-                    {info.email} | {info.mobile}
-                </p>
             </header>
 
             <div className="container">
-                <p>Description...</p>
+                <p>{info.description}</p>
             </div>
         </section>
     );
