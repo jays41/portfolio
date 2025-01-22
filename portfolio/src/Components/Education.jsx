@@ -1,16 +1,17 @@
 import React from 'react'
 import { useState } from 'react';
+import info from '../Info.json';
 
 const Education = () => {
 
   return (
     <section className="section" id="Education">
         <h2>EDUCATION</h2>
-          <p><strong>King’s College London</strong> - Expected Graduation May 2027</p>
-          <p>BSc Computer Science (expected grade: 1st Class Honours)</p>
-          <p><strong>Roundwood Park School</strong> - 2016-2023</p>
-          <p>A-Levels: Maths (A*), Further Maths (A*), Computer Science (A), Physics (A)</p>
-          <p>GCSEs: 999999999</p>
+          <p><strong>{info.education.university.name}</strong> - {info.education.university.graduation}</p>
+          <p>{info.education.university.degree} {info.education.university.grade}</p>
+          <p><strong>{info.education.school.name}</strong> {info.education.school.duration}</p>
+          <p>{info.education.school.alevels}</p>
+          <p>{info.education.school.gcses}</p>
     </section>
   )
 }
