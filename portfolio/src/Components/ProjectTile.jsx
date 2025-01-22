@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import './ProjectTile.css';
 import TagContainer from './TagContainer';
+import finbert_paper from '../finbert_paper.pdf'
 
-const ProjectTile = ({ heading, description, tags }) => {
+const ProjectTile = ({ heading, description, tags, link }) => {
     const [expanded, setExpanded] = useState(false);
 
     const closeModal = () => setExpanded(false);
+
+    const linksMap = {
+        "finbert_paper": finbert_paper
+    }
 
     return (
         <>
@@ -24,6 +29,7 @@ const ProjectTile = ({ heading, description, tags }) => {
                     >
                         <h3>{heading}</h3>
                         <p>{description}</p>
+                        {link ? <a href={linksMap[link]} target='_blank' rel='noreferrer'> here</a> : null}
                         <TagContainer tags={tags} />
                         <button onClick={closeModal}>Close</button>
                     </div>
