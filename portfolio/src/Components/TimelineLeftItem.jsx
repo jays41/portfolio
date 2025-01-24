@@ -6,7 +6,7 @@ const TimelineItem = ({ name, duration, points, startDate }) => {
     const colourMap = {
         "King’s College London": "red",
         "Roundwood Park School": "repeating-linear-gradient(135deg, red, red 10px, black 10px, black 30px)"
-    }
+    };
 
     const allPoints = (
         <ul>
