@@ -1,7 +1,7 @@
 import React from 'react';
 import './TimelineItem.css';
 
-const TimelineItem = ({ name, points, startDate }) => {
+const TimelineItem = ({ name, duration, points, startDate }) => {
     const data = {
         color: 'purple',
         tag: 'tag',
@@ -23,11 +23,9 @@ const TimelineItem = ({ name, points, startDate }) => {
     <>
         <div className="timeline-item">
         <div className="timeline-item-content">
-            <span className="tag" style={{ background: data.color }}>
-                {data.tag}
-            </span>
-            <time>{startDate}</time>
+            <time className="hidden">{startDate}</time>
             <h4>{name}</h4>
+            <h4>{duration}</h4>
             {allPoints}
             <span className="circle" />
         </div>

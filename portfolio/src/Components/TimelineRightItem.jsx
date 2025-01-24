@@ -13,7 +13,7 @@ const TimelineItem = ({ name, title, location, date, points, startDate }) => {
     <>
         <div className="timeline-item right">
         <div className="timeline-item-content">
-            <time>{startDate}</time>
+            <time className="hidden">{startDate}</time>
             <h4>{title}</h4>
             <h4>{name}</h4>
             <h4>{date}, {location}</h4>
