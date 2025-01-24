@@ -1,34 +1,27 @@
 import React from 'react'
 import { useState } from 'react'
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import ProjectTile from './ProjectTile';
 import Carousel from './Carousel';
-import info from '../Info.json'
+import info from '../Info.json';
+import finbert_paper from '../finbert_paper.pdf';
 
 const Projects = () => {
 
-    const [isShowing, show] = useState(false);
+    const x = useMotionValue(0)
+    const opacity = useTransform(x, [-100, 0, 100], [0, 1, 0])
 
 return (
     <section className="section" id="Projects">
+        <motion.div drag={x} style={{ x, opacity }}>
         <h2>PROJECTS</h2>
-        {isShowing ? <button onClick={() => {show(false)}}>Show</button> : 
-        <>
-            <p><strong>King’s Capital (King’s Business Club)</strong> - London, Quantitative Trading Associate, October 2024 - Present</p>
-            <p>Worked with the Quant department to develop algorithms and execute trades.</p>
-            <p>Drafted papers on quantitative strategies, including LSTMs in prediction strategies.</p>
-            <p><strong>Financial Dashboard with Stock Predictor</strong></p>
-            <p>Developed an LSTM model in TensorFlow to forecast stock prices.</p>
-            <p>Built a sentiment analysis tool for evaluating investor sentiment based on news and social media.</p>
-            <p>Designed a UI with JavaScript and a backend in Python using Flask.</p>
-            <button onClick={() => {show(true)}}>Hide</button>
-            <h3>Personal Projects</h3>
-            <Carousel content={info.projects.personal} />
-            <h3>King's Capital Projects</h3>
-            <Carousel content={info.projects.kcap} />
-            <h3>University Projects</h3>
-            <Carousel content={info.projects.university} />
-        </>
-        }
+        <h3>Personal Projects</h3>
+        <Carousel content={info.projects.personal} />
+        <h3>King's Capital (King's Business Club) Projects</h3>
+        <Carousel content={info.projects.kcap} />
+        <h3>University Projects</h3>
+        <Carousel content={info.projects.university} />
+        </motion.div>
     </section>
 )
 }
