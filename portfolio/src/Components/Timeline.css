@@ -9,7 +9,7 @@
     background-color: #6e46ff;
     content: '';
     position: absolute;
-    left: calc(50% - 2px);
-    width: 4px;
+    left: calc(50% - 8px);
+    width: 16px;
     height: 100%;
 }
