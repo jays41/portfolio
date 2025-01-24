@@ -57,11 +57,12 @@ const experiences = info.experience.map((e) => (
 
         <div className="md:flex md:justify-between mt-16 gap-32">
         <MotionSection content={e.name} delay={0.5} />
-        <MotionSection content="London, Software Developer Intern, June 2024" delay={0.75} />
+        <MotionSection content={e.title} delay={0.75} />
+        <MotionSection content={`${e.location}, ${e.date}`} delay={1} />
         {e.points.map((point, d)=>(
             <MotionSection
             content={point}
-            delay={1 + d * 0.25}
+            delay={1.25 + d * 0.25}
         />
         ))}
         </div>
