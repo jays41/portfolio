@@ -11,7 +11,7 @@ const Timeline = () => {
         ...info.experience.map((e) => ({...e, type: "experience"}))
     ];
 
-    allItems.sort((a, b) => new Date(a.startDate) - new Date(b.startDate)); // need to fix
+    allItems.sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
 
     const elements = (
         <>
