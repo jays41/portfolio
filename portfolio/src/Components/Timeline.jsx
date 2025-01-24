@@ -17,7 +17,7 @@ const Timeline = () => {
         <>
             {allItems.map((data) =>
                 data.type === "education" ?
-                    (<TimelineLeftItem name={data.name} duration={data.points} points={data.points} startDate={data.startDate} />)
+                    (<TimelineLeftItem name={data.name} points={data.points} startDate={data.startDate} />)
                     :
                     (<TimelineRightItem name={data.name} title={data.title} location={data.location} date={data.date} points={data.points} startDate={data.startDate} />)
             )}

@@ -1,7 +1,7 @@
 import React from 'react';
 import './TimelineItem.css';
 
-const TimelineItem = ({ name, duration, points }) => {
+const TimelineItem = ({ name, points, startDate }) => {
     const data = {
         color: 'purple',
         tag: 'tag',
@@ -13,6 +13,12 @@ const TimelineItem = ({ name, duration, points }) => {
         }
     }
 
+    const allPoints = (
+        <ul>
+            {points.map((e) => <li>{e}</li>)}
+        </ul>
+    );
+
   return (
     <>
         <div className="timeline-item">
@@ -20,17 +26,9 @@ const TimelineItem = ({ name, duration, points }) => {
             <span className="tag" style={{ background: data.color }}>
                 {data.tag}
             </span>
-            <time>{data.date}</time>
-            <p>{data.text}</p>
-            {data.link && (
-                <a
-                    href={data.link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {data.link.text}
-                </a>
-            )}
+            <time>{startDate}</time>
+            <h4>{name}</h4>
+            {allPoints}
             <span className="circle" />
         </div>
         </div>
