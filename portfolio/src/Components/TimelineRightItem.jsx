@@ -1,7 +1,8 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './TimelineItem.css';
 
-const TimelineItem = ({ name, title, location, date, points, startDate }) => {
+const TimelineRightItem = ({ name, title, location, date, points, startDate }) => {
 
     const colourMap = {
         "Ashbury Global": "linear-gradient(to bottom, orange, yellow, green)",
@@ -17,20 +18,34 @@ const TimelineItem = ({ name, title, location, date, points, startDate }) => {
         </ul>
     );
 
+    const delay = 0.5;
+
   return (
     <>
-        <div className="timeline-item right">
-        <div className="stripe" style={{ background: colourMap[name], width: '5px' }}></div>
-        <div className="timeline-item-content">
-            <time className="hidden">{startDate}</time>
-            <h4>{title}</h4>
-            <h4>{name}</h4>
-            <h4>{date}, {location}</h4>
-            {allPoints}
-        </div>
-        </div>
+    <div className="timeline-item right">
+    <div className="stripe" style={{ background: colourMap[name], width: '5px' }}></div>
+        <motion.div
+            className="md:w-1/3 mt-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.1 }}
+            transition={{ delay, duration: 0.5 }}
+            variants={{
+                hidden: { opacity: 0, x: -100 },
+                visible: { opacity: 1, x: 10 },
+            }}
+        >
+            <div className="timeline-item-content">
+                <time className="hidden">{startDate}</time>
+                <h4>{title}</h4>
+                <h4>{name}</h4>
+                <h4>{date}, {location}</h4>
+                {allPoints}
+            </div>
+        </motion.div>
+    </div>
     </>
   )
 }
 
-export default TimelineItem
+export default TimelineRightItem
