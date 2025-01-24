@@ -5,6 +5,7 @@
     position: relative;
     margin: 10px 0;
     width: 50%;
+    min-height: '100px'
 }
 
 .timeline-item.right {
@@ -16,4 +17,17 @@
 
 .hidden {
     display: none;
+}
+
+.stripe {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.stripe::after {
+    content: '';
+    position: absolute;
+    left: calc(50% - 2px);
+    height: 100%;
 }
