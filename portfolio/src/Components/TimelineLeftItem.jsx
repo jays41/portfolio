@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './TimelineItem.css';
+import kcl from '../assets/images/education/kcl.png';
+import rps from '../assets/images/education/rps.png';
 
 const TimelineLeftItem = ({ name, duration, points, startDate }) => {
     
@@ -15,7 +17,10 @@ const TimelineLeftItem = ({ name, duration, points, startDate }) => {
         </ul>
     );
 
-    const delay = 0.5;
+    const imagesMap = {
+        "King’s College London": kcl,
+        "Roundwood Park School": rps
+    };
 
   return (
     <>
@@ -25,7 +30,7 @@ const TimelineLeftItem = ({ name, duration, points, startDate }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.1 }}
-            transition={{ delay, duration: 0.5 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
             variants={{
                 hidden: { opacity: 0, x: 100 },
                 visible: { opacity: 1, x: -10 },
@@ -40,6 +45,19 @@ const TimelineLeftItem = ({ name, duration, points, startDate }) => {
         </motion.div>
         <div className="stripe" style={{ background: colourMap[name], width: '5px' }}></div>
         </div>
+            <motion.div
+                className="md:w-1/3 mt-10"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                variants={{
+                    hidden: { opacity: 0, x: 0 },
+                    visible: { opacity: 1, x: 200 },
+                }}
+            >
+                <img alt={name} src={imagesMap[name]} width="250px"></img>
+            </motion.div>
 
     
     </>
