@@ -2,15 +2,10 @@ import React from 'react';
 import './TimelineItem.css';
 
 const TimelineItem = ({ name, duration, points, startDate }) => {
-    const data = {
-        color: 'purple',
-        tag: 'tag',
-        date: '01-01-02',
-        text: 'text',
-        link: {
-            url: 'https://github.com/',
-            text: 'link text'
-        }
+    
+    const colourMap = {
+        "King’s College London": "red",
+        "Roundwood Park School": "repeating-linear-gradient(135deg, red, red 10px, black 10px, black 30px)"
     }
 
     const allPoints = (
@@ -21,7 +16,7 @@ const TimelineItem = ({ name, duration, points, startDate }) => {
 
   return (
     <>
-        <div className="timeline-item">
+        <div className="timeline-item side-by-side">
         <div className="timeline-item-content">
             <time className="hidden">{startDate}</time>
             <h4>{name}</h4>
@@ -29,7 +24,9 @@ const TimelineItem = ({ name, duration, points, startDate }) => {
             {allPoints}
             <span className="circle" />
         </div>
+        <div className="stripe" style={{ background: colourMap[name], width: '5px' }}></div>
         </div>
+
     </>
   )
 }
