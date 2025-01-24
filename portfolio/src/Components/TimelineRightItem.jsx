@@ -3,6 +3,14 @@ import './TimelineItem.css';
 
 const TimelineItem = ({ name, title, location, date, points, startDate }) => {
 
+    const colourMap = {
+        "Ashbury Global": "linear-gradient(to bottom, orange, yellow, green)",
+        "Valtech": "black",
+        "Armalytix": "#93002C",
+        "Kumon": "#33B5E5",
+        "Private Tutoring": "grey"
+    };
+
     const allPoints = (
         <ul>
             {points.map((e) => <li>{e}</li>)}
@@ -12,6 +20,7 @@ const TimelineItem = ({ name, title, location, date, points, startDate }) => {
   return (
     <>
         <div className="timeline-item right">
+        <div className="stripe" style={{ background: colourMap[name], width: '5px' }}></div>
         <div className="timeline-item-content">
             <time className="hidden">{startDate}</time>
             <h4>{title}</h4>
