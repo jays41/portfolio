@@ -1,10 +1,8 @@
 import './App.css'
 import ReactDOM from 'react-dom'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import ContactForm from './Components/ContactForm'
 import About from './Components/About'
-import Education from './Components/Education'
-import Experience from './Components/Experience'
+import Timeline from './Components/Timeline'
 import Projects from './Components/Projects'
 import Skills from './Components/Skills'
 import Links from './Components/Links'
@@ -19,8 +17,7 @@ function App() {
       <main className="scroll-container">
         <About />
         <Skills />
-        <Experience />
-        <Education />
+        <Timeline />
         <Projects />
         <CV />
         <ContactForm />
