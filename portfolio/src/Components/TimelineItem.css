@@ -1,10 +1,26 @@
+.container {
+    display: grid;
+    grid-template-columns: 50%;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.leftItem {
+    grid-column: 1;
+    align-items: right;
+}
+
+.rightItem {
+    grid-column: 2;
+    align-items: left;
+}
+
 .timeline-item {
     display: flex;
     justify-content: flex-end;
     padding-right: 30px;
     position: relative;
     margin: 10px 0;
-    width: 50%;
     min-height: '100px'
 }
 

@@ -23,10 +23,9 @@ const TimelineLeftItem = ({ name, duration, points, startDate }) => {
     };
 
   return (
-    <>
-        <div className="timeline-item side-by-side">
+    <div className="container">
+        <div className="timeline-item side-by-side leftItem">
         <motion.div
-            className="md:w-1/3 mt-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.1 }}
@@ -46,21 +45,20 @@ const TimelineLeftItem = ({ name, duration, points, startDate }) => {
         <div className="stripe" style={{ background: colourMap[name], width: '5px' }}></div>
         </div>
             <motion.div
-                className="md:w-1/3 mt-10"
+                className="rightItem"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
                 variants={{
-                    hidden: { opacity: 0, x: 0 },
-                    visible: { opacity: 1, x: 200 },
+                    hidden: { opacity: 0, x: -300 },
+                    visible: { opacity: 1, x: -150 },
                 }}
             >
                 <img alt={name} src={imagesMap[name]} width="250px"></img>
             </motion.div>
-
     
-    </>
+    </div>
   )
 }
 

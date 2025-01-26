@@ -27,36 +27,37 @@ const TimelineRightItem = ({ name, title, location, date, points, startDate }) =
 
     const allPoints = (
         <ul>
-            {points.map((e) => <li>{e}</li>)}
+            {points.map((e) => <li key={e}>{e}</li>)}
         </ul>
     );
 
   return (
-    <>
-    <motion.div
-        className="md:w-1/3 mt-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-        variants={{
-            hidden: { opacity: 0, x: 0 },
-            visible: { opacity: 1, x: -200 },
-        }}
-    >
-        <img alt={name} src={imagesMap[name]} width="250px"></img>
-    </motion.div>
-    <div className="timeline-item right">
-    <div className="stripe" style={{ background: colourMap[name], width: '5px' }}></div>
+    <div className="container">
+      <div className="leftItem">
         <motion.div
-            className="md:w-1/3 mt-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            variants={{
+                hidden: { opacity: 0, x: 300 },
+                visible: { opacity: 1, x: 150 },
+            }}
+        >
+            <img alt={name} src={imagesMap[name]} width="250px" />
+        </motion.div>
+      </div>
+
+      <div className="timeline-item rightItem">
+        <div className="stripe" style={{ background: colourMap[name], width: '5px' }}></div>
+        <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             variants={{
                 hidden: { opacity: 0, x: -100 },
-                visible: { opacity: 1, x: 10 },
+                visible: { opacity: 1, x: 0 },
             }}
         >
             <div className="timeline-item-content">
@@ -67,9 +68,9 @@ const TimelineRightItem = ({ name, title, location, date, points, startDate }) =
                 {allPoints}
             </div>
         </motion.div>
+      </div>
     </div>
-    </>
   )
 }
 
-export default TimelineRightItem
+export default TimelineRightItem;
