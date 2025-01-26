@@ -26,7 +26,7 @@ const Timeline = () => {
 
 
   return (
-    <section className="section" id="timeline">
+    <section className="section" id="Timeline">
         <div className="timeline-container">
             {elements}
         </div>
