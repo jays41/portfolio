@@ -31,8 +31,7 @@ const Sidebar = () => {
           >
       <a href="#About">About</a>
       <a href="#Skills">Skills</a>
-      <a href="#Experience">Experience</a>
-      <a href="#Education">Education</a>
+      <a href="#Timeline">Timeline</a>
       <a href="#Projects">Projects</a>
       <a href="#CV">CV</a>
       <a href="#ContactForm">Contact</a>
