@@ -13,14 +13,13 @@ const ProjectTile = ({ heading, description, tags, link }) => {
     }
 
     return (
-        <>
-            <div className="tile">
+        <div>
+            <div className="tile card">
                 <h3 className="tile-heading">{heading}</h3>
                 <button onClick={() => setExpanded(true)}>Show Details</button>
                 <TagContainer tags={tags} />
             </div>
 
-            {/* Render the modal at the top level */}
             {expanded && (
                 <div className="modal-overlay" onClick={closeModal}>
                     <div
@@ -35,7 +34,7 @@ const ProjectTile = ({ heading, description, tags, link }) => {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 };
 
