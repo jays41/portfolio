@@ -82,15 +82,3 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-
-.card {
-    padding: 20px;
-}
-
-.card:hover {
-    border: 7px solid transparent;
-    border-image: linear-gradient(163deg, #8611c1 0%, #3700ff 100%);
-    border-radius: 20px;
-    border-image-slice: 1;
-    transition: all .3s;
-}
