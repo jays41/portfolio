@@ -45,10 +45,6 @@ html {
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
-}
-
 /* Container */
 .scroll-container {
   height: 100vh; /* Full viewport height */
@@ -56,6 +52,8 @@ html {
   overflow-y: scroll;
   scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
   scroll-behavior: smooth; /* Smooth scrolling */
+  background: linear-gradient(135deg, rgb(229, 255, 246), rgb(177, 246, 246), rgb(184, 167, 252));
+  color: black;
 }
 
 /* Sections */
@@ -70,6 +68,39 @@ html, body {
   overflow: hidden; /* Hide any scrollbars on the body */
 }
 
+.btn {
+  color: purple;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid purple;
+  cursor: pointer;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: purple;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btn:hover::before {
+  width: 160%;
+}
 
 /* Styles for desktop devices */
 @media (min-width: 768px) {
