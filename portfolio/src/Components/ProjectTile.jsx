@@ -16,7 +16,7 @@ const ProjectTile = ({ heading, description, tags, link }) => {
         <div>
             <div className="tile card">
                 <h3 className="tile-heading">{heading}</h3>
-                <button onClick={() => setExpanded(true)}>Show Details</button>
+                <button className="btn" onClick={() => setExpanded(true)}>Show Details</button>
                 <TagContainer tags={tags} />
             </div>
 

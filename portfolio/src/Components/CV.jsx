@@ -16,7 +16,7 @@ const CV = () => {
     return (
         <section className="section" id="CV">
             <h2>My CV</h2>
-            <button onClick={handleDownload}>Download File</button>
+            <button className="btn" onClick={handleDownload}>Download File</button>
             <p>Alternatively, open in the browser
             <a href={Jay_Shah_CV} target="_blank" rel="noreferrer"> here</a>
             </p>
