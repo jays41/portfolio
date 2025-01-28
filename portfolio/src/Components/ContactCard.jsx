@@ -59,7 +59,7 @@ const ContactCard = () => {
                 visible: { opacity: 1, x: 327, y: 125 },
             }}
             >
-            <button className="button mt-5" onClick={()=>{setExpanded(false)}}>&lt;</button>
+            <button className="ccbutton mt-5" onClick={()=>{setExpanded(false)}}>&lt;</button>
         </motion.div>
         </div>
     );
