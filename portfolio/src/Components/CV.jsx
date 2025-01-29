@@ -17,12 +17,8 @@ const CV = () => {
     return (
         <section className="section" id="CV">
             <h2>My CV</h2>
-            <button onClick={handleDownload}>Download File</button>
-            <p>Alternatively, open in the browser
-            <a href={Jay_Shah_CV} target="_blank" rel="noreferrer"> here</a>
-            </p>
-
-            <span class="cv-button" type="button">
+            <div className="centre">
+            <span class="cv-button" type="button" onClick={handleDownload}>
             <span class="cv-button__text">Download</span>
             <span class="cv-button__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" class="svg">
@@ -32,6 +28,10 @@ const CV = () => {
             </svg>
             </span>
             </span>
+            <p>Alternatively, open in the browser
+            <a href={Jay_Shah_CV} target="_blank" rel="noreferrer"> here</a>
+            </p>
+            </div>
         </section>
     )
 }
