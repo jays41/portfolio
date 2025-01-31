@@ -9,7 +9,7 @@ import tutoring from '../assets/images/experience/tutoring.png';
 import kcl from '../assets/images/education/kcl.png';
 import rps from '../assets/images/education/rps.png';
 
-const TimelineMobileItem = ({ name, title, location, date, duration, points, startDate }) => {
+const TimelineMobileItem = ({ type, name, title, location, date, duration, points, startDate }) => {
 
     const imagesMap = {
         'Ashbury Global': ashbury,
@@ -28,44 +28,38 @@ const TimelineMobileItem = ({ name, title, location, date, duration, points, sta
     );
 
   return (
-    <div className="container">
-      <div className="leftItem">
-        <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            variants={{
-                hidden: { opacity: 0, x: 300 },
-                visible: { opacity: 1, x: 150 },
-            }}
-        >
+    <div>
+        <div>
             <img alt={name} src={imagesMap[name]} width="250px" />
-        </motion.div>
-      </div>
+        </div>
 
       <div>
-        <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            variants={{
-                hidden: { opacity: 0, y: 100 },
-                visible: { opacity: 1, y: 0 },
-            }}
-        >
+        <div>
             <div>
                 <time className="hidden">{startDate}</time>
-                <h4>{title}</h4>
-                <h4>{name}</h4>
-                <h4>{date}, {location}</h4>
+                {type === "education" ?
+                    <span>
+                        <h4>{name}</h4>
+                        <h4>{duration}</h4>
+                    </span>
+                :
+                <span>
+                    <h4>{title}</h4>
+                    <h4>{name}</h4>
+                    <h4>{date}, {location}</h4>
+                </span>
+                }
+                
                 {allPoints}
             </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   )
 }
 
 export default TimelineMobileItem;
+
+
+// type={"education"} name duration points
+// type={"work"} name title location date points
