@@ -34,10 +34,10 @@ const Skills = () => {
   const [framework, showFramework] = useState(null)
 
   const languages = languages_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} style={{ filter: language===image.title || language===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showLanguage(image.title); showFramework(null)}} />
+    <img key={index} src={image.src} alt={image.title} title={image.title} className={language===image.title ? 'selected' : ''} style={{ filter: language===image.title || language===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showLanguage(image.title); showFramework(null)}} />
   ));
   const frameworks = framework_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} style={{ filter: framework===image.title || framework===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showFramework(image.title); showLanguage(null)}} />
+    <img key={index} src={image.src} alt={image.title} title={image.title} className={framework===image.title ? 'selected' : ''} style={{ filter: framework===image.title || framework===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showFramework(image.title); showLanguage(null)}} />
   ));
 
 
