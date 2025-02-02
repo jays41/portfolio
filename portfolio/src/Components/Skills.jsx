@@ -29,15 +29,17 @@ const Skills = () => {
     {src: htmlcss, title: 'HTML/CSS'},
     {src: tf, title: 'TensorFlow'}
   ];
-  const languages = languages_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} onMouseEnter={()=>{showLanguage(image.title)}} onMouseLeave={()=>{showLanguage(null)}} />
-  ));
-  const frameworks = framework_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} onMouseEnter={()=>{showFramework(image.title)}} onMouseLeave={()=>{showFramework(null)}} />
-  ));
 
   const [language, showLanguage] = useState(null)
   const [framework, showFramework] = useState(null)
+
+  const languages = languages_images.map((image, index) => (
+    <img key={index} src={image.src} alt={image.title} title={image.title} style={{ filter: language===image.title || language===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showLanguage(image.title); showFramework(null)}} />
+  ));
+  const frameworks = framework_images.map((image, index) => (
+    <img key={index} src={image.src} alt={image.title} title={image.title} style={{ filter: framework===image.title || framework===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showFramework(image.title); showLanguage(null)}} />
+  ));
+
 
   return (
     <section className="section" id="Skills">
@@ -76,6 +78,7 @@ const Skills = () => {
               </ul>
             </>
           )}
+          <button onClick={()=>{showLanguage(null)}}>Close</button>
         </motion.div>
       </div>
 
@@ -113,6 +116,7 @@ const Skills = () => {
               </ul>
             </>
           )}
+        <button onClick={()=>{showFramework(null)}}>Close</button>
         </motion.div>
       </div>
     </section>
