@@ -3,7 +3,7 @@ import ContactCard from './ContactCard'
 
 const ContactForm = () => {
   return (
-    <section className="section" id="ContactForm">
+    <section className="section" id="Contact">
         <h2>Contact Me</h2>
         <ContactCard />
     </section>
