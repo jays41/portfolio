@@ -5,8 +5,6 @@ import About from './Components/About'
 import Timeline from './Components/Timeline'
 import Projects from './Components/Projects'
 import Skills from './Components/Skills'
-import Links from './Components/Links'
-import CV from './Components/CV'
 import Sidebar from './Components/Sidebar'
 
 function App() {
@@ -19,9 +17,7 @@ function App() {
         <Skills />
         <Timeline />
         <Projects />
-        <CV />
         <ContactForm />
-        <Links />
       </main>
     </>
   )
