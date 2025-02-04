@@ -11,15 +11,15 @@ html {
   }
 
 body {
-    background-color: #f4f4f9;
-    color: #333;
+    background: #1e2a47;
+    color: #e0e0e0;
     line-height: 1.6;
     font-size: 16px;
     padding: 20px;
 }
 
-h1, h2 {
-    color: #2c3e50;
+h1 {
+    color: #00bfae;
 }
 
 /* Header Styles */
@@ -52,9 +52,9 @@ header .contact-info {
 .section h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    border-bottom: 2px solid #2c3e50;
+    border-bottom: 2px solid #4e5a76;
     padding-bottom: 5px;
-    color: #16a085;
+    color: #00bfae;
 }
 
 ul {

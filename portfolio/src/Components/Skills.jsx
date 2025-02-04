@@ -65,7 +65,8 @@ const Skills = () => {
             borderRadius: '8px',
             boxShadow: language ? '0 4px 12px rgba(0, 0, 0, 0.1)' : 'none',
             padding: language ? '16px' : '0',
-            backgroundColor: language ? '#f9f9f9' : 'transparent',
+            background: '#f2f2f2',
+            color: '#2a3a59',
           }}
         >
           {language && (
@@ -103,7 +104,8 @@ const Skills = () => {
             borderRadius: '8px',
             boxShadow: framework ? '0 4px 12px rgba(0, 0, 0, 0.1)' : 'none',
             padding: framework ? '16px' : '0',
-            backgroundColor: framework ? '#f9f9f9' : 'transparent',
+            background: '#f2f2f2',
+            color: '#2a3a59',
           }}
         >
           {framework && (

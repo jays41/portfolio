@@ -51,9 +51,6 @@ html {
   overflow-y: scroll;
   scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
   scroll-behavior: smooth; /* Smooth scrolling */
-  /* background: linear-gradient(135deg, rgb(229, 255, 246), rgb(177, 246, 246), rgb(184, 167, 252)); */
-  background: #D1E8FF;
-  color: black;
 }
 
 /* Sections */
