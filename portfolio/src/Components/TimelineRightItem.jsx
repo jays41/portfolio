@@ -44,7 +44,7 @@ const TimelineRightItem = ({ name, title, location, date, points, startDate }) =
                 visible: { opacity: 1, x: 150 },
             }}
         >
-            <img alt={name} src={imagesMap[name]} width="250px" />
+            <img alt={name} src={imagesMap[name]} width="200px" />
         </motion.div>
       </div>
 
