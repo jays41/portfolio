@@ -55,7 +55,7 @@ const TimelineLeftItem = ({ name, duration, points, startDate }) => {
                     visible: { opacity: 1, x: -150 },
                 }}
             >
-                <img alt={name} src={imagesMap[name]} width="200px"></img>
+                <img alt={name} src={imagesMap[name]}></img>
             </motion.div>
     
     </div>

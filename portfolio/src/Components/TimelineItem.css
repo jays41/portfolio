@@ -54,3 +54,7 @@
     left: calc(50% - 2px);
     height: 100%;
 }
+
+img {
+    max-width: 175px;
+}

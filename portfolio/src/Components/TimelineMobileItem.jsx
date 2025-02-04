@@ -30,7 +30,7 @@ const TimelineMobileItem = ({ type, name, title, location, date, duration, point
   return (
     <div>
         <div>
-            <img alt={name} src={imagesMap[name]} width="200px" />
+            <img alt={name} src={imagesMap[name]} />
         </div>
 
       <div>
