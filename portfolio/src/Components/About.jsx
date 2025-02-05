@@ -5,6 +5,7 @@ import download from "downloadjs";
 import linkedin from '../assets/images/links/linkedin.png';
 import github from '../assets/images/links/github.png';
 import Jay_Shah_CV from '../Jay_Shah_CV.pdf';
+import './About.css'
 import './CV.css';
 import './Base.css';
 import './Links.css';
@@ -50,8 +51,8 @@ const About = () => {
             <div className="description">
                 <p>{info.description}</p>
             </div>
-        <br />
-        <div className="centre">My CV
+        <div className="about-container">
+        <div className="about-card about-leftItem centre">My CV
             <span className="cv-button" type="button" onClick={handleDownload}>
             <span className="cv-button__text">Download</span>
             <span className="cv-button__icon">
@@ -67,8 +68,7 @@ const About = () => {
             </p>
         </div>
 
-        <br />
-        <div className="images">
+        <div className="about-card about-rightItem images">
           <div className="images">
             <a href={info.links.linkedin_url} target="_blank" rel="noopener noreferrer" onMouseEnter={()=>{setShowingLinkedIn(true)}} onMouseLeave={()=>{setShowingLinkedIn(false)}}>
                 <img src={linkedin} alt="LinkedIn" />
@@ -81,6 +81,7 @@ const About = () => {
                 {showingGitHub ? <MotionSection content="GitHub" /> : null}
             </a>
           </div>
+        </div>
         </div>
         </section>
     );
