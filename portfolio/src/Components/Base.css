@@ -15,7 +15,6 @@ body {
     color: #e0e0e0;
     line-height: 1.6;
     font-size: 16px;
-    padding: 20px;
 }
 
 h1 {
@@ -40,7 +39,6 @@ header .contact-info {
 
 /* Container and Sections */
 .description {
-    max-width: 960px;
     margin: 0 auto;
 }
 
