@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import download from "downloadjs";
 import linkedin from '../assets/images/links/linkedin.png';
@@ -12,6 +12,7 @@ import './Links.css';
 import info from '../Info.json';
 
 const MotionSection = ({ content }) => (
+  
     <motion.div
       className="md:w-1/3 mt-10"
       initial="hidden"
@@ -29,6 +30,25 @@ const MotionSection = ({ content }) => (
   );
 
 const About = () => {
+  const useIsMobile = () => {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const mediaQuery = window.matchMedia('(max-width: 768px)');
+            setIsMobile(mediaQuery.matches);
+        };
+
+        checkIsMobile();
+        window.addEventListener('resize', checkIsMobile);
+        return () => window.removeEventListener('resize', checkIsMobile);
+
+    }, []);
+    return isMobile;
+  };
+
+const isMobile = useIsMobile();
 
     const handleDownload = () => {
         const url = 'src/Jay_Shah_CV.pdf';
@@ -51,8 +71,8 @@ const About = () => {
             <div className="description">
                 <p>{info.description}</p>
             </div>
-        <div className="about-container">
-        <div className="about-card about-leftItem centre">My CV
+        <div className={ isMobile ? null : 'about-container'}>
+        <div className={`about-card centre ${ isMobile ? null : 'about-leftItem'}`}>My CV
             <span className="cv-button" type="button" onClick={handleDownload}>
             <span className="cv-button__text">Download</span>
             <span className="cv-button__icon">
@@ -68,7 +88,7 @@ const About = () => {
             </p>
         </div>
 
-        <div className="about-card about-rightItem images">
+        <div className={`about-card side-by-side ${ isMobile ? null : 'about-rightItem'}`}>
           <div className="images">
             <a href={info.links.linkedin_url} target="_blank" rel="noopener noreferrer" onMouseEnter={()=>{setShowingLinkedIn(true)}} onMouseLeave={()=>{setShowingLinkedIn(false)}}>
                 <img src={linkedin} alt="LinkedIn" />
