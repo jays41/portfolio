@@ -9,7 +9,16 @@ html {
 .side-by-side {
   display: flex;
   gap: 10px;
+  justify-content: space-evenly;
+}
+
+.on-top {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
   justify-content: center;
+  align-items: center;
 }
 
 .logo {

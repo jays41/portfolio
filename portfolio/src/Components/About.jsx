@@ -71,7 +71,7 @@ const isMobile = useIsMobile();
             <div className="description">
                 <p>{info.description}</p>
             </div>
-        <div className={ isMobile ? null : 'about-container'}>
+        <div className={ isMobile ? 'on-top' : 'about-container side-by-side'}>
         <div className={`about-card centre ${ isMobile ? null : 'about-leftItem'}`}>My CV
             <span className="cv-button" type="button" onClick={handleDownload}>
             <span className="cv-button__text">Download</span>
