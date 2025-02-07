@@ -72,7 +72,7 @@ const isMobile = useIsMobile();
                 <p>{info.description}</p>
             </div>
         <div className={ isMobile ? 'on-top' : 'about-container side-by-side'}>
-        <div className={`about-card centre ${ isMobile ? null : 'about-leftItem'}`}>My CV
+        <div className={`centre ${ isMobile ? 'about-card-mobile' : 'about-card about-leftItem'}`}>My CV
             <span className="cv-button" type="button" onClick={handleDownload}>
             <span className="cv-button__text">Download</span>
             <span className="cv-button__icon">
@@ -88,7 +88,7 @@ const isMobile = useIsMobile();
             </p>
         </div>
 
-        <div className={`about-card side-by-side ${ isMobile ? null : 'about-rightItem'}`}>
+        <div className={`side-by-side ${ isMobile ? 'about-card-mobile' : 'about-card about-rightItem'}`}>
           <div className="images">
             <a href={info.links.linkedin_url} target="_blank" rel="noopener noreferrer" onMouseEnter={()=>{setShowingLinkedIn(true)}} onMouseLeave={()=>{setShowingLinkedIn(false)}}>
                 <img src={linkedin} alt="LinkedIn" />
