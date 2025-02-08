@@ -34,10 +34,10 @@ const Skills = () => {
   const [framework, showFramework] = useState(null)
 
   const languages = languages_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} className={language===image.title ? 'selected' : ''} style={{ filter: language===image.title || language===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showLanguage(image.title); showFramework(null)}} />
+    <img key={index} src={image.src} alt={image.title} title={image.title} className={language===image.title ? 'selected' : ''} style={{ filter: language===image.title || language===null && framework===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showLanguage(image.title); showFramework(null)}} />
   ));
   const frameworks = framework_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} className={framework===image.title ? 'selected' : ''} style={{ filter: framework===image.title || framework===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showFramework(image.title); showLanguage(null)}} />
+    <img key={index} src={image.src} alt={image.title} title={image.title} className={framework===image.title ? 'selected' : ''} style={{ filter: framework===image.title || language===null && framework===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showFramework(image.title); showLanguage(null)}} />
   ));
 
 
@@ -47,47 +47,49 @@ const Skills = () => {
       <div className="images">
         {languages}
       </div>
-      <div>
-        <motion.div
-          layout
-          initial={{ height: 0, opacity: 0 }}
-          animate={{
-            height: language ? 'auto' : 0,
-            opacity: language ? 1 : 0,
-          }}
-          transition={{
-            duration: 0.5,
-            ease: 'easeOut',
-            delay: language ? 0.2 : 0,
-          }}
-          style={{
-            overflow: 'hidden',
-            borderRadius: '8px',
-            boxShadow: language ? '0 4px 12px rgba(0, 0, 0, 0.1)' : 'none',
-            padding: language ? '16px' : '0',
-            background: '#f2f2f2',
-            color: '#2a3a59',
-          }}
-        >
-          {language && (
-            <>
-              <h1>{language}</h1>
-              <ul>
-                {info.skills[language]?.map((e, index) => (
-                  <li key={index}>{e}</li>
-                ))}
-              </ul>
-            </>
-          )}
-          <button onClick={()=>{showLanguage(null)}}>Close</button>
-        </motion.div>
-      </div>
 
         <div className="images">
           {frameworks}
         </div>
-        <div>
-        <motion.div
+
+
+
+
+      <div>
+      <motion.div
+        layout
+        initial={{ height: 0, opacity: 0 }}
+        animate={{
+          height: language ? 'auto' : 0,
+          opacity: language ? 1 : 0,
+        }}
+        transition={{
+          duration: 0.5,
+          ease: 'easeOut',
+          delay: language ? 0.2 : 0,
+        }}
+        style={{
+          overflow: 'hidden',
+          borderRadius: '8px',
+          boxShadow: language ? '0 4px 12px rgba(0, 0, 0, 0.1)' : 'none',
+          padding: language ? '16px' : '0',
+          background: '#f2f2f2',
+          color: '#2a3a59',
+        }}
+      >
+        {language && (
+          <>
+            <h1>{language}</h1>
+            <ul>
+              {info.skills[language]?.map((e, index) => (
+                <li key={index}>{e}</li>
+              ))}
+            </ul>
+          </>
+        )}
+        <button onClick={()=>{showLanguage(null)}}>Close</button>
+      </motion.div>
+      <motion.div
           layout
           initial={{ height: 0, opacity: 0 }}
           animate={{
