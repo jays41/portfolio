@@ -19,18 +19,53 @@
   transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
 }
 
+.hidden {
+  display: none;
+}
+
 .skill-detail-container {
-  width: 500px;
-  height: 300px;
+  width: 1000px;
+  height: 500px;
+  border: 2px solid red;
+  margin: 0 auto;
 }
 
 .skill-detail-card {
-  border: 2px solid red;
+  perspective: 1500px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+  transition: border-color 0.75s ease-in-out;
+  border: 2px solid blue;
+}
+
+.skill-detail-card.add-border {
+  border: 2px solid grey;
+}
+
+.skill-detail-card-front,
+.skill-detail-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back side when flipped */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+.skill-detail-card-front {
+  background: lightblue;
+}
+
+.skill-detail-card-back {
+  background: lightcoral;
+  transform: rotateY(180deg); /* Initially rotate the back to hide it */
 }
 
 .skill-detail-card.flipped {
-  transform-origin: 50% 50%;
-  transform: rotateY(180);
-  border: 2px solid blue;
-  border-radius: 100px;
+  transform: rotateY(180deg); /* Flip the card when clicked */
 }

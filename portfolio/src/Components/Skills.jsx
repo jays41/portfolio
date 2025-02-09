@@ -57,26 +57,15 @@ const Skills = () => {
       </div>
 
       <div className="skill-detail-container">
-      <div className={`skill-detail-card ${flipped ? 'flipped' : ''}`}>
+      <div className={`skill-detail-card ${language || framework ? 'add-border' : null} ${flipped ? 'flipped' : ''}`}>
+        <p className="skill-detail-card-front"></p>
       <motion.div
-        layout
-        initial={{ height: 0, opacity: 0 }}
-        animate={{
-          height: language ? 'auto' : 0,
-          opacity: language ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.5,
-          ease: 'easeOut',
-          delay: language ? 0.2 : 0,
-        }}
+        className={`skill-detail-card-back`}
         style={{
-          overflow: 'hidden',
-          borderRadius: '8px',
-          boxShadow: language ? '0 4px 12px rgba(0, 0, 0, 0.1)' : 'none',
-          padding: language ? '16px' : '0',
-          background: '#f2f2f2',
-          color: '#2a3a59',
+          position: "relative",
+          transformStyle: "preserve-3d", // Important for 3D effect
+          transform: `rotateY(${flipped ? 180 : 0}deg)`, // Flip logic
+          transition: "transform 0.75s ease-in-out", // Smooth flip animation
         }}
       >
         {language && (
@@ -91,27 +80,8 @@ const Skills = () => {
         )}
         <button onClick={()=>{showLanguage(null)}}>Close</button>
       </motion.div>
-      <motion.div
-          layout
-          initial={{ height: 0, opacity: 0 }}
-          animate={{
-            height: framework ? 'auto' : 0,
-            opacity: framework ? 1 : 0,
-          }}
-          transition={{
-            duration: 0.5,
-            ease: 'easeOut',
-            delay: framework ? 0.2 : 0,
-          }}
-          style={{
-            overflow: 'hidden',
-            borderRadius: '8px',
-            boxShadow: framework ? '0 4px 12px rgba(0, 0, 0, 0.1)' : 'none',
-            padding: framework ? '16px' : '0',
-            background: '#f2f2f2',
-            color: '#2a3a59',
-          }}
-        >
+
+      <div className={framework ? null : "hidden"}>
           {framework && (
             <>
               <h1>{framework}</h1>
@@ -123,7 +93,7 @@ const Skills = () => {
             </>
           )}
         <button onClick={()=>{showFramework(null)}}>Close</button>
-        </motion.div>
+        </div>
       </div>
       </div>
     </section>
