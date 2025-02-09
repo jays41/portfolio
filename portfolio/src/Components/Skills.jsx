@@ -30,15 +30,15 @@ const Skills = () => {
     {src: tf, title: 'TensorFlow'}
   ];
 
-  const [language, showLanguage] = useState(null);
-  const [framework, showFramework] = useState(null);
+  const [skill, setSkill] = useState(null);
+  const [skillType, setSkillType] = useState(null);
   const [flipped, flipOver] = useState(false);
 
   const languages = languages_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} className={language===image.title ? 'selected' : ''} style={{ filter: language===image.title || language===null && framework===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showLanguage(image.title); showFramework(null)}} />
+    <img key={index} src={image.src} alt={image.title} title={image.title} className={skill===image.title ? 'selected' : ''} style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{setSkill(image.title); setSkillType('language')}} />
   ));
   const frameworks = framework_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} className={framework===image.title ? 'selected' : ''} style={{ filter: framework===image.title || language===null && framework===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showFramework(image.title); showLanguage(null)}} />
+    <img key={index} src={image.src} alt={image.title} title={image.title} className={skill===image.title ? 'selected' : ''} style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{setSkill(image.title); setSkillType('framework')}} />
   ));
 
 
@@ -57,43 +57,30 @@ const Skills = () => {
       </div>
 
       <div className="skill-detail-container">
-      <div className={`skill-detail-card ${language || framework ? 'add-border' : null} ${flipped ? 'flipped' : ''}`}>
+      <div className={`skill-detail-card ${skill ? 'add-border' : null} ${flipped ? 'flipped' : ''}`}>
         <p className="skill-detail-card-front"></p>
       <motion.div
         className={`skill-detail-card-back`}
         style={{
           position: "relative",
-          transformStyle: "preserve-3d", // Important for 3D effect
-          transform: `rotateY(${flipped ? 180 : 0}deg)`, // Flip logic
-          transition: "transform 0.75s ease-in-out", // Smooth flip animation
+          transformStyle: "preserve-3d",
+          transform: `rotateY(${flipped ? 180 : 0}deg)`,
+          transition: "transform 0.75s ease-in-out",
         }}
       >
-        {language && (
+        {skill && (
           <>
-            <h1>{language}</h1>
+            <h1>{skill}</h1>
             <ul>
-              {info.skills[language]?.map((e, index) => (
+              {info.skills[skill]?.map((e, index) => (
                 <li key={index}>{e}</li>
               ))}
             </ul>
+            <button onClick={()=>{setSkill(null)}}>Close</button>
           </>
         )}
-        <button onClick={()=>{showLanguage(null)}}>Close</button>
       </motion.div>
 
-      <div className={framework ? null : "hidden"}>
-          {framework && (
-            <>
-              <h1>{framework}</h1>
-              <ul>
-                {info.skills[framework]?.map((e, index) => (
-                  <li key={index}>{e}</li>
-                ))}
-              </ul>
-            </>
-          )}
-        <button onClick={()=>{showFramework(null)}}>Close</button>
-        </div>
       </div>
       </div>
     </section>
