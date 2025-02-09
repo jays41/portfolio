@@ -57,14 +57,13 @@ const Skills = () => {
       </div>
 
       <div className="skill-detail-container">
-      <div className={`skill-detail-card ${skill ? 'add-border' : null} ${flipped ? 'flipped' : ''}`}>
-        <p className="skill-detail-card-front"></p>
+      <div className={`skill-detail-card ${skill ? 'add-border' : ''} ${flipped ? 'flipped' : ''}`}>
+        <p className="skill-detail-card-front">testing the front of the card</p>
       <motion.div
         className={`skill-detail-card-back`}
         style={{
           position: "relative",
           transformStyle: "preserve-3d",
-          transform: `rotateY(${flipped ? 180 : 0}deg)`,
           transition: "transform 0.75s ease-in-out",
         }}
       >
