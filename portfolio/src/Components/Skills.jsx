@@ -30,8 +30,9 @@ const Skills = () => {
     {src: tf, title: 'TensorFlow'}
   ];
 
-  const [language, showLanguage] = useState(null)
-  const [framework, showFramework] = useState(null)
+  const [language, showLanguage] = useState(null);
+  const [framework, showFramework] = useState(null);
+  const [flipped, flipOver] = useState(false);
 
   const languages = languages_images.map((image, index) => (
     <img key={index} src={image.src} alt={image.title} title={image.title} className={language===image.title ? 'selected' : ''} style={{ filter: language===image.title || language===null && framework===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{showLanguage(image.title); showFramework(null)}} />
@@ -44,18 +45,19 @@ const Skills = () => {
   return (
     <section className="section" id="Skills">
       <h2>TECHNICAL SKILLS</h2>
-      <div className="images">
-        {languages}
-      </div>
+      <button onClick={()=>(flipOver(!flipped))}>test button, currently: {flipped ? "back" : "front"}</button>
+      <div>
+        <div className="images">
+          {languages}
+        </div>
 
         <div className="images">
           {frameworks}
         </div>
+      </div>
 
-
-
-
-      <div>
+      <div className="skill-detail-container">
+      <div className={`skill-detail-card ${flipped ? 'flipped' : ''}`}>
       <motion.div
         layout
         initial={{ height: 0, opacity: 0 }}
@@ -122,6 +124,7 @@ const Skills = () => {
           )}
         <button onClick={()=>{showFramework(null)}}>Close</button>
         </motion.div>
+      </div>
       </div>
     </section>
   )

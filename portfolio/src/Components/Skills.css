@@ -18,3 +18,19 @@
   z-index: 1;
   transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
 }
+
+.skill-detail-container {
+  width: 500px;
+  height: 300px;
+}
+
+.skill-detail-card {
+  border: 2px solid red;
+}
+
+.skill-detail-card.flipped {
+  transform-origin: 50% 50%;
+  transform: rotateY(180);
+  border: 2px solid blue;
+  border-radius: 100px;
+}
