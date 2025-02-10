@@ -8,7 +8,7 @@ const ContactCard = () => {
     return (
         <div className="relative flip-card">
         <div className={`absolute flip-card-inner ${expanded ? 'flipped' : ''}`}>
-            <button className=" flip-card-front" onClick={() => setExpanded(true)}>
+            <button className="flip-card-front" onClick={() => setExpanded(true)}>
                 <h3>Contact Me</h3>
                 <p>(Click me!)</p>
             </button>
@@ -39,7 +39,7 @@ const ContactCard = () => {
                 <p>(Click me!)</p>
             </button>
 
-            <div className=" flip-card-back">
+            <div className="flip-card-back">
                 <form>
                     <div>
                         
