@@ -27,22 +27,22 @@
   width: 1000px;
   height: 500px;
   padding-top: 20px;
-  border: 20px solid red;
   margin: 0 auto;
 }
 
 .skill-detail-card {
+  border-radius: 100px;
   perspective: 1500px; /* Enables 3D effect */
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.5s ease-in-out, border-color 0.75s ease-in-out;
-  border: 20px solid blue;
 }
 
 .skill-detail-card.add-border {
-  border: 20px solid grey;
+  box-shadow: 0 0 30px #747bff;
+  transition: 0.5s;
 }
 
 .skill-detail-card-front,
@@ -57,14 +57,14 @@
 }
 
 .skill-detail-card-front {
-  background: lightblue;
 }
 
 .skill-detail-card-back {
-  background: lightcoral;
   transform: rotateX(180deg);
 }
 
 .skill-detail-card.flipped {
   transform: rotateX(180deg);
+  transition: transform 0.5s ease-in-out;
+  transition-delay: 0.5s;
 }

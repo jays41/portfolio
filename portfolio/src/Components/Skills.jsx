@@ -35,10 +35,10 @@ const Skills = () => {
   const [flipped, flipOver] = useState(false);
 
   const languages = languages_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} className={skill===image.title ? 'selected' : ''} style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{setSkill(image.title); setSkillType('language')}} />
+    <img key={index} src={image.src} alt={image.title} title={image.title} className={skill===image.title ? 'selected' : ''} style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{setSkill(image.title); setSkillType('language'); flipOver(true);}} />
   ));
   const frameworks = framework_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} className={skill===image.title ? 'selected' : ''} style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{setSkill(image.title); setSkillType('framework')}} />
+    <img key={index} src={image.src} alt={image.title} title={image.title} className={skill===image.title ? 'selected' : ''} style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{setSkill(image.title); setSkillType('framework'); flipOver(true);}} />
   ));
 
 
