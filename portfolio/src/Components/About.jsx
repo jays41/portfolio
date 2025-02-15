@@ -64,7 +64,7 @@ const isMobile = useIsMobile();
 
     return (
         <section className="section" id="About">
-            <header>
+            <header style={{ 'margin-top': '30px' }}>
                 <h1>{info.name}</h1>
             </header>
 
