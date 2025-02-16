@@ -61,6 +61,7 @@ const Timeline = () => {
     
   return (
     <section className="section" id="Timeline">
+        <h2>My Timeline</h2>
         {
         isMobile ?
             <>
