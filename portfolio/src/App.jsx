@@ -1,11 +1,12 @@
-import './App.css'
-import ReactDOM from 'react-dom'
-import ContactForm from './Components/ContactForm'
-import About from './Components/About'
-import Timeline from './Components/Timeline'
-import Projects from './Components/Projects'
-import Skills from './Components/Skills'
-import Sidebar from './Components/Sidebar'
+import './App.css';
+import './Components/Base.css';
+import ReactDOM from 'react-dom';
+import ContactForm from './Components/ContactForm';
+import About from './Components/About';
+import Timeline from './Components/Timeline';
+import Projects from './Components/Projects';
+import Skills from './Components/Skills';
+import Sidebar from './Components/Sidebar';
 
 function App() {
 
