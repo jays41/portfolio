@@ -7,7 +7,6 @@ import github from '../assets/images/links/github.png';
 import Jay_Shah_CV from '../Jay_Shah_CV.pdf';
 import './About.css'
 import './CV.css';
-import './Base.css';
 import './Links.css';
 import info from '../Info.json';
 
