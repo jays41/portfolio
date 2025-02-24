@@ -1,6 +1,5 @@
 import './App.css';
 import './Components/Base.css';
-import ReactDOM from 'react-dom';
 import ContactForm from './Components/ContactForm';
 import About from './Components/About';
 import Timeline from './Components/Timeline';
