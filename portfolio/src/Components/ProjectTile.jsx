@@ -26,9 +26,8 @@ const ProjectTile = ({ heading, description, tags, link }) => {
                         className="modal-content"
                         onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking inside
                     >
-                        <h3>{heading}</h3>
-                        <p>{description}</p>
-                        {link ? <a href={linksMap[link]} target='_blank' rel='noreferrer'> here</a> : null}
+                        <h3 style={{color: "purple"}}>{heading}</h3>
+                        <p style={{color: "black"}}>{description} {link ? <a href={linksMap[link]} target='_blank' rel='noreferrer'> here</a> : null}</p>
                         <TagContainer tags={tags} />
                         <button onClick={closeModal}>Close</button>
                     </div>
