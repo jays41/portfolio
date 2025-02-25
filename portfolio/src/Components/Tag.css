@@ -10,7 +10,7 @@
   /* Tag: individual tag styling */
   .tag {
     background-color: #e0f7fa; /* Light blue background */
-    color: #00796b; /* Darker teal text */
+    color: #004466; /* Darker teal text */
     font-size: 12px; /* Small text size */
     padding: 4px 8px; /* Space inside the tag */
     border-radius: 16px; /* Rounded edges for the badge look */
