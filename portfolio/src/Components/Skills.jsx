@@ -75,7 +75,7 @@ const Skills = () => {
                 <li key={index}>{e}</li>
               ))}
             </ul>
-            <button onClick={()=>{setSkill(null)}}>Close</button>
+            <button onClick={()=>{setSkill(null);flipOver(false);}}>Close</button>
           </>
         )}
       </motion.div>
