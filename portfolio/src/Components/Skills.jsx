@@ -58,7 +58,7 @@ const Skills = () => {
 
       <div className="skill-detail-container">
       <div className={`skill-detail-card ${skill ? 'add-border' : ''} ${flipped ? 'flipped' : ''}`}>
-        <p className="skill-detail-card-front">testing the front of the card</p>
+        <p className="skill-detail-card-front">Hover over an icon to view details</p>
       <motion.div
         className={`skill-detail-card-back`}
         style={{
