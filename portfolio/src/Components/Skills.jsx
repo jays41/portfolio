@@ -45,7 +45,7 @@ const Skills = () => {
   return (
     <section className="section" id="Skills">
       <h2>TECHNICAL SKILLS</h2>
-      <button onClick={()=>(flipOver(!flipped))}>test button, currently: {flipped ? "back" : "front"}</button>
+      {/* <button onClick={()=>(flipOver(!flipped))}>test button, currently: {flipped ? "back" : "front"}</button> */}
       <div>
         <div className="images">
           {languages}
