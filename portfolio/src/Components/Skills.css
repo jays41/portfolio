@@ -57,9 +57,6 @@
   padding: 25px;
 }
 
-.skill-detail-card-front {
-}
-
 .skill-detail-card-back {
   transform: rotateX(180deg);
 }
