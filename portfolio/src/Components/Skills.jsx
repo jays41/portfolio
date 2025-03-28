@@ -46,6 +46,7 @@ const Skills = () => {
     <section className="section" id="Skills">
       <h2>TECHNICAL SKILLS</h2>
       {/* <button onClick={()=>(flipOver(!flipped))}>test button, currently: {flipped ? "back" : "front"}</button> */}
+      <div onMouseLeave={()=>flipOver(false)}>
       <div>
         <div className="images">
           {languages}
@@ -80,6 +81,7 @@ const Skills = () => {
         )}
       </motion.div>
 
+      </div>
       </div>
       </div>
     </section>
