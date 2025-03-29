@@ -25,10 +25,12 @@
 
 .about-leftItem {
     grid-column: 1;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .about-rightItem {
     grid-column: 2;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .about-leftItem:hover, .about-rightItem:hover {
