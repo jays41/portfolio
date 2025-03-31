@@ -7,7 +7,7 @@ import rps from '../assets/images/education/rps.png';
 const TimelineLeftItem = ({ name, duration, points, startDate }) => {
     
     const colourMap = {
-        "King’s College London": "red",
+        "King's College London": "red",
         "Roundwood Park School": "repeating-linear-gradient(135deg, red, red 10px, black 10px, black 30px)"
     };
 
@@ -18,7 +18,7 @@ const TimelineLeftItem = ({ name, duration, points, startDate }) => {
     );
 
     const imagesMap = {
-        "King’s College London": kcl,
+        "King's College London": kcl,
         "Roundwood Park School": rps
     };
 
