@@ -11,16 +11,19 @@ const Projects = () => {
     const x = useMotionValue(0)
     const opacity = useTransform(x, [-100, 0, 100], [0, 1, 0])
 
+    const allProjects = [...info.projects.personal, ...info.projects.kcap, ...info.projects.university];
+
 return (
     <section className="section" id="Projects">
         <motion.div drag={x} style={{ x, opacity }}>
         <h2>PROJECTS</h2>
-        <h3>Personal Projects</h3>
+        <Carousel content={allProjects} />
+        {/* <h3>Personal Projects</h3>
         <Carousel content={info.projects.personal} />
         <h3>King's Capital (King's Business Club) Projects</h3>
         <Carousel content={info.projects.kcap} />
         <h3>University Projects</h3>
-        <Carousel content={info.projects.university} />
+        <Carousel content={info.projects.university} /> */}
         </motion.div>
     </section>
 )

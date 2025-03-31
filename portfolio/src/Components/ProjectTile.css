@@ -1,36 +1,32 @@
-/* Basic Styling for the Tile */
 .tile {
-    background-color: #fff;  /* White background */
-    border-radius: 10px;  /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
-    padding: 20px;  /* Padding inside the tile */
-    max-width: 300px;  /* Limit the tile size */
-    text-align: center;  /* Center text horizontally */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for hover effects */
-    margin: 10px;  /* Space between tiles */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
 }
 
 .tile:hover {
-    transform: translateY(-5px);  /* Slight lift effect when hovered */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Heading Styling */
 .tile-heading {
-    font-size: 1.5rem;  /* Larger font size for the heading */
-    font-weight: bold;  /* Make the heading bold */
-    color: #333;  /* Dark grey color */
-    margin-bottom: 10px;  /* Space below the heading */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-/* Description Styling */
 .tile-description {
-    font-size: 1rem;  /* Normal font size for the description */
-    color: #659;  /* Lighter grey color for the description */
-    line-height: 1.5;  /* Increase line height for readability */
+    font-size: 1rem;
+    color: #659;
+    line-height: 1.5;
 }
 
-/* Modal Overlay */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -41,10 +37,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Ensure it appears above all other content */
+    z-index: 1000;
 }
 
-/* Modal Content */
 .modal-content {
     background: white;
     padding: 20px;
@@ -53,10 +48,9 @@
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: slide-down 0.3s ease-in-out;
-    z-index: 1010; /* Ensure it appears above the overlay */
+    z-index: 1010;
 }
 
-/* Slide Down Animation */
 @keyframes slide-down {
     from {
         transform: translateY(-20%);

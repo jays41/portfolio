@@ -29,7 +29,7 @@ const ProjectTile = ({ heading, description, tags, link }) => {
                         <h3 style={{color: "purple"}}>{heading}</h3>
                         <p style={{color: "black"}}>{description} {link ? <a href={linksMap[link]} target='_blank' rel='noreferrer'> here</a> : null}</p>
                         <TagContainer tags={tags} />
-                        <button onClick={closeModal}>Close</button>
+                        <button onClick={closeModal} style={{ marginTop: '20px', backgroundColor: 'purple' }}>Close</button>
                     </div>
                 </div>
             )}
