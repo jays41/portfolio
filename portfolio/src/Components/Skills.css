@@ -73,6 +73,16 @@
   transform: rotateX(180deg);
 }
 
+.skill-detail-card-back.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skill-detail-card-back.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .skill-detail-card.flipped {
   transform: rotateX(180deg);
   transition: transform 0.5s ease-in-out;

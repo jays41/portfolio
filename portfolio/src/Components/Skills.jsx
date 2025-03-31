@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import './Skills.css'
 import { motion } from "framer-motion";
 import info from '../Info.json'
@@ -33,19 +32,36 @@ const Skills = () => {
   const [skill, setSkill] = useState(null);
   const [skillType, setSkillType] = useState(null);
   const [flipped, flipOver] = useState(false);
+  const [fade, setFade] = useState(false);
 
   const languages = languages_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} className={skill===image.title ? 'selected' : ''} style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{setSkill(image.title); setSkillType('language'); flipOver(true);}} />
+    <img key={index} src={image.src} alt={image.title}
+    title={image.title} className={skill===image.title ? 'selected' : ''}
+    style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }}
+    onMouseEnter={()=>{
+      setFade(true);
+      const timeout = setTimeout(() => {
+        setSkill(image.title);
+        setFade(false);
+      }, 250);
+      setSkillType('language'); flipOver(true);}} />
   ));
   const frameworks = framework_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title} title={image.title} className={skill===image.title ? 'selected' : ''} style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }} onMouseEnter={()=>{setSkill(image.title); setSkillType('framework'); flipOver(true);}} />
+    <img key={index} src={image.src} alt={image.title}
+    title={image.title} className={skill===image.title ? 'selected' : ''}
+    style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }}
+    onMouseEnter={()=>{
+      setFade(true);
+      const timeout = setTimeout(() => {
+        setSkill(image.title);
+        setFade(false);
+      }, 250);
+      setSkillType('framework'); flipOver(true);}} />
   ));
-
 
   return (
     <section className="section" id="Skills">
       <h2>TECHNICAL SKILLS</h2>
-      {/* <button onClick={()=>(flipOver(!flipped))}>test button, currently: {flipped ? "back" : "front"}</button> */}
       <div onMouseLeave={()=>{setSkill(null);flipOver(false);}}>
       <div>
         <div className="images">
@@ -61,11 +77,12 @@ const Skills = () => {
       <div className={`skill-detail-card ${skill ? 'add-border' : ''} ${flipped ? 'flipped' : ''}`}>
         <p className="skill-detail-card-front">Hover over an icon to view details</p>
       <motion.div
-        className={`skill-detail-card-back`}
+        className={`skill-detail-card-back ${fade ? 'fade-out' : 'fade-in'}`}
         style={{
           position: "relative",
           transformStyle: "preserve-3d",
-          transition: "transform 0.75s ease-in-out",
+          transition: "opacity 0.25s ease-in-out, transform 0.75s ease-in-out",
+          opacity: fade ? 0 : 1,
         }}
       >
         {skill && (
