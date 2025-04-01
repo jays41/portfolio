@@ -87,13 +87,13 @@ const Skills = () => {
       >
         {skill && (
           <>
-            <h1>{skill}</h1>
+            <h1 style={{ marginBottom: '25px' }}>{skill}</h1>
             <ul>
               {info.skills[skill]?.map((e, index) => (
                 <li key={index}>{e}</li>
               ))}
             </ul>
-            <button onClick={()=>{setSkill(null);flipOver(false);}}>Close</button>
+            <button onClick={()=>{setSkill(null);flipOver(false);}} style={{ marginTop: '25px' }}>Close</button>
           </>
         )}
       </motion.div>
