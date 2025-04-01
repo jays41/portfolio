@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { PopUpModal } from './ProjectTile';
 import './TimelineItem.css';
 import kcl from '../assets/images/education/kcl.png';
 import rps from '../assets/images/education/rps.png';
+import info from '../Info.json';
 
 const TimelineLeftItem = ({ name, duration, points, startDate }) => {
+
+    const [expanded, setExpanded] = useState(false);
     
     const colourMap = {
         "King's College London": "red",
@@ -12,9 +16,7 @@ const TimelineLeftItem = ({ name, duration, points, startDate }) => {
     };
 
     const allPoints = (
-        <ul>
-            {points.map((e) => <li>{e}</li>)}
-        </ul>
+        points.map((e) => <li>{e}</li>)
     );
 
     const imagesMap = {
@@ -22,8 +24,19 @@ const TimelineLeftItem = ({ name, duration, points, startDate }) => {
         "Roundwood Park School": rps
     };
 
+    console.log(info.education[0].modules)
+
+    const modulesInfo = (
+        <ul>
+            {info.education[0].modules.map(e => <li>{e}</li>)}
+        </ul>
+    );
+
   return (
     <div className="container">
+        {expanded &&
+            <PopUpModal {...{ expanded, setExpanded }} heading={"Modules Taken"} description={modulesInfo} />
+        }
         <div className="timeline-item side-by-side leftItem">
         <motion.div
             initial="hidden"
@@ -39,7 +52,10 @@ const TimelineLeftItem = ({ name, duration, points, startDate }) => {
                 <time className="hidden">{startDate}</time>
                 <h4>{name}</h4>
                 <h4>{duration}</h4>
-                {allPoints}
+                <ul>
+                    {allPoints}
+                    {name === "King's College London" ? <a onClick={()=>setExpanded(true)}>See list of modules here</a> : null}
+                </ul>
             </div>
         </motion.div>
         <div className="stripe" style={{ background: colourMap[name], width: '5px' }}></div>
