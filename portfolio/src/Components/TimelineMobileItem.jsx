@@ -4,8 +4,6 @@ import './TimelineItem.css';
 import ashbury from '../assets/images/experience/ashbury.webp';
 import valtech from '../assets/images/experience/valtech.png';
 import armalytix from '../assets/images/experience/armalytix.png';
-import kumon from '../assets/images/experience/kumon.png';
-import tutoring from '../assets/images/experience/tutoring.png';
 import kcl from '../assets/images/education/kcl.png';
 import rps from '../assets/images/education/rps.png';
 
@@ -15,8 +13,6 @@ const TimelineMobileItem = ({ type, name, title, location, date, duration, point
         'Ashbury Global': ashbury,
         'Valtech': valtech,
         'Armalytix': armalytix,
-        'Kumon': kumon,
-        'Private Tutoring': tutoring,
         "King’s College London": kcl,
         "Roundwood Park School": rps
     };
@@ -59,7 +55,3 @@ const TimelineMobileItem = ({ type, name, title, location, date, duration, point
 }
 
 export default TimelineMobileItem;
-
-
-// type={"education"} name duration points
-// type={"work"} name title location date points
