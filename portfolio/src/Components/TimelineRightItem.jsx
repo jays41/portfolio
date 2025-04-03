@@ -13,16 +13,12 @@ const TimelineRightItem = ({ name, title, location, date, points, startDate }) =
         "Ashbury Global": "linear-gradient(to bottom, orange, yellow, green)",
         "Valtech": "black",
         "Armalytix": "#93002C",
-        "Kumon": "#33B5E5",
-        "Private Tutoring": "grey"
     };
 
     const imagesMap = {
         'Ashbury Global': ashbury,
         'Valtech': valtech,
         'Armalytix': armalytix,
-        'Kumon': kumon,
-        'Private Tutoring': tutoring
     };
 
     const allPoints = (
