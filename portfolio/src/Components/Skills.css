@@ -85,6 +85,6 @@
 
 .skill-detail-card.flipped {
   transform: rotateX(180deg);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.7s ease-in-out;
   transition-delay: 0.4s;
 }
