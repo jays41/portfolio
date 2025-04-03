@@ -4,8 +4,6 @@ import './TimelineItem.css';
 import ashbury from '../assets/images/experience/ashbury.webp';
 import valtech from '../assets/images/experience/valtech.png';
 import armalytix from '../assets/images/experience/armalytix.png';
-import kumon from '../assets/images/experience/kumon.png';
-import tutoring from '../assets/images/experience/tutoring.png';
 
 const TimelineRightItem = ({ name, title, location, date, points, startDate }) => {
 
