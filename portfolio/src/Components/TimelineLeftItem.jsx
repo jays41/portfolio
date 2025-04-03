@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { PopUpModal } from './ProjectTile';
+import PopUpModal from './PopUpModal';
 import './TimelineItem.css';
 import kcl from '../assets/images/education/kcl.png';
 import rps from '../assets/images/education/rps.png';
