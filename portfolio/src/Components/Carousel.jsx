@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import './Carousel.css';
 import ProjectTile from './ProjectTile';
 
-const Carousel = ({ content }) => {
+const Carousel = ({ content, showcase, updateShowcase }) => {
   const carouselRef = useRef(null);
 
   const scrollLeft = () => {
@@ -26,14 +26,12 @@ const Carousel = ({ content }) => {
   return (
     <div className="carousel-wrapper" style={{ position: 'relative' }}>
       <div className="carousel-container" ref={carouselRef}>
-      {content.map(({ heading, description, tags, link }) => (
-        link ?
-        <ProjectTile key={heading} heading={heading} description={description} tags={tags} link={link} />
-        :
-        <ProjectTile key={heading} heading={heading} description={description} tags={tags} />
-      ))}
+        {content.map((project) => (
+          project.index !== showcase ? (
+            <ProjectTile {...project} key={project.index} updateShowcase={updateShowcase} />
+          ) : null
+        ))}
       </div>
-
 
       <div className="carousel-nav carousel-nav-left" onClick={scrollLeft}>
         &#10094;
