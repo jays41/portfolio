@@ -1,4 +1,5 @@
 import React from 'react';
+import './ProjectTile.css';
 import TagContainer from './TagContainer';
 import finbert_paper from '../finbert_paper.pdf'
 
@@ -24,7 +25,7 @@ const ShowcaseProject = ({ idx, project }) => {
     };
 
   return (
-    <div style={{ background: "white" }}>
+    <div>
         <h3 style={{color: "purple", marginBottom: '15px'}}>{project.heading}</h3>
         {updateDescription(project.description, project.link)}
         <TagContainer tags={project.tags} />

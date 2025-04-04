@@ -51,6 +51,33 @@
     z-index: 1010;
 }
 
+.tile.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tile.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.showcase {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.showcase.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
 @keyframes slide-down {
     from {
         transform: translateY(-20%);
