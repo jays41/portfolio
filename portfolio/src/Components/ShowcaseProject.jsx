@@ -1,7 +1,8 @@
 import React from 'react';
 import './ProjectTile.css';
 import TagContainer from './TagContainer';
-import finbert_paper from '../finbert_paper.pdf'
+import finbert_paper from '../finbert_paper.pdf';
+import vite from '../assets/react.svg';
 
 const ShowcaseProject = ({ idx, project }) => {
 
@@ -25,11 +26,16 @@ const ShowcaseProject = ({ idx, project }) => {
     };
 
   return (
-    <div>
-        <h3 style={{color: "purple", marginBottom: '15px'}}>{project.heading}</h3>
-        {updateDescription(project.description, project.link)}
-        <TagContainer tags={project.tags} />
-    </div>
+    <>
+        <div className="showcase-image">
+            <img src={vite} />
+        </div>
+        <div className="showcase-content">
+            <h3 style={{color: "purple", marginBottom: '15px'}}>{project.heading}</h3>
+            {updateDescription(project.description, project.link)}
+            <TagContainer tags={project.tags} />
+        </div>
+    </>
   )
 }
 
