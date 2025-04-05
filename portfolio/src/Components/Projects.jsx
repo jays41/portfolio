@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import ProjectTile from './ProjectTile';
-import Carousel from './Carousel';
+import ProjectsShelf from './ProjectsShelf';
 import info from '../Info.json';
 import finbert_paper from '../finbert_paper.pdf';
 import ShowcaseProject from './ShowcaseProject';
@@ -32,8 +32,7 @@ return (
     <section className="section" id="Projects">
         <motion.div drag={x} style={{ x, opacity }}>
         <h2>PROJECTS</h2>
-        <Carousel content={allProjects} showcase={showcase} updateShowcase={updateShowcase} />
-        <p>{shelf}</p>
+        <ProjectsShelf content={allProjects} showcase={showcase} updateShowcase={updateShowcase} />
         <div className={`showcase ${fade ? 'fade-out' : 'fade-in'}`}>
             <ShowcaseProject idx={showcase} project={info.projects[showcase]} />
         </div>

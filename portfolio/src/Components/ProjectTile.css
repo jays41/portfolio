@@ -69,8 +69,15 @@
     margin: 50px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: grid;
-    grid-template-columns: 50%;
     align-items: center;
+}
+
+.showcase.two-items {
+    grid-template-columns: 50%;
+}
+
+.showcase.three-items {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .showcase.fade-out {
@@ -83,8 +90,12 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-.showcase-image {
+.showcase-image-left {
     grid-column: 1;
+}
+
+.showcase-image-right {
+    grid-column: 3;
 }
 
 .showcase-content {

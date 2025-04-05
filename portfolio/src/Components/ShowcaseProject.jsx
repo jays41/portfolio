@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProjectTile.css';
 import TagContainer from './TagContainer';
 import finbert_paper from '../finbert_paper.pdf';
 import vite from '../assets/react.svg';
+import finbert from '../assets/images/projects/finbert_paper.png';
+import makcorp from '../assets/images/projects/makcorp_website.png';
+import sentiment_analysis from '../assets/images/projects/sentiment_analysis_website.png';
 
 const ShowcaseProject = ({ idx, project }) => {
 
+    const [leftImage, setLeftImage] = useState(null);
+    const [rightImage, setRightImage] = useState(null);
+
     const linksMap = {
         "finbert_paper": finbert_paper
-    }
+    };
+
+    const imagesMap = {
+        "finbert_paper": [finbert, sentiment_analysis],
+        "makcorp": [makcorp]
+    };
+
+    useEffect(() => {
+        const images = imagesMap[project.link] || [vite];
+        if (images.length === 2) {
+            setLeftImage(images[0]);
+            setRightImage(images[1]);
+        } else {
+            setLeftImage(images[0]);
+            setRightImage(null);
+        }
+    }, [project]);
 
     const updateDescription = (description, link) => {
         const start = description.indexOf("#");
@@ -26,16 +48,21 @@ const ShowcaseProject = ({ idx, project }) => {
     };
 
   return (
-    <>
-        <div className="showcase-image">
-            <img src={vite} />
+    <span className={`showcase ${rightImage ? 'three' : 'two'}-items`}>
+        <div className={"showcase-image-left"}>
+            <img src={project.link ? leftImage : vite} />
         </div>
         <div className="showcase-content">
             <h3 style={{color: "purple", marginBottom: '15px'}}>{project.heading}</h3>
             {updateDescription(project.description, project.link)}
             <TagContainer tags={project.tags} />
         </div>
-    </>
+        {rightImage ?
+            <div className={"showcase-image-right"}>
+                <img src={project.link ? rightImage : vite} />
+            </div>
+        : null}
+    </span>
   )
 }
 
