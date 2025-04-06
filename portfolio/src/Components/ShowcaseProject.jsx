@@ -6,6 +6,8 @@ import vite from '../assets/react.svg';
 import finbert from '../assets/images/projects/finbert_paper.png';
 import makcorp from '../assets/images/projects/makcorp_website.png';
 import sentiment_analysis from '../assets/images/projects/sentiment_analysis_website.png';
+import qepm_presentation from '../assets/images/projects/qepm_presentation.png';
+import qepm_book from '../assets/images/projects/qepm_book.png';
 
 const ShowcaseProject = ({ idx, project }) => {
 
@@ -18,7 +20,8 @@ const ShowcaseProject = ({ idx, project }) => {
 
     const imagesMap = {
         "finbert_paper": [finbert, sentiment_analysis],
-        "makcorp": [makcorp]
+        "makcorp": [makcorp],
+        "qepm": [qepm_book, qepm_presentation]
     };
 
     useEffect(() => {
