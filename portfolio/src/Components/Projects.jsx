@@ -33,7 +33,7 @@ return (
         <motion.div drag={x} style={{ x, opacity }}>
         <h2>PROJECTS</h2>
         <ProjectsShelf content={allProjects} showcase={showcase} updateShowcase={updateShowcase} />
-        <div className={`showcase ${fade ? 'fade-out' : 'fade-in'}`}>
+        <div className={`showcase-container ${fade ? 'fade-out' : 'fade-in'}`}>
             <ShowcaseProject idx={showcase} project={info.projects[showcase]} />
         </div>
         </motion.div>
