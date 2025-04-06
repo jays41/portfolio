@@ -77,11 +77,11 @@
 }
 
 .showcase.two-items {
-    grid-template-columns: 50%;
+    grid-template-columns: 30%;
 }
 
 .showcase.three-items {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 25% 50% 25%;
 }
 
 .showcase-container {
