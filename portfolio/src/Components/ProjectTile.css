@@ -67,7 +67,8 @@
     padding: 20px;
     text-align: center;
     border-radius: 20px;
-    height: 40vh;
+    height: auto;
+    max-height: 40vh;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
@@ -77,7 +78,7 @@
 }
 
 .showcase.two-items {
-    grid-template-columns: 30%;
+    grid-template-columns: 30% 70%;
 }
 
 .showcase.three-items {
@@ -100,14 +101,29 @@
 
 .showcase-image-left {
     grid-column: 1;
+    max-height: 35vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .showcase-image-right {
     grid-column: 3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
 }
 
 .showcase-content {
     grid-column: 2;
+}
+
+.showcase img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 @keyframes slide-down {
