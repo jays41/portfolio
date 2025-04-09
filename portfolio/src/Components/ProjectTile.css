@@ -67,8 +67,7 @@
     padding: 20px;
     text-align: center;
     border-radius: 20px;
-    height: auto;
-    max-height: 40vh;
+    height: 40vh;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
@@ -105,7 +104,7 @@
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .showcase-image-right {
@@ -113,7 +112,7 @@
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: center;
 }
 
 .showcase-content {
@@ -121,9 +120,10 @@
 }
 
 .showcase img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 80%;
     object-fit: contain;
+    margin: auto;
 }
 
 @keyframes slide-down {
