@@ -15,7 +15,8 @@ const ShowcaseProject = ({ idx, project }) => {
     const [rightImage, setRightImage] = useState(null);
 
     const linksMap = {
-        "finbert_paper": finbert_paper
+        "finbert_paper": finbert_paper,
+        "makcorp": "https://teampuzzled.vercel.app/"
     };
 
     const imagesMap = {
@@ -36,6 +37,9 @@ const ShowcaseProject = ({ idx, project }) => {
     }, [project]);
 
     const updateDescription = (description, link) => {
+        if (!!!link) {
+            return <p style={{color: "white"}}>{description}</p>
+        }
         const start = description.indexOf("#");
         const end = description.indexOf("#", start + 1);
         const content = description.substring(start+1, end);
@@ -43,7 +47,7 @@ const ShowcaseProject = ({ idx, project }) => {
         const nextContent = description.substring(end + 1, description.length);
         return (
             <div>
-                <p style={{color: "black"}}>{previousContent}
+                <p style={{color: "white"}}>{previousContent}
                 <a href={linksMap[link]} target='_blank' rel='noreferrer'>{content}</a>
                 {nextContent}</p>
             </div>
@@ -56,7 +60,7 @@ const ShowcaseProject = ({ idx, project }) => {
             <img src={project.link ? leftImage : vite} />
         </div>
         <div className="showcase-content">
-            <h3 style={{color: "purple", marginBottom: '15px'}}>{project.heading}</h3>
+            <h3 style={{color: "#00bfae", marginBottom: '15px'}}>{project.heading}</h3>
             {updateDescription(project.description, project.link)}
             <TagContainer tags={project.tags} />
         </div>
