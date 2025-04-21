@@ -1,4 +1,5 @@
 import React from 'react';
+import './Modal.css';
 
 const PopUpModal = ({ expanded, setExpanded, heading, description, tags=[], link='' }) => {
 
