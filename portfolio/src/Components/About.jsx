@@ -10,24 +10,6 @@ import './CV.css';
 import './Links.css';
 import info from '../Info.json';
 
-const MotionSection = ({ content }) => (
-  
-    <motion.div
-      className="md:w-1/3 mt-10"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.3 }}
-      variants={{
-        hidden: { opacity: 0, y: -50 },
-        visible: { opacity: 1, y: 0 },
-      }}
-    >
-  
-      <p className="mt-3">{content}</p>
-    </motion.div>
-  );
-
 const About = () => {
   const useIsMobile = () => {
 
@@ -58,9 +40,6 @@ const isMobile = useIsMobile();
         .catch((err) => console.error('Download failed', err));
     }
 
-    const [showingLinkedIn, setShowingLinkedIn] = useState(false);
-    const [showingGitHub, setShowingGitHub] = useState(false);
-
     return (
         <section className="section" id="About">
             <header style={{ 'margin-top': '30px' }}>
@@ -71,7 +50,8 @@ const isMobile = useIsMobile();
                 <p>{info.description}</p>
             </div>
         <div className={ isMobile ? 'on-top' : 'about-container side-by-side'}>
-        <div className={`centre ${ isMobile ? 'about-card-mobile' : 'about-card about-leftItem'}`}>My CV
+        <div className={`centre ${ isMobile ? 'about-card-mobile' : 'about-card about-leftItem'}`}>
+            <h2>My CV</h2>
             <span className="cv-button" type="button" onClick={handleDownload}>
             <span className="cv-button__text">Download</span>
             <span className="cv-button__icon">
@@ -89,15 +69,13 @@ const isMobile = useIsMobile();
 
         <div className={`side-by-side ${ isMobile ? 'about-card-mobile' : 'about-card about-rightItem'}`}>
           <div className="images">
-            <a href={info.links.linkedin_url} target="_blank" rel="noopener noreferrer" onMouseEnter={()=>{setShowingLinkedIn(true)}} onMouseLeave={()=>{setShowingLinkedIn(false)}}>
+            <a href={info.links.linkedin_url} target="_blank" rel="noopener noreferrer">
                 <img src={linkedin} alt="LinkedIn" />
-                {showingLinkedIn ? <MotionSection content="LinkedIn" /> : null}
             </a>
           </div>
           <div className="images">
-            <a href={info.links.github_url} target="_blank" rel="noopener noreferrer" onMouseEnter={()=>{setShowingGitHub(true)}} onMouseLeave={()=>{setShowingGitHub(false)}}>
+            <a href={info.links.github_url} target="_blank" rel="noopener noreferrer">
                 <img src={github} alt="GitHub" />
-                {showingGitHub ? <MotionSection content="GitHub" /> : null}
             </a>
           </div>
         </div>
