@@ -75,7 +75,7 @@ html, body {
 }
 
 .btn {
-  color: purple;
+  color: #00bfae;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
@@ -98,7 +98,7 @@ html, body {
   top: 0;
   left: -40px;
   transform: skewX(45deg);
-  background-color: purple;
+  background-color: #029286;
   z-index: -1;
   transition: all 1s;
 }
@@ -110,7 +110,7 @@ html, body {
 .btn:focus,
 .btn:focus-visible {
   color: white;
-  background-color: purple;
+  background-color: #00bfae;
 }
 
 button {
