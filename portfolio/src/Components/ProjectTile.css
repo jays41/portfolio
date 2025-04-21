@@ -1,69 +1,37 @@
 .tile {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #273656;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(15, 20, 35, 0.301);
     padding: 20px;
     width: 300px;
     height: 300px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.4s ease-in-out;;
 }
 
 .tile:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px #747bff;
 }
 
 .tile-heading {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: #f7f5f5;
     margin-bottom: 10px;
-}
-
-.tile-description {
-    font-size: 1rem;
-    color: #659;
-    line-height: 1.5;
-}
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: slide-down 0.3s ease-in-out;
-    z-index: 1010;
 }
 
 .tile.fade-out {
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
 }
 
 .tile.fade-in {
     opacity: 1;
-    transition: opacity 0.3s ease-in-out;
 }
 
 .showcase {
-    background-color: #fff;
+    background-color: #273656;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
