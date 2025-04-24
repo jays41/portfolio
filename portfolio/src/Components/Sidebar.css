@@ -10,7 +10,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     color: white;
     z-index: 1000;
-    transition: width 0.3s ease, height 0.3s ease; /* Smooth shrinking animation */
+    transition: width 0.3s ease, height 0.3s ease;
   }
   
   .sidebar.collapsed {
