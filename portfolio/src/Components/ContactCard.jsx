@@ -1,6 +1,6 @@
 // import React, { useState } from 'react';
 // import { motion } from 'framer-motion'; 
-// import emailjs from '@emailjs/browser'; // Import EmailJS
+// import emailjs from '@emailjs/browser';
 import './ContactCard.css';
 
 const ContactCard = () => {
