@@ -5,8 +5,8 @@ import ProjectTile from './ProjectTile';
 const ProjectsShelf = ({ content, showcase, updateShowcase }) => {
 
   return (
-    <div className="carousel-wrapper" style={{ margin: 'auto' }}>
-      <div className="carousel-container">
+    <div className="shelf-wrapper" style={{ margin: 'auto' }}>
+      <div className="shelf-container">
         {content.map((project) => (
           project.index !== showcase ? (
             <ProjectTile {...project} key={project.index} updateShowcase={updateShowcase} />
