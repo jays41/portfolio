@@ -23,9 +23,16 @@
   display: none;
 }
 
-.skill-detail-container {
+.skill-detail-container.standard {
   width: 1000px;
   height: 400px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.skill-detail-container.mobile {
+  width: 90vw;
+  height: 90vh;
   padding-top: 20px;
   margin: 0 auto;
 }
@@ -69,8 +76,12 @@
   padding: 25px;
 }
 
-.skill-detail-card-back {
+.skill-detail-card-back.standard {
   transform: rotateX(180deg);
+}
+
+.skill-detail-card-back.mobile {
+  transform: rotateY(180deg);
 }
 
 .skill-detail-card-back.fade-out {
@@ -83,8 +94,14 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.skill-detail-card.flipped {
+.skill-detail-card.standard.flipped {
   transform: rotateX(180deg);
+  transition: transform 0.7s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.skill-detail-card.mobile.flipped {
+  transform: rotateY(180deg);
   transition: transform 0.7s ease-in-out;
   transition-delay: 0.4s;
 }

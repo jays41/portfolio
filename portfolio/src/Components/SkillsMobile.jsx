@@ -13,15 +13,13 @@ import django from '../assets/images/skills/django.png';
 import tf from '../assets/images/skills/tf.png';
 import scala from '../assets/images/skills/scala.png'
 
-const Skills = () => {
-  const languages_images = [
+const SkillsMobile = () => {
+  const images = [
     {src: python, title: 'Python'},
     {src: javascript, title: 'JavaScript'},
     {src: java, title: 'Java'},
     {src: cpp, title: 'C++'},
-    {src: scala, title: 'Scala'}
-  ];
-  const framework_images = [
+    {src: scala, title: 'Scala'},
     {src: react, title: 'React'},
     {src: node, title: 'Node'},
     {src: django, title: 'Django'},
@@ -33,23 +31,11 @@ const Skills = () => {
   const [flipped, flipOver] = useState(false);
   const [fade, setFade] = useState(false);
 
-  const languages = languages_images.map((image, index) => (
+  const languages = images.map((image, index) => (
     <img key={index} src={image.src} alt={image.title}
     title={image.title} className={skill===image.title ? 'selected' : ''}
     style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }}
-    onMouseEnter={()=>{
-      setFade(true);
-      const timeout = setTimeout(() => {
-        setSkill(image.title);
-        setFade(false);
-      }, 250);
-      flipOver(true);}} />
-  ));
-  const frameworks = framework_images.map((image, index) => (
-    <img key={index} src={image.src} alt={image.title}
-    title={image.title} className={skill===image.title ? 'selected' : ''}
-    style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }}
-    onMouseEnter={()=>{
+    onClick={()=>{
       setFade(true);
       const timeout = setTimeout(() => {
         setSkill(image.title);
@@ -62,21 +48,19 @@ const Skills = () => {
     <section className="section" id="Skills">
       <h2>TECHNICAL SKILLS</h2>
       <div onMouseLeave={()=>{setSkill(null);flipOver(false);}}>
-      <div>
+
+      <div className="skill-detail-container mobile">
+      <div className={`skill-detail-card mobile ${skill ? 'add-border' : ''} ${flipped ? 'flipped' : ''}`}>
+        <div className={`skill-detail-card-front ${fade ? 'fade-out' : 'fade-in'}`}>
+          <p>Click on an icon to view details</p>
+          <div>
         <div className="images">
           {languages}
         </div>
-
-        <div className="images">
-          {frameworks}
-        </div>
       </div>
-
-      <div className="skill-detail-container standard">
-      <div className={`skill-detail-card standard ${skill ? 'add-border' : ''} ${flipped ? 'flipped' : ''}`}>
-        <p className="skill-detail-card-front">Hover over an icon to view details</p>
+        </div>
       <motion.div
-        className={`skill-detail-card-back standard ${fade ? 'fade-out' : 'fade-in'}`}
+        className={`skill-detail-card-back mobile ${fade ? 'fade-out' : 'fade-in'}`}
         style={{
           position: "relative",
           transformStyle: "preserve-3d",
@@ -104,4 +88,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default SkillsMobile

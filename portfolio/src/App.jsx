@@ -5,6 +5,7 @@ import About from './Components/About';
 import Timeline from './Components/Timeline';
 import Projects from './Components/Projects';
 import Skills from './Components/Skills';
+import SkillsMobile from './Components/SkillsMobile';
 import Sidebar from './Components/Sidebar';
 import useIsMobile from './hooks/useIsMobile';
 
@@ -16,7 +17,7 @@ function App() {
       {!isMobile ? <Sidebar /> : null}
       <main className="scroll-container">
         <About />
-        <Skills />
+        {!isMobile ? <Skills /> : <SkillsMobile />}
         <Timeline />
         <Projects />
         {/* <ContactForm /> */}
