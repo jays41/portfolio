@@ -5,7 +5,7 @@ import './Timeline.css';
 import TimelineLeftItem from './TimelineLeftItem';
 import TimelineRightItem from './TimelineRightItem';
 import TimelineMobileItem from './TimelineMobileItem';
-import info from '../Info.json';
+import info from '../../public/data/Info.json';
 
 const Timeline = () => {
 

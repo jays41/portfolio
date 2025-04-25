@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Skills.css'
 import { motion } from "framer-motion";
-import info from '../Info.json'
+import info from '../../public/data/Info.json'
 import python from '../assets/images/skills/python.png';
 import javascript from '../assets/images/skills/javascript.png';
 import java from '../assets/images/skills/java.png';

@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import download from "downloadjs";
 import linkedin from '../assets/images/links/linkedin.png';
 import github from '../assets/images/links/github.png';
-import Jay_Shah_CV from '../Jay_Shah_CV.pdf';
+import Jay_Shah_CV from '../../public/docs/Jay_Shah_CV.pdf';
 import './About.css'
 import './CV.css';
 import './Links.css';
-import info from '../Info.json';
+import info from '../../public/data/Info.json';
 
 const About = () => {
   const useIsMobile = () => {
@@ -32,7 +32,7 @@ const About = () => {
 const isMobile = useIsMobile();
 
     const handleDownload = () => {
-        const url = 'src/Jay_Shah_CV.pdf';
+        const url = '../../public/docs/Jay_Shah_CV.pdf';
         const fileName = 'Jay_Shah_CV';
         fetch(url)
         .then((response) => response.blob())

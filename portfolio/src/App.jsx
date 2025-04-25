@@ -17,7 +17,7 @@ function App() {
         <Skills />
         <Timeline />
         <Projects />
-        <ContactForm />
+        {/* <ContactForm /> */}
       </main>
     </>
   )

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ProjectTile.css';
 import TagContainer from './TagContainer';
-import finbert_paper from '../finbert_paper.pdf';
+import finbert_paper from '../../public/docs/finbert_paper.pdf';
 import vite from '../assets/react.svg';
 import finbert from '../assets/images/projects/finbert_paper.png';
 import makcorp from '../assets/images/projects/makcorp_website.png';

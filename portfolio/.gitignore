@@ -30,10 +30,7 @@ dist-ssr
 *.sw?
 
 # Files
-Info.json
 ToDo.txt
-Jay_Shah_CV.pdf
-finbert_paper.pdf
 
 # TypeScript build artifacts
 *.tsbuildinfo

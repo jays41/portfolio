@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import ProjectTile from './ProjectTile';
 import ProjectsShelf from './ProjectsShelf';
-import info from '../Info.json';
-import finbert_paper from '../finbert_paper.pdf';
+import info from '../../public/data/Info.json';
+import finbert_paper from '../../public/docs/finbert_paper.pdf';
 import ShowcaseProject from './ShowcaseProject';
 
 const Projects = () => {

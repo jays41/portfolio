@@ -1,0 +1,146 @@
+{
+  "name": "Jay Shah",
+  "description": "Software engineering student at King's College London with experience in full-stack development, data analysis, and machine learning.",
+  "projects": [
+      {
+        "index": 0,
+        "heading": "Financial Dashboard with Stock Predictor",
+        "description": "Developed an LSTM model in TensorFlow to forecast stock prices. Built a sentiment analysis tool for evaluating investor sentiment based on news and social media. Designed a UI with JavaScript and a backend in Python using Flask.",
+        "tags": ["Python", "Machine Learning", "Finance", "JavaScript", "Flask"]
+      },
+      {
+        "index": 1,
+        "heading": "Recipe Tracker / Meal Planner",
+        "description": "Developed a full-stack meal planning application with CRUD functionality using React and Node.js. Implemented a 30-day meal planning feature with automated shopping list emails. Created a recommendation API in Flask using machine learning-based clustering to personalize meal suggestions based on user preferences, dietary restrictions, and past interactions.",
+        "tags": ["JavaScript", "React", "Node.js", "Machine Learning", "Python", "Flask"]
+      },
+      {
+        "index": 2,
+        "heading": "Financial Sentiment Analysis Research & Platform",
+        "description": "Co-authored a #research paper# exploring FinBERT applications for sentiment analysis in financial markets. Independently developed and deployed a web-based sentiment analysis tool now actively used by society members as a decision support system for investment decisions and market research.",
+        "link": "finbert_paper",
+        "tags": ["NLP", "Python", "Finance", "Research"]
+      },
+      {
+        "index": 3,
+        "heading": "Quantitative Equity Portfolio Management Project – Deutsche Bank Collaboration",
+        "description": "Invited by the Global Head of Quantitative Investment Solutions Research at Deutsche Bank to implement strategies from Chincarini & Kim's 'Quantitative Equity Portfolio Management'. Developed and back-tested two systematic portfolio models: a market-neutral strategy eliminating market risk while maximizing alpha, and a beta-neutral strategy with strategic factor tilts to enhance returns. Presented findings to Managing Directors and VPs in Deutsche Bank's Quant team.",
+        "tags": ["Machine Learning", "Python", "Finance"]
+      },
+      {
+        "index": 4,
+        "heading": "Customising a client's data warehouse interface",
+        "description": "Used React and Django to create a custom #website# from scratch for our clients MakCorp.",
+        "link": "makcorp",
+        "tags": ["JavaScript", "React", "Python", "Django"]
+      }
+  ],
+  "skills": {
+    "Python": [
+      "Started coding in Python in Year 6 in code club (this was my first experience of programming other than Scratch and Kodu)",
+      "Created a variety of projects from stock price predictors and recommendation APIs to controlling robots",
+      "I have used Python in the workplace in Armalytix for machine learning research and scripting and again for scripting purposes when working at Ashbury Global"
+    ],
+    "JavaScript": ["Used for frontend development in various projects including personal portfolio and internship work at Valtech"],
+    "Java": [
+        "Learnt during 'Programming Practices and Applications' module in my first year of university",
+        "Experience through university coursework and personal projects"],
+    "C++": [
+        "Learnt during 'Practical Experiences of Programming' module in my second year of university",
+        "Created a range of mini-projects during this module such as: a countdown solver, a string construction optimizer, and a puzzle solver for a Soduku-like game",
+        "Implemented quantitative trading strategies as a part of my work at King's Capital (a student investment fund)"
+    ],
+    "Scala": [
+      "Learnt during 'Practical Experiences of Programming' module in my second year of university",
+      "Created a range of mini-projects during this module such as: a compiler, a regular expression matcher, and an implementation of the board game 'Shogun'"
+    ],
+    "React": [
+      "This website is written in React!",
+      "Used React for developing frontend components when I was working at Valtech",
+      "Used for a range of personal and client projects (e.g. when creating a data warehouse interface for MakCorp)"
+    ],
+    "Node": ["Backend development for Meal Planner project"],
+    "Django": ["Created tutoring website and client data warehouse interface projects"],
+    "HTML/CSS": ["Frontend web development skills used across multiple projects"],
+    "TensorFlow": ["Used for machine learning projects including stock price prediction and transaction categorization at Armalytix"]
+  },
+  "experience": [
+    {
+      "name": "Ashbury Global",
+      "title": "Data Administrator",
+      "location": "London / Remote",
+      "startDate": "2024-07-01",
+      "date": "July – September 2024",
+      "points": [
+        "Cleansed and validated client data for major retailers such as Aldi, Tesco, Waitrose, and Greggs, ensuring accuracy and readiness for migration to the company's new system.",
+        "Automated data validation using Python, improving efficiency by up to 12 times compared to the manual approach previously used by the team."
+      ]
+    },
+    {
+      "name": "Valtech",
+      "title": "Software Developer Intern",
+      "location": "London",
+      "startDate": "2024-06-10",
+      "date": "June - July 2024",
+      "points": [
+        "Collaborated in a team developing front-end components for Ocado Technologies.",
+        "Independently designed and implemented new features using React.js.",
+        "Critiqued and reviewed code solutions proposed by team members before deployment.",
+        "Designed tests using the Jest framework with TypeScript to guarantee code correctness and reliability."
+      ]
+    },
+    {
+      "name": "Armalytix",
+      "title": "Software Developer Work Experience",
+      "location": "London",
+      "startDate": "2022-05-16",
+      "date": "May 2022",
+      "points": [
+        "Conducted research and development into the use of machine learning algorithms with TensorFlow to categorize transactions in the company's database.",
+        "Automated API testing using Postman, enabling scalable and repeatable test suites for continuous integration.",
+        "Developed and automated end-to-end tests using Playwright in Python, reducing manual testing time."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "name": "King's College London",
+      "duration": "Expected Graduation May 2026",
+      "startDate": "2023-09-25",
+      "points": ["BSc Computer Science", "Expected grade: 1st Class Honours"],
+      "modules": [
+        "Foundations of Computing 1 (Year 1, 15 Credits)",
+        "Elementry Logic and Applications (Year 1, 15 Credits)",
+        "Computer Systems 1 (Year 1, 15 Credits)",
+        "Practical Applications of Programming (Year 1, 30 Credits)",
+        "Data Structures and Algorithms (Year 1, 15 Credits)",
+        "Database Systems (Year 1, 15 Credits)",
+        "Introduction to Software Engineering (Year 1, 15 Credits)",
+        "Foundations of Computing 2 (Year 2, 15 Credits)",
+        "Practical Experiences of Programming (Year 2, 15 Credits)",
+        "Introduction to Robotics (Year 2, 15 Credits)",
+        "Software Engineering Group Project (Year 2, 30 Credits)",
+        "Programming Language Design Paradigms (Year 2, 15 Credits)",
+        "Introduction to Artificial Intelligence (Year 2, 15 Credits)",
+        "Operating Systems and Concurrency (Year 2, 15 Credits)"
+      ]
+    },
+    {
+      "name": "Roundwood Park School",
+      "duration": "2016-2023",
+      "startDate": "2016-09-01",
+      "points": [
+        "A-Levels: Maths (A*), Further Maths (A*), Computer Science (A), Physics (A)",
+        "GCSEs: 999999999",
+        "Earned a distinction and a medal, placing in the top 200 nationally in the UKMT Junior Mathematics Olympiad (JMO) 2018",
+        "Awarded a distinction and ranked in the top 100 nationally in the UKMT Intermediate Mathematics Olympiad (Cayley) 2019, also earning a medal"
+      ]
+    }
+  ],
+  "links": {
+    "linkedin_url": "https://www.linkedin.com/in/jayrshah41/",
+    "github_url": "https://github.com/jays41",
+    "email": "jr-shah@outlook.com",
+    "phone": "+447497325864"
+  }
+}

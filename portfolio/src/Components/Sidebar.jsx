@@ -33,7 +33,7 @@ const Sidebar = () => {
       <a href="#Skills">Skills</a>
       <a href="#Timeline">Timeline</a>
       <a href="#Projects">Projects</a>
-      <a href="#Contact">Contact</a>
+      {/* <a href="#Contact">Contact</a> */}
       </motion.div>
     )}
     </AnimatePresence>
