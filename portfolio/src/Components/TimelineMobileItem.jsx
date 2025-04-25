@@ -13,7 +13,7 @@ const TimelineMobileItem = ({ type, name, title, location, date, duration, point
         'Ashbury Global': ashbury,
         'Valtech': valtech,
         'Armalytix': armalytix,
-        "King’s College London": kcl,
+        "King's College London": kcl,
         "Roundwood Park School": rps
     };
 
