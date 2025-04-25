@@ -8,26 +8,9 @@ import './About.css'
 import './CV.css';
 import './Links.css';
 import info from '../data/Info.json';
+import useIsMobile from '../hooks/useIsMobile';
 
 const About = () => {
-  const useIsMobile = () => {
-
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkIsMobile = () => {
-            const mediaQuery = window.matchMedia('(max-width: 768px)');
-            setIsMobile(mediaQuery.matches);
-        };
-
-        checkIsMobile();
-        window.addEventListener('resize', checkIsMobile);
-        return () => window.removeEventListener('resize', checkIsMobile);
-
-    }, []);
-    return isMobile;
-  };
-
     const isMobile = useIsMobile();
 
     const cv_url = '/docs/Jay_Shah_CV.pdf';

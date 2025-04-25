@@ -6,12 +6,14 @@ import Timeline from './Components/Timeline';
 import Projects from './Components/Projects';
 import Skills from './Components/Skills';
 import Sidebar from './Components/Sidebar';
+import useIsMobile from './hooks/useIsMobile';
 
 function App() {
+  const isMobile = useIsMobile();
 
   return (
     <>
-      <Sidebar />
+      {!isMobile ? <Sidebar /> : null}
       <main className="scroll-container">
         <About />
         <Skills />
