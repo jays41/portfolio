@@ -4,8 +4,11 @@ import ProjectTile from './ProjectTile';
 import ProjectsShelf from './ProjectsShelf';
 import info from '../data/Info.json';
 import ShowcaseProject from './ShowcaseProject';
+import ProjectsListMobile from './ProjectsListMobile';
+import useIsMobile from '../hooks/useIsMobile';
 
 const Projects = () => {
+    const isMobile = useIsMobile();
 
     const [showcase, setShowcase] = useState(0);
     const [shelf, setShelf] = useState(() => Array.from({ length: info.projects.length }, (_, i) => i).filter((idx) => idx !== showcase));
@@ -29,13 +32,17 @@ const Projects = () => {
 
 return (
     <section className="section" id="Projects">
-        <motion.div drag={x} style={{ x, opacity }}>
         <h2>PROJECTS</h2>
+        {!isMobile ?
+        <>
         <ProjectsShelf content={allProjects} showcase={showcase} updateShowcase={updateShowcase} />
         <div className={`showcase-container ${fade ? 'fade-out' : 'fade-in'}`}>
             <ShowcaseProject idx={showcase} project={info.projects[showcase]} />
         </div>
-        </motion.div>
+        </>
+        :
+        <ProjectsListMobile content={allProjects} />
+        }
     </section>
 )
 }
