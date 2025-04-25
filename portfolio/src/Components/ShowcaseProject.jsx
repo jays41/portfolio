@@ -10,7 +10,7 @@ import qepm_book from '../assets/images/projects/qepm_book.png';
 
 const ShowcaseProject = ({ idx, project }) => {
 
-    const finbert_paper = "../../public/docs/finbert_paper.pdf";
+    const finbert_paper = "/docs/finbert_paper.pdf";
 
     const [leftImage, setLeftImage] = useState(null);
     const [rightImage, setRightImage] = useState(null);

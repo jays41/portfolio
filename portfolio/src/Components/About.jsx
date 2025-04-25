@@ -30,7 +30,7 @@ const About = () => {
 
     const isMobile = useIsMobile();
 
-    const cv_url = '../../public/docs/Jay_Shah_CV.pdf';
+    const cv_url = '/docs/Jay_Shah_CV.pdf';
 
     const handleDownload = () => {
         const fileName = 'Jay_Shah_CV';
