@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 import download from "downloadjs";
 import linkedin from '../assets/images/links/linkedin.png';
 import github from '../assets/images/links/github.png';
-import Jay_Shah_CV from '../../public/docs/Jay_Shah_CV.pdf';
 import './About.css'
 import './CV.css';
 import './Links.css';
-import info from '../../public/data/Info.json';
+import info from '../data/Info.json';
 
 const About = () => {
   const useIsMobile = () => {
@@ -29,12 +28,13 @@ const About = () => {
     return isMobile;
   };
 
-const isMobile = useIsMobile();
+    const isMobile = useIsMobile();
+
+    const cv_url = '../../public/docs/Jay_Shah_CV.pdf';
 
     const handleDownload = () => {
-        const url = '../../public/docs/Jay_Shah_CV.pdf';
         const fileName = 'Jay_Shah_CV';
-        fetch(url)
+        fetch(cv_url)
         .then((response) => response.blob())
         .then((blob) => download(blob, fileName))
         .catch((err) => console.error('Download failed', err));
@@ -63,7 +63,7 @@ const isMobile = useIsMobile();
             </span>
             </span>
             <p>Alternatively, open in the browser
-            <a href={Jay_Shah_CV} target="_blank" rel="noreferrer"> here</a>
+            <a href={cv_url} target="_blank" rel="noreferrer"> here</a>
             </p>
         </div>
 

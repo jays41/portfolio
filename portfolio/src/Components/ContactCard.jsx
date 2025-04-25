@@ -1,45 +1,45 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion'; 
-import emailjs from '@emailjs/browser'; // Import EmailJS
+// import React, { useState } from 'react';
+// import { motion } from 'framer-motion'; 
+// import emailjs from '@emailjs/browser'; // Import EmailJS
 import './ContactCard.css';
 
 const ContactCard = () => {
-    const [expanded, setExpanded] = useState(false);
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
-    });
-    const [status, setStatus] = useState('');
+    // const [expanded, setExpanded] = useState(false);
+    // const [formData, setFormData] = useState({
+    //     name: '',
+    //     email: '',
+    //     message: '',
+    // });
+    // const [status, setStatus] = useState('');
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
+    // const handleChange = (e) => {
+    //     const { name, value } = e.target;
+    //     setFormData({ ...formData, [name]: value });
+    // };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
 
-        emailjs.send(
-            import.meta.env.VITE_EMAILJS_SERVICE_ID,
-            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-            formData,
-            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        )
-        .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-            setStatus('Message sent successfully!');
-            setFormData({ name: '', email: '', message: '' }); // Reset form
-        })
-        .catch((err) => {
-            console.error('FAILED...', err);
-            setStatus('Failed to send message. Please try again.');
-        });
-    };
+    //     emailjs.send(
+    //         import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    //         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    //         formData,
+    //         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    //     )
+    //     .then((response) => {
+    //         console.log('SUCCESS!', response.status, response.text);
+    //         setStatus('Message sent successfully!');
+    //         setFormData({ name: '', email: '', message: '' }); // Reset form
+    //     })
+    //     .catch((err) => {
+    //         console.error('FAILED...', err);
+    //         setStatus('Failed to send message. Please try again.');
+    //     });
+    // };
 
     return (
         <div className="relative flip-card">
-            <div className={`absolute flip-card-inner ${expanded ? 'flipped' : ''}`}>
+            {/* <div className={`absolute flip-card-inner ${expanded ? 'flipped' : ''}`}>
                 <button className="flip-card-front" onClick={() => setExpanded(true)}>
                     <h3>Contact Me</h3>
                     <p>(Click me!)</p>
@@ -111,7 +111,7 @@ const ContactCard = () => {
                 }}
             >
                 <button className="ccbutton mt-5" onClick={() => { setExpanded(false); }}>&lt;</button>
-            </motion.div>
+            </motion.div> */}
         </div>
     );
 };

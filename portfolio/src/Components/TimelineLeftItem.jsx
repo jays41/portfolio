@@ -4,7 +4,7 @@ import PopUpModal from './PopUpModal';
 import './TimelineItem.css';
 import kcl from '../assets/images/education/kcl.png';
 import rps from '../assets/images/education/rps.png';
-import info from '../../public/data/Info.json';
+import info from '../data/Info.json';
 
 const TimelineLeftItem = ({ name, duration, points, startDate }) => {
 

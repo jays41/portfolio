@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ProjectTile.css';
 import TagContainer from './TagContainer';
-import finbert_paper from '../../public/docs/finbert_paper.pdf';
 import vite from '../assets/react.svg';
 import finbert from '../assets/images/projects/finbert_paper.png';
 import makcorp from '../assets/images/projects/makcorp_website.png';
@@ -10,6 +9,8 @@ import qepm_presentation from '../assets/images/projects/qepm_presentation.png';
 import qepm_book from '../assets/images/projects/qepm_book.png';
 
 const ShowcaseProject = ({ idx, project }) => {
+
+    const finbert_paper = "../../public/docs/finbert_paper.pdf";
 
     const [leftImage, setLeftImage] = useState(null);
     const [rightImage, setRightImage] = useState(null);
