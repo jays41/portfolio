@@ -29,7 +29,7 @@ const About = () => {
                 <h1>{info.name}</h1>
             </header>
 
-            <div className="description">
+            <div className="description" style={{ margin: '15px' }}>
                 <p>{info.description}</p>
             </div>
         <div className={ isMobile ? 'on-top' : 'about-container side-by-side'}>
