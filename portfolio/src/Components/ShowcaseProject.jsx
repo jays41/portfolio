@@ -8,7 +8,7 @@ import sentiment_analysis from '../assets/images/projects/sentiment_analysis_web
 import qepm_presentation from '../assets/images/projects/qepm_presentation.png';
 import qepm_book from '../assets/images/projects/qepm_book.png';
 
-const ShowcaseProject = ({ idx, project }) => {
+const ShowcaseProject = ({ idx, project, setShowcase=()=>{}, isMobile=false }) => {
 
     const finbert_paper = "/docs/finbert_paper.pdf";
 
@@ -56,6 +56,26 @@ const ShowcaseProject = ({ idx, project }) => {
     };
 
   return (
+    isMobile ?
+    <>
+        <button onClick={()=>setShowcase(-1)}>Back</button>
+        <div className="showcase-content" style={{ marginBottom: '25px', margin: '15px' }}>
+            <h3 style={{color: "#00bfae", marginBottom: '15px'}}>{project.heading}</h3>
+            {updateDescription(project.description, project.link)}
+            <TagContainer tags={project.tags} />
+        </div>
+        <div className={"showcase-image-left"}>
+            <img src={project.link ? leftImage : vite} />
+        </div>
+        {rightImage ?
+            <div className={"showcase-image-right"}>
+                <img src={project.link ? rightImage : vite} />
+            </div>
+        : null}
+    </>
+    
+    
+    :
     <span className={`showcase ${rightImage ? 'three' : 'two'}-items`}>
         <div className={"showcase-image-left"}>
             <img src={project.link ? leftImage : vite} />
