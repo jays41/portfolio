@@ -25,7 +25,8 @@
         "index": 3,
         "heading": "Quantitative Equity Portfolio Management Project – Deutsche Bank Collaboration",
         "description": "Invited by the Global Head of Quantitative Investment Solutions Research at Deutsche Bank to implement strategies from Chincarini & Kim's 'Quantitative Equity Portfolio Management'. Developed and back-tested two systematic portfolio models: a market-neutral strategy eliminating market risk while maximizing alpha, and a beta-neutral strategy with strategic factor tilts to enhance returns. Presented findings to Managing Directors and VPs in Deutsche Bank's Quant team.",
-        "tags": ["Machine Learning", "Python", "Finance"]
+        "tags": ["Machine Learning", "Python", "Finance"],
+        "link": "qepm"
       },
       {
         "index": 4,
