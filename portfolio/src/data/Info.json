@@ -12,7 +12,7 @@
         "index": 1,
         "heading": "Recipe Tracker / Meal Planner",
         "description": "Developed a full-stack meal planning application with CRUD functionality using React and Node.js. Implemented a 30-day meal planning feature with automated shopping list emails. Created a recommendation API in Flask using machine learning-based clustering to personalize meal suggestions based on user preferences, dietary restrictions, and past interactions.",
-        "tags": ["JavaScript", "React", "Node.js", "Machine Learning", "Python", "Flask"]
+        "tags": ["Machine Learning", "Python", "Flask", "JavaScript", "React", "Node.js"]
       },
       {
         "index": 2,
@@ -31,7 +31,7 @@
       {
         "index": 4,
         "heading": "Customising a client's data warehouse interface",
-        "description": "Used React and Django to create a custom #website# from scratch for our clients MakCorp.",
+        "description": "Used React and Django to create a custom #website# from scratch for our clients MakCorp in a small team.",
         "link": "makcorp",
         "tags": ["JavaScript", "React", "Python", "Django"]
       }
