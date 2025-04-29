@@ -58,7 +58,7 @@
     "React": [
       "This website is written in React!",
       "Used React for developing frontend components when I was working at Valtech",
-      "Used for a range of personal and client projects (e.g. when creating a data warehouse interface for MakCorp)"
+      "Used for a range of personal and client projects (e.g. when creating a data warehouse interface for MakCorp and for the Meal Planner project)"
     ],
     "Node": ["Backend development for Meal Planner project"],
     "Django": ["Created tutoring website and client data warehouse interface projects"],
