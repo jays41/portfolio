@@ -7,6 +7,7 @@ import Projects from './Components/Projects';
 import Skills from './Components/Skills';
 import SkillsMobile from './Components/SkillsMobile';
 import Sidebar from './Components/Sidebar';
+import ScrollButtons from './Components/ScrollButtons';
 import useIsMobile from './hooks/useIsMobile';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <>
-      {!isMobile ? <Sidebar /> : null}
+      {!isMobile ? <Sidebar /> : <ScrollButtons />}
       <main className="scroll-container">
         <About />
         {!isMobile ? <Skills /> : <SkillsMobile />}
