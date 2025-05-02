@@ -105,3 +105,7 @@
   transition: transform 0.7s ease-in-out;
   transition-delay: 0.4s;
 }
+
+.responsive-text {
+  font-size: clamp(12px, 2vw, 18px);
+}
