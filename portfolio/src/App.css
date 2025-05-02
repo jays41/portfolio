@@ -71,7 +71,7 @@ html {
 
 html, body {
   height: 100%;
-  overflow: hidden; /* Hide any scrollbars on the body */
+  /* overflow: hidden; Hide any scrollbars on the body */
 }
 
 .btn {
