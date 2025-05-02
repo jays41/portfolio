@@ -38,14 +38,21 @@
   ],
   "skills": {
     "Python": [
-      "Started coding in Python in Year 6 in code club (this was my first experience of programming other than Scratch and Kodu)",
-      "Created a variety of projects from stock price predictors and recommendation APIs to controlling robots",
-      "I have used Python in the workplace in Armalytix for machine learning research and scripting and again for scripting purposes when working at Ashbury Global"
+      "Started to learn Python in Year 6 through Code Club - this was my first exposure to programming other than Scratch",
+      "Created a variety of projects from stock price predictors and recommendation APIs to robotics control systems",
+      "Used professionally for machine learning research and scripting at Armalytix, and for automation tasks at Ashbury Global",
+      "Utilised in university group projects, such as building a full-stack tutoring platform and developing the backend of a client data warehouse, both using Django",
+      "Proficient with libraries such as pandas, NumPy, scikit-learn, Django, and Flask"
     ],
-    "JavaScript": ["Used for frontend development in various projects including personal portfolio and internship work at Valtech"],
+    "JavaScript": [
+      "Used primarily for frontend development in both personal and professional projects, including my portfolio site and internship work at Valtech",
+      "Built dynamic, responsive UIs for web apps such as a meal planner and a client-facing data warehouse interface (see Projects section below)",
+      "Experienced with React for component-based development, state management, and integration with RESTful APIs",
+      "Comfortable using modern JavaScript (ES6+), handling asynchronous workflows, and manipulating the DOM"
+    ],
     "Java": [
         "Learnt during 'Programming Practices and Applications' module in my first year of university",
-        "Experience through university coursework and personal projects"],
+        "Experience through university coursework and personal projects e.g. a visualisation tool for Coronavirus spread in London"],
     "C++": [
         "Learnt during 'Practical Experiences of Programming' module in my second year of university",
         "Created a range of mini-projects during this module such as: a countdown solver, a string construction optimizer, and a puzzle solver for a Soduku-like game",
@@ -57,11 +64,11 @@
     ],
     "React": [
       "This website is written in React!",
-      "Used React for developing frontend components when I was working at Valtech",
-      "Used for a range of personal and client projects (e.g. when creating a data warehouse interface for MakCorp and for the Meal Planner project)"
+      "Used React for developing frontend components when I was working at Valtech (I was on a team designing specifically designing front end components for Ocado Technologies)",
+      "Used for a range of personal and client projects (e.g. when creating a data warehouse interface for MakCorp and for my Meal Planner project)"
     ],
     "Node": ["Backend development for Meal Planner project"],
-    "Django": ["Created tutoring website and client data warehouse interface projects"],
+    "Django": ["Created a full stack tutoring website and the backend for the data warehouse interface for MakCorp both using Django"],
     "HTML/CSS": ["Frontend web development skills used across multiple projects"],
     "TensorFlow": ["Used for machine learning projects including stock price prediction and transaction categorization at Armalytix"]
   },
