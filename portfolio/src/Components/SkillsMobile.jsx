@@ -33,8 +33,7 @@ const SkillsMobile = () => {
 
   const languages = images.map((image, index) => (
     <img key={index} src={image.src} alt={image.title}
-    title={image.title} className={skill===image.title ? 'selected' : ''}
-    style={{ filter: skill===image.title || skill===null ? '' : 'blur(3px)' }}
+    title={image.title}
     onClick={()=>{
       setFade(true);
       const timeout = setTimeout(() => {
