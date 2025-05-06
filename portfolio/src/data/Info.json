@@ -10,8 +10,8 @@
       },
       {
         "index": 1,
-        "heading": "Recipe Tracker / Meal Planner",
-        "description": "Developed a full-stack meal planning application with CRUD functionality using React and Node.js. Implemented a 30-day meal planning feature with automated shopping list emails. Created a recommendation API in Flask using machine learning-based clustering to personalize meal suggestions based on user preferences, dietary restrictions, and past interactions.",
+        "heading": "Meal Planner",
+        "description": "Developed a full-stack meal planning application with CRUD functionality using React and Node.js. Implemented a 30-day meal planning feature with automated shopping list emails. Created a recommendation API in Flask using machine learning-based clustering to personalise meal suggestions based on user preferences, dietary restrictions, and past interactions.",
         "tags": ["Machine Learning", "Python", "Flask", "JavaScript", "React", "Node.js"]
       },
       {
@@ -55,7 +55,7 @@
         "Experience through university coursework and personal projects e.g. a visualisation tool for Coronavirus spread in London"],
     "C++": [
         "Learnt during 'Practical Experiences of Programming' module in my second year of university",
-        "Created a range of mini-projects during this module such as: a countdown solver, a string construction optimizer, and a puzzle solver for a Soduku-like game",
+        "Created a range of mini-projects during this module such as: a countdown solver, a string construction optimiser, and a puzzle solver for a Soduku-like game",
         "Implemented quantitative trading strategies as a part of my work at King's Capital (a student investment fund)"
     ],
     "Scala": [
@@ -70,7 +70,7 @@
     "Node": ["Backend development for Meal Planner project"],
     "Django": ["Created a full stack tutoring website and the backend for the data warehouse interface for MakCorp both using Django"],
     "HTML/CSS": ["Frontend web development skills used across multiple projects"],
-    "TensorFlow": ["Used for machine learning projects including stock price prediction and transaction categorization at Armalytix"]
+    "TensorFlow": ["Used for machine learning projects including stock price prediction and transaction categorisation at Armalytix"]
   },
   "experience": [
     {
@@ -104,7 +104,7 @@
       "startDate": "2022-05-16",
       "date": "May 2022",
       "points": [
-        "Conducted research and development into the use of machine learning algorithms with TensorFlow to categorize transactions in the company's database.",
+        "Conducted research and development into the use of machine learning algorithms with TensorFlow to categorise transactions in the company's database.",
         "Automated API testing using Postman, enabling scalable and repeatable test suites for continuous integration.",
         "Developed and automated end-to-end tests using Playwright in Python, reducing manual testing time."
       ]
