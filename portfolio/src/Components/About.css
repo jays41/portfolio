@@ -38,3 +38,8 @@
     box-shadow: 0 0 30px #747bff;
     transition: 0.4s;
 }
+
+.description {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
