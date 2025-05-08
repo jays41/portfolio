@@ -72,7 +72,7 @@ const SkillsMobile = () => {
             <h1 style={{ marginBottom: '25px' }}>{skill}</h1>
             <ul>
               {info.skills[skill]?.map((e, index) => (
-                <li key={index}>{e}</li>
+                <p key={index} style={{ marginBottom: "15px" }}>{e}</p>
               ))}
             </ul>
             <button onClick={()=>{setSkill(null);flipOver(false);}} style={{ marginTop: '25px' }}>Close</button>

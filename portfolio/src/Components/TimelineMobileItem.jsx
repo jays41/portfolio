@@ -19,7 +19,7 @@ const TimelineMobileItem = ({ type, name, title, location, date, duration, point
 
     const allPoints = (
         <ul>
-            {points.map((e) => <li key={e}>{e}</li>)}
+            {points.map((e) => <p key={e} style={{ marginBottom: "15px" }}>{e}</p>)}
         </ul>
     );
 
