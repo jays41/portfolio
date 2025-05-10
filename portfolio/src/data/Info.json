@@ -23,7 +23,7 @@
       },
       {
         "index": 3,
-        "heading": "Quantitative Equity Portfolio Management Project – Deutsche Bank Collaboration",
+        "heading": "Quantitative Equity Portfolio Management Project - Deutsche Bank Collaboration",
         "description": "Invited by the Global Head of Quantitative Investment Solutions Research at Deutsche Bank to implement strategies from Chincarini & Kim's 'Quantitative Equity Portfolio Management'. Developed and back-tested two systematic portfolio models: a market-neutral strategy eliminating market risk while maximizing alpha, and a beta-neutral strategy with strategic factor tilts to enhance returns. Presented findings to Managing Directors and VPs in Deutsche Bank's Quant team.",
         "tags": ["Machine Learning", "Python", "Finance"],
         "link": "qepm"
@@ -78,7 +78,7 @@
       "title": "Data Administrator",
       "location": "London / Remote",
       "startDate": "2024-07-01",
-      "date": "July – September 2024",
+      "date": "July - September 2024",
       "points": [
         "Cleansed and validated client data for major retailers such as Aldi, Tesco, Waitrose, and Greggs, ensuring accuracy and readiness for migration to the company's new system.",
         "Automated data validation using Python, improving efficiency by up to 12 times compared to the manual approach previously used by the team."
