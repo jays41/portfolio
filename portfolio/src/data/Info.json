@@ -6,7 +6,7 @@
         "index": 0,
         "heading": "Financial Dashboard with Stock Predictor",
         "description": "Developed an LSTM model in TensorFlow to forecast stock prices. Built a sentiment analysis tool for evaluating investor sentiment based on news and social media. Designed a UI with JavaScript and a backend in Python using Flask.",
-        "tags": ["Python", "Machine Learning", "Finance", "JavaScript", "Flask"]
+        "tags": ["Python", "Machine Learning", "JavaScript", "Flask"]
       },
       {
         "index": 1,
@@ -19,13 +19,13 @@
         "heading": "Financial Sentiment Analysis Research & Platform",
         "description": "Co-authored a #research paper# exploring FinBERT applications for sentiment analysis in financial markets. Independently developed and deployed a web-based sentiment analysis tool now actively used by society members as a decision support system for investment decisions and market research.",
         "link": "finbert_paper",
-        "tags": ["NLP", "Python", "Finance", "Research"]
+        "tags": ["NLP", "Python", "Research"]
       },
       {
         "index": 3,
         "heading": "Quantitative Equity Portfolio Management Project - Deutsche Bank Collaboration",
         "description": "Invited by the Global Head of Quantitative Investment Solutions Research at Deutsche Bank to implement strategies from Chincarini & Kim's 'Quantitative Equity Portfolio Management'. Developed and back-tested two systematic portfolio models: a market-neutral strategy eliminating market risk while maximizing alpha, and a beta-neutral strategy with strategic factor tilts to enhance returns. Presented findings to Managing Directors and VPs in Deutsche Bank's Quant team.",
-        "tags": ["Machine Learning", "Python", "Finance"],
+        "tags": ["Machine Learning", "Python"],
         "link": "qepm"
       },
       {
