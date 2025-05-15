@@ -21,7 +21,6 @@ function App() {
         {!isMobile ? <Skills /> : <SkillsMobile />}
         <Timeline />
         <Projects />
-        {/* <ContactForm /> */}
       </main>
     </>
   )
