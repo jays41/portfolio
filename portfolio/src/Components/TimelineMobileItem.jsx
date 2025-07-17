@@ -4,6 +4,7 @@ import './TimelineItem.css';
 import ashbury from '../assets/images/experience/ashbury.webp';
 import valtech from '../assets/images/experience/valtech.png';
 import armalytix from '../assets/images/experience/armalytix.png';
+import hubspot from '../assets/images/experience/hubspot.png';
 import kcl from '../assets/images/education/kcl.png';
 import rps from '../assets/images/education/rps.png';
 
@@ -13,6 +14,7 @@ const TimelineMobileItem = ({ type, name, title, location, date, duration, point
         'Ashbury Global': ashbury,
         'Valtech': valtech,
         'Armalytix': armalytix,
+        'HubSpot': hubspot,
         "King's College London": kcl,
         "Roundwood Park School": rps
     };
