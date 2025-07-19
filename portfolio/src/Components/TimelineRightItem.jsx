@@ -4,6 +4,7 @@ import './TimelineItem.css';
 import ashbury from '../assets/images/experience/ashbury.webp';
 import valtech from '../assets/images/experience/valtech.png';
 import armalytix from '../assets/images/experience/armalytix.png';
+import hubspot from '../assets/images/experience/hubspot.png';
 
 const TimelineRightItem = ({ name, title, location, date, points, startDate }) => {
 
@@ -11,12 +12,14 @@ const TimelineRightItem = ({ name, title, location, date, points, startDate }) =
         "Ashbury Global": "linear-gradient(to bottom, orange, yellow, green)",
         "Valtech": "black",
         "Armalytix": "#93002C",
+        "HubSpot": "#FF7A57",
     };
 
     const imagesMap = {
         'Ashbury Global': ashbury,
         'Valtech': valtech,
         'Armalytix': armalytix,
+        'HubSpot': hubspot,
     };
 
     const allPoints = (
