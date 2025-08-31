@@ -7,7 +7,7 @@ const PopUpModal = ({ expanded, setExpanded, heading, description, tags=[], link
         <div className="modal-overlay" onClick={()=>setExpanded(false)}>
             <div
                 className="modal-content"
-                onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking inside
+                onClick={(e) => e.stopPropagation()}
             >
                 <h3 style={{color: "purple", marginBottom: '15px'}}>{heading}</h3>
                 <p style={{color: "black"}}>{description}</p>
