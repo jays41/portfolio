@@ -1,6 +1,3 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { motion } from "framer-motion";
 import download from "downloadjs";
 import linkedin from '../assets/images/links/linkedin.png';
 import github from '../assets/images/links/github.png';
