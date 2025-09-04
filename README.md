@@ -1,3 +1,3 @@
-# Personal portfolio website built using React
+# My personal portfolio website built using React
 
-https://jayrshah.vercel.app/
+Visit here: https://jayrshah.vercel.app/
