@@ -80,7 +80,7 @@
       "startDate": "2025-07-19",
       "date": "July - September 2025",
       "points": [
-        "Worked in the Data Sync team developing a front end that aligned with the UX team's designs"
+         "Contributed to Data Studio, a flagship HubSpot feature launched at INBOUND 2025 and now used by thousands of customers", "Engineered a smart account verification polling system, reducing recovery time after verification errors from minutes to seconds and eliminating stale verification states", "Built an intelligent sync restart mechanism, reducing redundant API calls and improving sync throughput and reliability", "Strengthened product reliability with expanded automated test coverage, reducing regressions and supporting production releases"
       ]
     },
     {
