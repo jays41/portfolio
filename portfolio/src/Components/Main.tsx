@@ -50,17 +50,18 @@ export function Main() {
 
       {/* Main Cards with staggered animation */}
       <motion.div 
-        className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-4xl w-full"
+        className="flex flex-col lg:flex-row gap-6 lg:gap-8 max-w-5xl w-full"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
         {/* CV Card */}
         <motion.div
+          className="flex-1 lg:max-w-md"
           whileHover={{ scale: 1.02, y: -5 }}
           transition={{ duration: 0.2 }}
         >
-          <Card className="flex-1 p-6 md:p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300 hover:shadow-lg">
+          <Card className="h-full p-6 md:p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300 hover:shadow-lg">
             <motion.h2 
               className="text-xl md:text-2xl font-serif font-semibold text-primary mb-4 md:mb-6"
               initial={{ opacity: 0, x: -20 }}
@@ -105,10 +106,11 @@ export function Main() {
 
         {/* Navigation Card */}
         <motion.div
+          className="flex-1 lg:max-w-md"
           whileHover={{ scale: 1.02, y: -5 }}
           transition={{ duration: 0.2 }}
         >
-          <Card className="flex-1 p-6 md:p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-lg transition-all duration-300">
+          <Card className="h-full p-6 md:p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-lg transition-all duration-300">
             <motion.nav 
               className="space-y-3 md:space-y-4"
               initial={{ opacity: 0 }}

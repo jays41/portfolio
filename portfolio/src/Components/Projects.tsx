@@ -38,7 +38,7 @@ export function Projects() {
   }
 
   return (
-    <section id="projects" className="py-32 px-6 bg-secondary/30">
+    <section id="projects" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           className="mb-16"
@@ -47,7 +47,7 @@ export function Projects() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="heading-display text-4xl md:text-5xl mb-4 text-foreground">Selected Work</h2>
+          <h2 className="heading-display text-4xl md:text-5xl mb-4 text-foreground">Projects</h2>
           <div className="w-16 h-px bg-accent mb-6"></div>
           <p className="text-refined text-muted-foreground text-lg max-w-2xl">
             A collection of projects spanning machine learning, full-stack development, and quantitative finance.
@@ -72,11 +72,7 @@ export function Projects() {
               }}
               viewport={{ once: true, amount: 0.1 }}
             >
-              <Card
-                className={`gradient-overlay border-2 border-border bg-card rounded-2xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:border-accent/50 ${
-                  project.featured ? "md:col-span-1 xl:col-span-1" : ""
-                }`}
-              >
+              <Card className="gradient-overlay border-2 border-border bg-card rounded-2xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:border-accent/50">
                 {/* Project Images */}
                 {project.images && project.images.length > 0 && (
                   <motion.div 
@@ -124,21 +120,6 @@ export function Projects() {
                     >
                       {project.title}
                     </motion.h3>
-                    {project.featured && (
-                      <motion.div
-                        initial={{ scale: 0, rotate: -180 }}
-                        whileInView={{ scale: 1, rotate: 0 }}
-                        transition={{ delay: index * 0.1 + 0.3, duration: 0.5, type: "spring" }}
-                        viewport={{ once: true }}
-                      >
-                        <Badge
-                          variant="secondary"
-                          className="bg-accent/10 text-accent border-accent/20 text-xs font-medium"
-                        >
-                          Featured
-                        </Badge>
-                      </motion.div>
-                    )}
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-6">
