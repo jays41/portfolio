@@ -1,0 +1,279 @@
+{
+  "personal": {
+    "name": "Jay Shah",
+    "title": "Software Engineering Student",
+    "university": "King's College London",
+    "graduationDate": "May 2026",
+    "expectedGrade": "First Class Honours",
+    "intro": "I'm a Software Engineering student at King's College London with a strong interest in full-stack development, data-driven systems, and machine learning. I enjoy creating applications that are both technically robust and genuinely helpful, and I'm always curious about how technology can solve real-world problems.",
+    "email": "jr-shah@outlook.com",
+    "linkedin": "https://www.linkedin.com/in/jayrshah41/",
+    "github": "https://github.com/jays41",
+    "cv": {
+      "downloadUrl": "/docs/Jay_Shah_CV.pdf",
+      "browserUrl": "/docs/Jay_Shah_CV.pdf"
+    }
+  },
+  "about": {
+    "paragraphs": [
+      "Currently pursuing a BSc in Computer Science at King's College London, where I'm expected to graduate with First Class Honours in May 2026.",
+      "My journey in technology began early, starting with Python in Year 6 through Code Club. Since then, I've developed expertise across the full stack, from machine learning algorithms to user interfaces.",
+      "I'm particularly drawn to projects that combine technical complexity with real-world impact, whether that's building sentiment analysis tools for financial markets or creating data-driven applications that solve genuine problems."
+    ],
+    "highlights": [
+      {
+        "title": "Currently",
+        "description": "Software Engineering Student at King's College London, specializing in full-stack development and machine learning applications."
+      },
+      {
+        "title": "Recent Experience",
+        "description": "Software Engineering Intern at HubSpot, contributing to Data Studio and improving product reliability for thousands of customers."
+      },
+      {
+        "title": "Research & Innovation",
+        "description": "Co-authored research on FinBERT applications for sentiment analysis and developed quantitative portfolio models for Deutsche Bank."
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "King's College London",
+      "title": "BSc Computer Science",
+      "location": "London",
+      "date": "September 2023 - May 2026",
+      "image": "/src/assets/images/education/kcl.png",
+      "color": "red",
+      "type": "education",
+      "points": [
+        "Expected First Class Honours degree in Computer Science",
+        "Specializing in software engineering, machine learning, and data systems",
+        "Relevant coursework: Algorithms & Data Structures, Database Systems, Machine Learning, Software Engineering"
+      ]
+    },
+    {
+      "company": "Roundwood Park School",
+      "title": "A-Levels & GCSEs",
+      "location": "Harpenden",
+      "date": "2016 - 2023",
+      "image": "/src/assets/images/education/rps.png",
+      "color": "repeating-linear-gradient(135deg, red, red 10px, black 10px, black 30px)",
+      "type": "education",
+      "points": [
+        "A-Levels: Maths (A*), Further Maths (A*), Computer Science (A), Physics (A)",
+        "GCSEs: 999999999",
+        "Junior Mathematical Olympiad (2018): Achieved Distinction and Medal, ranking in the top 200 nationally",
+        "Intermediate Mathematical Olympiad - Cayley (2019): Earned Distinction and Medal, placing in the top 100 nationally"
+      ]
+    },
+    {
+      "company": "HubSpot",
+      "title": "Software Engineering Intern",
+      "location": "London / Dublin",
+      "date": "July - September 2025",
+      "image": "/src/assets/images/experience/hubspot.png",
+      "color": "#FF7A57",
+      "type": "experience",
+      "points": [
+        "Contributed to Data Studio, a flagship HubSpot feature launched at INBOUND 2025 and now used by thousands of customers",
+        "Engineered a smart account verification polling system, reducing recovery time after verification errors from minutes to seconds",
+        "Built an intelligent sync restart mechanism, reducing redundant API calls and improving sync throughput and reliability",
+        "Strengthened product reliability with expanded automated test coverage, reducing regressions and supporting production releases"
+      ]
+    },
+    {
+      "company": "Ashbury Global",
+      "title": "Data Administrator",
+      "location": "London / Remote",
+      "date": "July - September 2024",
+      "image": "/src/assets/images/experience/ashbury.webp",
+      "color": "linear-gradient(to bottom, orange, yellow, green)",
+      "type": "experience",
+      "points": [
+        "Cleansed and validated client data for major retailers such as Aldi, Tesco, Waitrose, and Greggs",
+        "Automated data validation using Python, improving efficiency by up to 12 times compared to manual approach"
+      ]
+    },
+    {
+      "company": "Valtech",
+      "title": "Software Developer Intern",
+      "location": "London",
+      "date": "June - July 2024",
+      "image": "/src/assets/images/experience/valtech.png",
+      "color": "black",
+      "type": "experience",
+      "points": [
+        "Collaborated in a team developing front-end components for Ocado Technologies",
+        "Independently designed and implemented new features using React.js",
+        "Designed tests using the Jest framework with TypeScript to guarantee code correctness and reliability"
+      ]
+    },
+    {
+      "company": "Armalytix",
+      "title": "Software Developer Work Experience",
+      "location": "London",
+      "date": "May 2022",
+      "image": "/src/assets/images/experience/armalytix.png",
+      "color": "#93002C",
+      "type": "experience",
+      "points": [
+        "Conducted research and development into machine learning algorithms using TensorFlow to categorise transactions",
+        "Automated API testing using Postman, enabling scalable and repeatable test suites",
+        "Developed and automated end-to-end tests using Playwright in Python"
+      ]
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "title": "Languages",
+        "skills": [
+          {
+            "name": "Python",
+            "description": "5+ years experience. Primary language for machine learning, data analysis, and backend development. Built multiple production applications."
+          },
+          {
+            "name": "JavaScript",
+            "description": "4+ years experience. Proficient in modern ES6+, React, Node.js. Used extensively in full-stack projects."
+          },
+          {
+            "name": "Java",
+            "description": "3+ years experience through university coursework and personal projects. Strong understanding of OOP principles."
+          },
+          {
+            "name": "C++",
+            "description": "2+ years experience. Used for algorithms, data structures, and performance-critical applications."
+          },
+          {
+            "name": "Scala",
+            "description": "1+ year experience. Learned for functional programming concepts and big data processing."
+          },
+          {
+            "name": "HTML/CSS",
+            "description": "4+ years experience. Proficient in modern CSS, responsive design, and accessibility best practices."
+          }
+        ]
+      },
+      {
+        "title": "Frameworks & Libraries",
+        "skills": [
+          {
+            "name": "React",
+            "description": "3+ years experience. Built multiple production applications with hooks, context, and modern patterns."
+          },
+          {
+            "name": "Node.js",
+            "description": "3+ years experience. Used for API development, full-stack applications, and automation scripts."
+          },
+          {
+            "name": "Django",
+            "description": "2+ years experience. Built REST APIs and full-stack web applications with authentication and database integration."
+          },
+          {
+            "name": "Flask",
+            "description": "2+ years experience. Preferred for lightweight APIs and machine learning model deployment."
+          },
+          {
+            "name": "TensorFlow",
+            "description": "2+ years experience. Used for deep learning projects including LSTM models and sentiment analysis."
+          },
+          {
+            "name": "Next.js",
+            "description": "1+ year experience. Used for modern React applications with SSR and API routes."
+          }
+        ]
+      },
+      {
+        "title": "Tools & Technologies",
+        "skills": [
+          {
+            "name": "Git",
+            "description": "4+ years experience. Proficient with branching strategies, collaboration workflows, and version control best practices."
+          },
+          {
+            "name": "Docker",
+            "description": "2+ years experience. Used for containerization, development environments, and deployment."
+          },
+          {
+            "name": "AWS",
+            "description": "1+ year experience. Familiar with EC2, S3, Lambda, and basic cloud architecture patterns."
+          },
+          {
+            "name": "PostgreSQL",
+            "description": "2+ years experience. Used for relational database design, complex queries, and performance optimization."
+          },
+          {
+            "name": "MongoDB",
+            "description": "1+ year experience. Used for document-based storage in full-stack applications."
+          },
+          {
+            "name": "Jest",
+            "description": "2+ years experience. Used for unit testing, integration testing, and test-driven development."
+          }
+        ]
+      },
+      {
+        "title": "Specializations",
+        "skills": [
+          {
+            "name": "Machine Learning",
+            "description": "3+ years experience. Built models for sentiment analysis, stock prediction, and recommendation systems."
+          },
+          {
+            "name": "Full-Stack Development",
+            "description": "4+ years experience. Comfortable with entire development lifecycle from database to user interface."
+          },
+          {
+            "name": "Data Analysis",
+            "description": "3+ years experience. Proficient in data cleaning, visualization, and statistical analysis."
+          },
+          {
+            "name": "API Design",
+            "description": "2+ years experience. Built RESTful APIs with proper authentication, validation, and documentation."
+          }
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Financial Dashboard with Stock Predictor",
+      "description": "Developed an LSTM model in TensorFlow to forecast stock prices. Built a sentiment analysis tool for evaluating investor sentiment based on news and social media. Designed a UI with JavaScript and a backend in Python using Flask.",
+      "tags": ["Python", "Machine Learning", "JavaScript", "Flask", "TensorFlow"],
+      "featured": true,
+      "images": ["/src/assets/react.svg"]
+    },
+    {
+      "title": "Meal Planner",
+      "description": "Developed a full-stack meal planning application with CRUD functionality using React and Node.js. Implemented a 30-day meal planning feature with automated shopping list emails. Created a recommendation API in Flask using machine learning-based clustering.",
+      "tags": ["Machine Learning", "Python", "Flask", "JavaScript", "React", "Node.js"],
+      "featured": false,
+      "images": ["/src/assets/react.svg"]
+    },
+    {
+      "title": "Financial Sentiment Analysis Research & Platform",
+      "description": "Co-authored a #research paper# exploring FinBERT applications for sentiment analysis in financial markets. Independently developed and deployed a web-based sentiment analysis tool now actively used by society members as a decision support system for investment decisions and market research.",
+      "tags": ["NLP", "Python", "Research", "FinBERT"],
+      "featured": true,
+      "link": "finbert_paper",
+      "linkUrl": "/docs/finbert_paper.pdf",
+      "images": ["/src/assets/images/projects/finbert_paper.png", "/src/assets/images/projects/sentiment_analysis_website.png"]
+    },
+    {
+      "title": "Quantitative Equity Portfolio Management Project - Deutsche Bank Collaboration",
+      "description": "Invited by the Global Head of Quantitative Investment Solutions Research at Deutsche Bank to implement strategies from Chincarini & Kim's 'Quantitative Equity Portfolio Management'. Developed and back-tested two systematic portfolio models: a market-neutral strategy eliminating market risk while maximizing alpha, and a beta-neutral strategy with strategic factor tilts to enhance returns. Presented findings to Managing Directors and VPs in Deutsche Bank's Quant team.",
+      "tags": ["Machine Learning", "Python", "Quantitative Finance"],
+      "featured": true,
+      "link": "qepm",
+      "images": ["/src/assets/images/projects/qepm_book.png", "/src/assets/images/projects/qepm_presentation.png"]
+    },
+    {
+      "title": "Customising a client's data warehouse interface",
+      "description": "Used React and Django to create a custom #website# from scratch for our clients MakCorp in a small team.",
+      "tags": ["JavaScript", "React", "Python", "Django"],
+      "featured": false,
+      "link": "makcorp",
+      "linkUrl": "https://teampuzzled.vercel.app/",
+      "images": ["/src/assets/images/projects/makcorp_website.png"]
+    }
+  ]
+}

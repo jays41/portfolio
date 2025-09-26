@@ -1,0 +1,155 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+
+  /* Updated to sophisticated blue palette - converted to HSL for Tailwind compatibility */
+  --background: 240 100% 98%; /* Crisp off-white with blue undertone */
+  --foreground: 240 90% 8%; /* Deep navy text */
+  --card: 240 100% 99%;
+  --card-foreground: 240 90% 8%;
+  --popover: 240 100% 99%;
+  --popover-foreground: 240 90% 8%;
+  --primary: 240 85% 35%; /* Rich royal blue */
+  --primary-foreground: 240 100% 98%;
+  --secondary: 240 30% 92%; /* Soft blue-gray */
+  --secondary-foreground: 240 90% 8%;
+  --muted: 240 20% 94%;
+  --muted-foreground: 240 10% 45%;
+  --accent: 200 60% 65%; /* Sophisticated steel blue accent */
+  --accent-foreground: 240 100% 98%;
+  --destructive: 15 80% 55%;
+  --destructive-foreground: 240 100% 98%;
+  --border: 240 20% 88%;
+  --input: 240 30% 96%;
+  --ring: 200 60% 65%;
+  --chart-1: 240 85% 35%;
+  --chart-2: 200 60% 65%;
+  --chart-3: 220 70% 25%;
+  --chart-4: 180 40% 75%;
+  --chart-5: 260 50% 55%;
+  --radius: 0.75rem;
+  --sidebar: 240 100% 97%;
+  --sidebar-foreground: 240 90% 8%;
+  --sidebar-primary: 240 85% 35%;
+  --sidebar-primary-foreground: 240 100% 98%;
+  --sidebar-accent: 240 30% 92%;
+  --sidebar-accent-foreground: 240 90% 8%;
+  --sidebar-border: 240 20% 88%;
+  --sidebar-ring: 200 60% 65%;
+}
+
+.dark {
+  /* Updated dark theme with sophisticated blue palette - converted to HSL */
+  --background: 240 95% 4%; /* Deep midnight blue */
+  --foreground: 240 100% 95%; /* Cool white */
+  --card: 240 95% 5%;
+  --card-foreground: 240 100% 95%;
+  --popover: 240 95% 5%;
+  --popover-foreground: 240 100% 95%;
+  --primary: 200 85% 75%; /* Bright steel blue */
+  --primary-foreground: 240 95% 4%;
+  --secondary: 240 90% 8%; /* Deeper midnight */
+  --secondary-foreground: 240 100% 95%;
+  --muted: 240 95% 6%;
+  --muted-foreground: 240 10% 65%;
+  --accent: 200 85% 75%; /* Bright steel blue accent */
+  --accent-foreground: 240 95% 4%;
+  --destructive: 15 75% 60%;
+  --destructive-foreground: 240 100% 95%;
+  --border: 240 90% 9%;
+  --input: 240 90% 8%;
+  --ring: 200 85% 75%;
+  --chart-1: 200 85% 75%;
+  --chart-2: 180 50% 65%;
+  --chart-3: 220 70% 55%;
+  --chart-4: 260 60% 45%;
+  --chart-5: 200 30% 85%;
+  --sidebar: 240 95% 5%;
+  --sidebar-foreground: 240 100% 95%;
+  --sidebar-primary: 200 85% 75%;
+  --sidebar-primary-foreground: 240 95% 4%;
+  --sidebar-accent: 240 90% 8%;
+  --sidebar-accent-foreground: 240 100% 95%;
+  --sidebar-border: 240 90% 9%;
+  --sidebar-ring: 200 85% 75%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "rlig" 1, "calt" 1;
+  font-family: var(--font-sans);
+  /* Added subtle texture and improved typography */
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.15) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Added sophisticated typography classes */
+.heading-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.heading-elegant {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.text-refined {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+/* Added elegant hover effects */
+.elegant-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.elegant-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* Added sophisticated gradient overlays */
+.gradient-overlay {
+  position: relative;
+}
+
+.gradient-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: inherit;
+  pointer-events: none;
+}
