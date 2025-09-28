@@ -61,9 +61,9 @@ export function Main() {
           whileHover={{ scale: 1.02, y: -5 }}
           transition={{ duration: 0.2 }}
         >
-          <Card className="h-full p-6 md:p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300 hover:shadow-lg">
+          <Card className="h-full p-6 md:p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300 hover:shadow-lg flex flex-col">
             <motion.h2 
-              className="text-xl md:text-2xl font-serif font-semibold text-primary mb-4 md:mb-6"
+              className="text-xl md:text-2xl font-serif font-semibold text-primary mb-4 md:mb-6 text-center"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: 0.8 }}
@@ -71,7 +71,7 @@ export function Main() {
               My CV
             </motion.h2>
             <motion.div 
-              className="space-y-4"
+              className="space-y-4 flex-1 flex flex-col justify-start pt-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 1.0 }}
