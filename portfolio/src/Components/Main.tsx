@@ -50,14 +50,14 @@ export function Main() {
 
       {/* Main Cards with staggered animation */}
       <motion.div 
-        className="flex flex-col lg:flex-row gap-6 lg:gap-8 max-w-5xl w-full"
+        className="flex flex-col lg:flex-row gap-6 lg:gap-8 max-w-4xl w-full mx-auto justify-center items-stretch"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
         {/* CV Card */}
         <motion.div
-          className="flex-1 lg:max-w-md"
+          className="flex-1 max-w-sm lg:max-w-md"
           whileHover={{ scale: 1.02, y: -5 }}
           transition={{ duration: 0.2 }}
         >
@@ -106,7 +106,7 @@ export function Main() {
 
         {/* Navigation Card */}
         <motion.div
-          className="flex-1 lg:max-w-md"
+          className="flex-1 max-w-sm lg:max-w-md"
           whileHover={{ scale: 1.02, y: -5 }}
           transition={{ duration: 0.2 }}
         >
