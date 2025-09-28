@@ -41,7 +41,7 @@
       "title": "BSc Computer Science",
       "location": "London",
       "date": "September 2023 - May 2026",
-      "image": "/src/assets/images/education/kcl.png",
+      "image": "/assets/images/education/kcl.png",
       "color": "red",
       "type": "education",
       "points": [
@@ -55,7 +55,7 @@
       "title": "A-Levels & GCSEs",
       "location": "Harpenden",
       "date": "2016 - 2023",
-      "image": "/src/assets/images/education/rps.png",
+      "image": "/assets/images/education/rps.png",
       "color": "repeating-linear-gradient(135deg, red, red 10px, black 10px, black 30px)",
       "type": "education",
       "points": [
@@ -70,7 +70,7 @@
       "title": "Software Engineering Intern",
       "location": "London / Dublin",
       "date": "July - September 2025",
-      "image": "/src/assets/images/experience/hubspot.png",
+      "image": "/assets/images/experience/hubspot.png",
       "color": "#FF7A57",
       "type": "experience",
       "points": [
@@ -85,7 +85,7 @@
       "title": "Data Administrator",
       "location": "London / Remote",
       "date": "July - September 2024",
-      "image": "/src/assets/images/experience/ashbury.webp",
+      "image": "/assets/images/experience/ashbury.webp",
       "color": "linear-gradient(to bottom, orange, yellow, green)",
       "type": "experience",
       "points": [
@@ -98,7 +98,7 @@
       "title": "Software Developer Intern",
       "location": "London",
       "date": "June - July 2024",
-      "image": "/src/assets/images/experience/valtech.png",
+      "image": "/assets/images/experience/valtech.png",
       "color": "black",
       "type": "experience",
       "points": [
@@ -112,7 +112,7 @@
       "title": "Software Developer Work Experience",
       "location": "London",
       "date": "May 2022",
-      "image": "/src/assets/images/experience/armalytix.png",
+      "image": "/assets/images/experience/armalytix.png",
       "color": "#93002C",
       "type": "experience",
       "points": [
@@ -240,14 +240,14 @@
       "description": "Developed an LSTM model in TensorFlow to forecast stock prices. Built a sentiment analysis tool for evaluating investor sentiment based on news and social media. Designed a UI with JavaScript and a backend in Python using Flask.",
       "tags": ["Python", "Machine Learning", "JavaScript", "Flask", "TensorFlow"],
       "featured": true,
-      "images": ["/src/assets/react.svg"]
+      "images": ["/assets/react.svg"]
     },
     {
       "title": "Meal Planner",
       "description": "Developed a full-stack meal planning application with CRUD functionality using React and Node.js. Implemented a 30-day meal planning feature with automated shopping list emails. Created a recommendation API in Flask using machine learning-based clustering.",
       "tags": ["Machine Learning", "Python", "Flask", "JavaScript", "React", "Node.js"],
       "featured": false,
-      "images": ["/src/assets/react.svg"]
+      "images": ["/assets/react.svg"]
     },
     {
       "title": "Financial Sentiment Analysis Research & Platform",
@@ -256,7 +256,7 @@
       "featured": true,
       "link": "finbert_paper",
       "linkUrl": "/docs/finbert_paper.pdf",
-      "images": ["/src/assets/images/projects/finbert_paper.png", "/src/assets/images/projects/sentiment_analysis_website.png"]
+      "images": ["/assets/images/projects/finbert_paper.png", "/assets/images/projects/sentiment_analysis_website.png"]
     },
     {
       "title": "Quantitative Equity Portfolio Management Project - Deutsche Bank Collaboration",
@@ -264,7 +264,7 @@
       "tags": ["Machine Learning", "Python", "Quantitative Finance"],
       "featured": true,
       "link": "qepm",
-      "images": ["/src/assets/images/projects/qepm_book.png", "/src/assets/images/projects/qepm_presentation.png"]
+      "images": ["/assets/images/projects/qepm_book.png", "/assets/images/projects/qepm_presentation.png"]
     },
     {
       "title": "Customising a client's data warehouse interface",
@@ -273,7 +273,7 @@
       "featured": false,
       "link": "makcorp",
       "linkUrl": "https://teampuzzled.vercel.app/",
-      "images": ["/src/assets/images/projects/makcorp_website.png"]
+      "images": ["/assets/images/projects/makcorp_website.png"]
     }
   ]
 }

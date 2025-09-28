@@ -3,16 +3,6 @@ import { motion } from "framer-motion"
 import data from "../data/Info2.json"
 
 export function Experience() {
-  // Image mapping using public paths
-  const imageMap: { [key: string]: string } = {
-    "King's College London": "/src/assets/images/education/kcl.png",
-    "Roundwood Park School": "/src/assets/images/education/rps.png",
-    "HubSpot": "/src/assets/images/experience/hubspot.png",
-    "Ashbury Global": "/src/assets/images/experience/ashbury.webp",
-    "Valtech": "/src/assets/images/experience/valtech.png",
-    "Armalytix": "/src/assets/images/experience/armalytix.png",
-  }
-
   return (
     <div>
       <div className="mb-8">
@@ -26,7 +16,6 @@ export function Experience() {
 
         <div className="space-y-8">
           {data.experience.map((exp, index) => {
-            const isEven = index % 2 === 0
             const isEducation = exp.type === 'education'
             
             return (
@@ -51,10 +40,10 @@ export function Experience() {
                   }}
                   transition={{ delay: index * 0.1 + 0.3, duration: 0.5 }}
                 >
-                  {imageMap[exp.company] && (
+                  {exp.image && (
                     <div className="w-20 h-20 rounded-lg overflow-hidden border-2 border-primary bg-white transform hover:scale-105 transition-transform duration-300">
                       <img 
-                        src={imageMap[exp.company]} 
+                        src={exp.image} 
                         alt={exp.company}
                         className="w-full h-full object-contain p-2"
                       />
