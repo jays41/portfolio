@@ -45,9 +45,7 @@
       "color": "red",
       "type": "education",
       "points": [
-        "Expected First Class Honours degree in Computer Science",
-        "Specializing in software engineering, machine learning, and data systems",
-        "Relevant coursework: Algorithms & Data Structures, Database Systems, Machine Learning, Software Engineering"
+        "Expected First Class Honours degree in Computer Science"
       ]
     },
     {
@@ -129,27 +127,27 @@
         "skills": [
           {
             "name": "Python",
-            "description": "5+ years experience. Primary language for machine learning, data analysis, and backend development. Built multiple production applications."
+            "description": "End-to-end ML and backend development: LSTM stock predictor, recommendation APIs, and robotics control; used professionally at Armalytix (ML R&D, transaction categorisation) and Ashbury (data automation). Proficient with pandas, NumPy, scikit-learn, Django, and Flask."
           },
           {
             "name": "JavaScript",
-            "description": "4+ years experience. Proficient in modern ES6+, React, Node.js. Used extensively in full-stack projects."
+            "description": "Frontend-focused: built responsive, component-driven UIs in React for my portfolio, a Meal Planner, and a client data-warehouse interface; strong with ES6+, async patterns, DOM manipulation, and REST API integration."
           },
           {
             "name": "Java",
-            "description": "3+ years experience through university coursework and personal projects. Strong understanding of OOP principles."
+            "description": "Strong OOP foundations from university coursework; built projects such as a London COVID spread visualisation."
           },
           {
             "name": "C++",
-            "description": "2+ years experience. Used for algorithms, data structures, and performance-critical applications."
+            "description": "Applied to algorithms and problem solving: built a countdown solver, string construction optimizer, and a Sudoku-like puzzle solver; used for quantitative trading strategy prototyping at King's Capital."
           },
           {
             "name": "Scala",
-            "description": "1+ year experience. Learned for functional programming concepts and big data processing."
+            "description": "Functional programming projects including a mini compiler, a regex matcher, and an implementation of the board game Shogun."
           },
           {
             "name": "HTML/CSS",
-            "description": "4+ years experience. Proficient in modern CSS, responsive design, and accessibility best practices."
+            "description": "Modern, accessible, responsive UI development across multiple projects."
           }
         ]
       },
@@ -158,15 +156,15 @@
         "skills": [
           {
             "name": "React",
-            "description": "3+ years experience. Built multiple production applications with hooks, context, and modern patterns."
+            "description": "Primary frontend framework for this site and professional work at Valtech (Ocado). Built reusable components, managed state, and shipped features for client projects like MakCorp and Meal Planner."
           },
           {
             "name": "Node.js",
-            "description": "3+ years experience. Used for API development, full-stack applications, and automation scripts."
+            "description": "Built the backend for the Meal Planner application (API endpoints and data flow)."
           },
           {
             "name": "Django",
-            "description": "2+ years experience. Built REST APIs and full-stack web applications with authentication and database integration."
+            "description": "Developed a full-stack tutoring website and the backend for a client data-warehouse interface (MakCorp)."
           },
           {
             "name": "Flask",
@@ -174,7 +172,7 @@
           },
           {
             "name": "TensorFlow",
-            "description": "2+ years experience. Used for deep learning projects including LSTM models and sentiment analysis."
+            "description": "Built deep learning models including an LSTM for stock prediction; applied to transaction categorisation research at Armalytix."
           },
           {
             "name": "Next.js",
