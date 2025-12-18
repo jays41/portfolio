@@ -1,17 +1,17 @@
 {
   "name": "Jay Shah",
-  "description": "I'm a Software Engineering student at King's College London with a strong interest in full-stack development, data-driven systems, and machine learning. I enjoy creating applications that are both technically robust and genuinely helpful, and I'm always curious about how technology can solve real-world problems.",
+  "description": "I'm a Computer Science student at King's College London, focused on machine learning, data-driven systems, and building reliable software. I enjoy working across the stack and on problems that reward strong quantitative reasoning.",
   "projects": [
       {
         "index": 0,
         "heading": "Financial Dashboard with Stock Predictor",
-        "description": "Developed an LSTM model in TensorFlow to forecast stock prices. Built a sentiment analysis tool for evaluating investor sentiment based on news and social media. Designed a UI with JavaScript and a backend in Python using Flask.",
+        "description": "Built a financial analytics dashboard combining time-series modelling and sentiment analysis. Implemented an LSTM model in TensorFlow and a sentiment pipeline over financial news and social media, with a JavaScript frontend and a Flask backend.",
         "tags": ["Python", "Machine Learning", "JavaScript", "Flask"]
       },
       {
         "index": 1,
         "heading": "Meal Planner",
-        "description": "Developed a full-stack meal planning application with CRUD functionality using React and Node.js. Implemented a 30-day meal planning feature with automated shopping list emails. Created a recommendation API in Flask using machine learning-based clustering to personalise meal suggestions based on user preferences, dietary restrictions, and past interactions.",
+        "description": "Developed a full-stack meal planning application using React and Node.js. Built a personalised recommendation API in Flask using clustering-based similarity models over vectorised recipes, with automated 30-day planning and shopping list generation.",
         "tags": ["Machine Learning", "Python", "Flask", "JavaScript", "React", "Node.js"]
       },
       {
@@ -31,47 +31,28 @@
       {
         "index": 4,
         "heading": "Customising a client's data warehouse interface",
-        "description": "Used React and Django to create a custom #website# from scratch for our clients MakCorp in a small team.",
+        "description": "Built a custom data warehouse #website# from scratch using React and Django, working in a small team to deliver client-facing dashboards and backend integrations.",
         "link": "makcorp",
         "tags": ["JavaScript", "React", "Python", "Django"]
       }
   ],
   "skills": {
-    "Python": [
-      "Started to learn Python in Year 6 through Code Club - this was my first exposure to programming other than Scratch",
-      "Created a variety of projects from stock price predictors and recommendation APIs to robotics control systems",
-      "Used professionally for machine learning research and scripting at Armalytix, and for automation tasks at Ashbury Global",
-      "Utilised in university group projects, such as building a full-stack tutoring platform and developing the backend of a client data warehouse, both using Django",
-      "Proficient with libraries such as pandas, NumPy, scikit-learn, Django, and Flask"
-    ],
-    "JavaScript": [
-      "Used primarily for frontend development in both personal and professional projects, including my portfolio site and internship work at Valtech",
-      "Built dynamic, responsive UIs for web apps such as a meal planner and a client-facing data warehouse interface (see Projects section below)",
-      "Experienced with React for component-based development, state management, and integration with RESTful APIs",
-      "Comfortable using modern JavaScript (ES6+), handling asynchronous workflows, and manipulating the DOM"
-    ],
-    "Java": [
-        "Learnt during 'Programming Practices and Applications' module in my first year of university",
-        "Experience through university coursework and personal projects e.g. a visualisation tool for Coronavirus spread in London"],
-    "C++": [
-        "Learnt during 'Practical Experiences of Programming' module in my second year of university",
-        "Created a range of mini-projects during this module such as: a countdown solver, a string construction optimiser, and a puzzle solver for a Soduku-like game",
-        "Implemented quantitative trading strategies as a part of my work at King's Capital (a student investment fund)"
-    ],
-    "Scala": [
-      "Learnt during 'Practical Experiences of Programming' module in my second year of university",
-      "Created a range of mini-projects during this module such as: a compiler, a regular expression matcher, and an implementation of the board game 'Shogun'"
-    ],
-    "React": [
-      "This website is written in React!",
-      "Used React for developing frontend components when I was working at Valtech (I was on a team designing specifically designing front end components for Ocado Technologies)",
-      "Used for a range of personal and client projects (e.g. when creating a data warehouse interface for MakCorp and for my Meal Planner project)"
-    ],
-    "Node": ["Backend development for Meal Planner project"],
-    "Django": ["Created a full stack tutoring website and the backend for the data warehouse interface for MakCorp both using Django"],
-    "HTML/CSS": ["Frontend web development skills used across multiple projects"],
-    "TensorFlow": ["Used for machine learning projects including stock price prediction and transaction categorisation at Armalytix"]
-  },
+    "languages":{
+      "Python":
+        "Used extensively for machine learning, quantitative modelling, and backend development. Built end-to-end ML systems including an LSTM stock predictor, recommendation APIs, and robotics control software. Used professionally for ML research at Armalytix and data automation at Ashbury Global. Proficient with pandas, NumPy, scikit-learn, Django, and Flask.",
+      "JavaScript":
+        "Frontend-focused, with experience building responsive, component-driven interfaces in React for production and personal projects, including this site, a meal planner, and a client data warehouse interface. Comfortable with modern JavaScript (ES6+), async patterns, DOM manipulation, and REST API integration.",
+      "Java":
+          "Strong object-oriented foundations from university coursework, with projects including a visualisation tool for COVID-19 spread in London.",
+      "C++": "Applied to algorithmic problem-solving and quantitative projects. Built solvers and optimisers (countdown solver, string construction optimiser, Sudoku-like puzzle solver) and used C++ for prototyping quantitative trading strategies at King's Capital.",
+      "Scala": "Experience with functional programming through projects including a mini compiler, a regular expression matcher, and an implementation of the board game Shogun."},
+    "frameworks": {
+    "React": "Primary frontend framework for this site and professional work at HubSpot and Valtech (Ocado Technologies). Built reusable components, managed state, and shipped production features for both client and personal projects.",
+    "Node": "Built backend services and API endpoints for the Meal Planner application.",
+    "Django": "Developed a full-stack tutoring platform and the backend for a client-facing data warehouse interface (MakCorp).",
+    "Flask": "Over two years of experience. Preferred for lightweight APIs and deploying machine learning models.",
+    "TensorFlow": "Used to build deep learning models, including an LSTM for time-series forecasting and transaction categorisation research at Armalytix."
+  }},
   "experience": [
     {
       "name": "HubSpot",
