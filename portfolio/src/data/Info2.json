@@ -5,7 +5,7 @@
     "university": "King's College London",
     "graduationDate": "May 2026",
     "expectedGrade": "First Class Honours",
-    "intro": "I'm a Software Engineering student at King's College London with a strong interest in full-stack development, data-driven systems, and machine learning. I enjoy creating applications that are both technically robust and genuinely helpful, and I'm always curious about how technology can solve real-world problems.",
+    "intro": "I'm a Computer Science student at King's College London, focused on machine learning, data-driven systems, and building reliable software. I enjoy working across the stack and on problems that reward strong quantitative reasoning.",
     "email": "jr-shah@outlook.com",
     "linkedin": "https://www.linkedin.com/in/jayrshah41/",
     "github": "https://github.com/jays41",
@@ -73,7 +73,7 @@
       "type": "experience",
       "points": [
         "Contributed to Data Studio, a flagship HubSpot feature launched at INBOUND 2025 and now used by thousands of customers",
-        "Engineered a smart account verification polling system, reducing recovery time after verification errors from minutes to seconds",
+        "Engineered a smart account verification polling system, reducing recovery time after verification errors from minutes to seconds and eliminating stale verification states",
         "Built an intelligent sync restart mechanism, reducing redundant API calls and improving sync throughput and reliability",
         "Strengthened product reliability with expanded automated test coverage, reducing regressions and supporting production releases"
       ]
@@ -87,8 +87,8 @@
       "color": "linear-gradient(to bottom, orange, yellow, green)",
       "type": "experience",
       "points": [
-        "Cleansed and validated client data for major retailers such as Aldi, Tesco, Waitrose, and Greggs",
-        "Automated data validation using Python, improving efficiency by up to 12 times compared to manual approach"
+        "Cleansed and validated client data for major retailers such as Aldi, Tesco, Waitrose, and Greggs, ensuring accuracy and readiness for migration to the company's new system",
+        "Automated data validation using Python, improving efficiency by up to 12 times compared to the manual approach previously used by the team"
       ]
     },
     {
@@ -102,6 +102,7 @@
       "points": [
         "Collaborated in a team developing front-end components for Ocado Technologies",
         "Independently designed and implemented new features using React.js",
+        "Critiqued and reviewed code solutions proposed by team members before deployment",
         "Designed tests using the Jest framework with TypeScript to guarantee code correctness and reliability"
       ]
     },
@@ -114,9 +115,9 @@
       "color": "#93002C",
       "type": "experience",
       "points": [
-        "Conducted research and development into machine learning algorithms using TensorFlow to categorise transactions",
-        "Automated API testing using Postman, enabling scalable and repeatable test suites",
-        "Developed and automated end-to-end tests using Playwright in Python"
+        "Conducted research and development into the use of machine learning algorithms using TensorFlow to categorise transactions in the company's database",
+        "Automated API testing using Postman, enabling scalable and repeatable test suites for continuous integration",
+        "Developed and automated end-to-end tests using Playwright in Python, reducing manual testing time"
       ]
     }
   ],
@@ -127,27 +128,23 @@
         "skills": [
           {
             "name": "Python",
-            "description": "End-to-end ML and backend development: LSTM stock predictor, recommendation APIs, and robotics control; used professionally at Armalytix (ML R&D, transaction categorisation) and Ashbury (data automation). Proficient with pandas, NumPy, scikit-learn, Django, and Flask."
+            "description": "Used extensively for machine learning, quantitative modelling, and backend development. Built end-to-end ML systems including an LSTM stock predictor, recommendation APIs, and robotics control software. Used professionally for ML research at Armalytix and data automation at Ashbury Global. Proficient with pandas, NumPy, scikit-learn, Django, and Flask."
           },
           {
             "name": "JavaScript",
-            "description": "Frontend-focused: built responsive, component-driven UIs in React for my portfolio, a Meal Planner, and a client data-warehouse interface; strong with ES6+, async patterns, DOM manipulation, and REST API integration."
+            "description": "Frontend-focused, with experience building responsive, component-driven interfaces in React for production and personal projects, including this site, a meal planner, and a client data warehouse interface. Comfortable with modern JavaScript (ES6+), async patterns, DOM manipulation, and REST API integration."
           },
           {
             "name": "Java",
-            "description": "Strong OOP foundations from university coursework; built projects such as a London COVID spread visualisation."
+            "description": "Strong object-oriented foundations from university coursework, with projects including a visualisation tool for COVID-19 spread in London."
           },
           {
             "name": "C++",
-            "description": "Applied to algorithms and problem solving: built a countdown solver, string construction optimizer, and a Sudoku-like puzzle solver; used for quantitative trading strategy prototyping at King's Capital."
+            "description": "Applied to algorithmic problem-solving and quantitative projects. Built solvers and optimisers (countdown solver, string construction optimiser, Sudoku-like puzzle solver) and used C++ for prototyping quantitative trading strategies at King's Capital."
           },
           {
             "name": "Scala",
-            "description": "Functional programming projects including a mini compiler, a regex matcher, and an implementation of the board game Shogun."
-          },
-          {
-            "name": "HTML/CSS",
-            "description": "Modern, accessible, responsive UI development across multiple projects."
+            "description": "Experience with functional programming through projects including a mini compiler, a regular expression matcher, and an implementation of the board game Shogun."
           }
         ]
       },
@@ -156,77 +153,23 @@
         "skills": [
           {
             "name": "React",
-            "description": "Primary frontend framework for this site and professional work at Valtech (Ocado). Built reusable components, managed state, and shipped features for client projects like MakCorp and Meal Planner."
+            "description": "Primary frontend framework for this site and professional work at HubSpot and Valtech (Ocado Technologies). Built reusable components, managed state, and shipped production features for both client and personal projects."
           },
           {
             "name": "Node.js",
-            "description": "Built the backend for the Meal Planner application (API endpoints and data flow)."
+            "description": "Built backend services and API endpoints for the Meal Planner application."
           },
           {
             "name": "Django",
-            "description": "Developed a full-stack tutoring website and the backend for a client data-warehouse interface (MakCorp)."
+            "description": "Developed a full-stack tutoring platform and the backend for a client-facing data warehouse interface (MakCorp)."
           },
           {
             "name": "Flask",
-            "description": "2+ years experience. Preferred for lightweight APIs and machine learning model deployment."
+            "description": "Over two years of experience. Preferred for lightweight APIs and deploying machine learning models."
           },
           {
             "name": "TensorFlow",
-            "description": "Built deep learning models including an LSTM for stock prediction; applied to transaction categorisation research at Armalytix."
-          },
-          {
-            "name": "Next.js",
-            "description": "1+ year experience. Used for modern React applications with SSR and API routes."
-          }
-        ]
-      },
-      {
-        "title": "Tools & Technologies",
-        "skills": [
-          {
-            "name": "Git",
-            "description": "4+ years experience. Proficient with branching strategies, collaboration workflows, and version control best practices."
-          },
-          {
-            "name": "Docker",
-            "description": "2+ years experience. Used for containerization, development environments, and deployment."
-          },
-          {
-            "name": "AWS",
-            "description": "1+ year experience. Familiar with EC2, S3, Lambda, and basic cloud architecture patterns."
-          },
-          {
-            "name": "PostgreSQL",
-            "description": "2+ years experience. Used for relational database design, complex queries, and performance optimization."
-          },
-          {
-            "name": "MongoDB",
-            "description": "1+ year experience. Used for document-based storage in full-stack applications."
-          },
-          {
-            "name": "Jest",
-            "description": "2+ years experience. Used for unit testing, integration testing, and test-driven development."
-          }
-        ]
-      },
-      {
-        "title": "Specializations",
-        "skills": [
-          {
-            "name": "Machine Learning",
-            "description": "3+ years experience. Built models for sentiment analysis, stock prediction, and recommendation systems."
-          },
-          {
-            "name": "Full-Stack Development",
-            "description": "4+ years experience. Comfortable with entire development lifecycle from database to user interface."
-          },
-          {
-            "name": "Data Analysis",
-            "description": "3+ years experience. Proficient in data cleaning, visualization, and statistical analysis."
-          },
-          {
-            "name": "API Design",
-            "description": "2+ years experience. Built RESTful APIs with proper authentication, validation, and documentation."
+            "description": "Used to build deep learning models, including an LSTM for time-series forecasting and transaction categorisation research at Armalytix."
           }
         ]
       }
@@ -235,14 +178,14 @@
   "projects": [
     {
       "title": "Financial Dashboard with Stock Predictor",
-      "description": "Developed an LSTM model in TensorFlow to forecast stock prices. Built a sentiment analysis tool for evaluating investor sentiment based on news and social media. Designed a UI with JavaScript and a backend in Python using Flask.",
-      "tags": ["Python", "Machine Learning", "JavaScript", "Flask", "TensorFlow"],
+      "description": "Built a financial analytics dashboard combining time-series modelling and sentiment analysis. Implemented an LSTM model in TensorFlow and a sentiment pipeline over financial news and social media, with a JavaScript frontend and a Flask backend.",
+      "tags": ["Python", "Machine Learning", "JavaScript", "Flask"],
       "featured": true,
       "images": ["/assets/react.svg"]
     },
     {
       "title": "Meal Planner",
-      "description": "Developed a full-stack meal planning application with CRUD functionality using React and Node.js. Implemented a 30-day meal planning feature with automated shopping list emails. Created a recommendation API in Flask using machine learning-based clustering.",
+      "description": "Developed a full-stack meal planning application using React and Node.js. Built a personalised recommendation API in Flask using clustering-based similarity models over vectorised recipes, with automated 30-day planning and shopping list generation.",
       "tags": ["Machine Learning", "Python", "Flask", "JavaScript", "React", "Node.js"],
       "featured": false,
       "images": ["/assets/react.svg"]
@@ -250,7 +193,7 @@
     {
       "title": "Financial Sentiment Analysis Research & Platform",
       "description": "Co-authored a #research paper# exploring FinBERT applications for sentiment analysis in financial markets. Independently developed and deployed a web-based sentiment analysis tool now actively used by society members as a decision support system for investment decisions and market research.",
-      "tags": ["NLP", "Python", "Research", "FinBERT"],
+      "tags": ["NLP", "Python", "Research"],
       "featured": true,
       "link": "finbert_paper",
       "linkUrl": "/docs/finbert_paper.pdf",
@@ -259,14 +202,14 @@
     {
       "title": "Quantitative Equity Portfolio Management Project - Deutsche Bank Collaboration",
       "description": "Invited by the Global Head of Quantitative Investment Solutions Research at Deutsche Bank to implement strategies from Chincarini & Kim's 'Quantitative Equity Portfolio Management'. Developed and back-tested two systematic portfolio models: a market-neutral strategy eliminating market risk while maximizing alpha, and a beta-neutral strategy with strategic factor tilts to enhance returns. Presented findings to Managing Directors and VPs in Deutsche Bank's Quant team.",
-      "tags": ["Machine Learning", "Python", "Quantitative Finance"],
+      "tags": ["Machine Learning", "Python"],
       "featured": true,
       "link": "qepm",
       "images": ["/assets/images/projects/qepm_book.png", "/assets/images/projects/qepm_presentation.png"]
     },
     {
       "title": "Customising a client's data warehouse interface",
-      "description": "Used React and Django to create a custom #website# from scratch for our clients MakCorp in a small team.",
+      "description": "Built a custom data warehouse #website# from scratch using React and Django, working in a small team to deliver client-facing dashboards and backend integrations.",
       "tags": ["JavaScript", "React", "Python", "Django"],
       "featured": false,
       "link": "makcorp",
