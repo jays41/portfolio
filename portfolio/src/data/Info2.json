@@ -23,7 +23,7 @@
     "highlights": [
       {
         "title": "Currently",
-        "description": "Software Engineering Student at King's College London, specializing in full-stack development and machine learning applications."
+        "description": "Software Engineering Student at King's College London, specialising in full-stack development and machine learning applications."
       },
       {
         "title": "Recent Experience",
@@ -31,7 +31,7 @@
       },
       {
         "title": "Research & Innovation",
-        "description": "Co-authored research on FinBERT applications for sentiment analysis and developed quantitative portfolio models for Deutsche Bank."
+        "description": "Dissertation on explainable AI for financial regime discovery using LSTM autoencoders and SHAP. 2nd place at Quantihack (sponsored by Anthropic, Jane Street & Optiver)."
       }
     ]
   },
@@ -66,7 +66,7 @@
     {
       "company": "HubSpot",
       "title": "Software Engineering Intern",
-      "location": "London / Dublin",
+      "location": "London",
       "date": "July - September 2025",
       "image": "/assets/images/experience/hubspot.png",
       "color": "#FF7A57",
@@ -93,17 +93,16 @@
     },
     {
       "company": "Valtech",
-      "title": "Software Developer Intern",
+      "title": "Software Developer Intern (Consulting for Ocado Technologies)",
       "location": "London",
       "date": "June - July 2024",
       "image": "/assets/images/experience/valtech.png",
       "color": "black",
       "type": "experience",
       "points": [
-        "Collaborated in a team developing front-end components for Ocado Technologies",
-        "Independently designed and implemented new features using React.js",
-        "Critiqued and reviewed code solutions proposed by team members before deployment",
-        "Designed tests using the Jest framework with TypeScript to guarantee code correctness and reliability"
+        "Developed and deployed a React component powering rotating product recommendations and advertisements, seen by thousands of Ocado customers daily",
+        "Delivered new frontend features and unit tests (Jest), improving performance and reliability across the platform",
+        "Reviewed peer code contributions and proposed improvements to ensure production quality"
       ]
     },
     {
@@ -145,6 +144,14 @@
           {
             "name": "Scala",
             "description": "Experience with functional programming through projects including a mini compiler, a regular expression matcher, and an implementation of the board game Shogun."
+          },
+          {
+            "name": "SQL",
+            "description": "Used for data querying and manipulation across academic and professional projects."
+          },
+          {
+            "name": "HTML/CSS",
+            "description": "Used throughout frontend development across personal and professional projects, including this portfolio site."
           }
         ]
       },
@@ -154,6 +161,10 @@
           {
             "name": "React",
             "description": "Primary frontend framework for this site and professional work at HubSpot and Valtech (Ocado Technologies). Built reusable components, managed state, and shipped production features for both client and personal projects."
+          },
+          {
+            "name": "Next.js",
+            "description": "Used for server-side rendering and static site generation in full-stack web projects."
           },
           {
             "name": "Node.js",
@@ -168,14 +179,106 @@
             "description": "Over two years of experience. Preferred for lightweight APIs and deploying machine learning models."
           },
           {
+            "name": "Rails",
+            "description": "Experience with Ruby on Rails for rapid full-stack web development."
+          },
+          {
             "name": "TensorFlow",
             "description": "Used to build deep learning models, including an LSTM for time-series forecasting and transaction categorisation research at Armalytix."
+          },
+          {
+            "name": "NumPy / Pandas",
+            "description": "Core data science libraries used extensively across quantitative modelling, ML pipelines, and data processing tasks."
+          },
+          {
+            "name": "Jest",
+            "description": "Used for unit testing at Valtech (Ocado Technologies) and HubSpot, ensuring reliability of production frontend components."
+          },
+          {
+            "name": "Playwright",
+            "description": "Developed and automated end-to-end tests at Armalytix using Playwright in Python, reducing manual testing time."
+          },
+          {
+            "name": "Postman",
+            "description": "Automated API testing at Armalytix, enabling scalable and repeatable test suites for continuous integration."
+          },
+          {
+            "name": "Redis",
+            "description": "Experience with Redis for caching and data store use cases in backend development."
           }
         ]
       }
     ]
   },
   "projects": [
+    {
+      "title": "Dissertation: Explainable Regime Discovery in Financial Time Series",
+      "description": "Designed a dual-track XAI framework applying Vector SHAP and TimeSHAP to an unsupervised LSTM autoencoder trained on 25 years of S&P 500 data. Built a 2-layer stacked LSTM encoder with reverse reconstruction into a 32-dimensional latent space; K-Means with entropy-based model selection and logistic regression soft assignments discovers market regimes unsupervised. Track 1 attributes cluster membership via exact Vector SHAP; Track 2 identifies structurally anomalous market periods via TimeSHAP; faithfulness validated via feature ablation and sanity checks.",
+      "tags": ["Python", "Machine Learning", "Deep Learning", "XAI"],
+      "featured": true,
+      "images": []
+    },
+    {
+      "title": "Quantitative Trading Hackathon (Quantihack) - 2nd Place",
+      "description": "Sponsored by Anthropic, Jane Street & Optiver. Wheat trading strategy: generated monthly trading signals from annual supply data using satellite images of wheat farms, achieving 17.5% annualised alpha (Sharpe 0.63, -10.4% max drawdown) over a 12-year backtest. Built a correlation-weighted, z-scored composite signal from lagged features, ranking as the top-performing algorithm for multiple days and finishing 2nd overall in the finals.",
+      "tags": ["Python", "Quantitative Finance", "Satellite Data"],
+      "featured": true,
+      "images": []
+    },
+    {
+      "title": "King's Capital - Quantitative Trading Strategies",
+      "description": "As Head of Quantitative Trading at King's College London's investment society, developed and deployed systematic strategies across equities and commodities. Built an alternative data-driven oil strategy using satellite imagery (inventory shadow analysis) and maritime shipping data. Designed an after-hours earnings momentum strategy and a volatility arbitrage framework selling ATM straddles, forecasting realised volatility via EGARCH, DS3M, GNN-HAR, and CNN-HAR+Ridge with earnings blockers and regime filters. Presented to Deutsche Bank's Quantitative Investment Solutions team (MDs and VPs) and pitched to MCD Capital for a potential £100k allocation.",
+      "tags": ["Python", "Quantitative Finance", "Machine Learning"],
+      "featured": true,
+      "subprojects": [
+        {
+          "title": "Volatility Arbitrage Strategy",
+          "description": "Built a multi-model volatility arbitrage system trading ATM equity straddles across a 20-stock universe. Enters short positions when implied volatility exceeds forecasted realised volatility (with regime and earnings filters), and long in the reverse case. Ensemble of EGARCH, DS³M, GNN-HAR, and HAR-CNN forecasting models. Best model (EGARCH) achieved Sharpe 1.29 and 89% total return over a Jul '20–Dec '24 backtest; DS³M delivered Sharpe 1.02; GNN-HAR and HAR-CNN both ~0.68–0.69. Includes daily delta hedging, earnings blockers, and margin caps.",
+          "tags": ["Python", "Volatility Forecasting", "Options", "Quantitative Finance"]
+        },
+        {
+          "title": "GNN-HAR Realised Volatility Forecasting",
+          "description": "Implemented a graph neural network combined with a Heterogeneous Autoregressive (HAR) model to forecast 5-day-ahead realised volatility across 74 S&P 500 stocks. A Graphical LASSO (GLASSO) structure encodes conditional dependencies between stocks as a sparse learned graph, capturing cross-asset volatility spillover alongside each stock's own daily/weekly/monthly RV patterns. Retrained every 21 trading days on a rolling 2-year window using a Quasi-likelihood loss to penalise under-predictions.",
+          "tags": ["Python", "GNN", "Deep Learning", "Volatility Forecasting"]
+        },
+        {
+          "title": "HAR-CNN Realised Volatility Forecasting",
+          "description": "Extended a 2025 paper by encoding 16 HAR-type volatility components across 16 rolling lag windows into a 16×16 \"HAR image\", then applying a CNN as a feature extractor. The 64-dimensional penultimate layer representations are concatenated with standard HAR predictors and fed into per-ticker Ridge regression heads to produce continuous next-day RV forecasts — adapting the original binary classification model for use in an IV-RV spread trading system.",
+          "tags": ["Python", "CNN", "Deep Learning", "Volatility Forecasting"]
+        },
+        {
+          "title": "DS³M Regime-Switching Volatility Model",
+          "description": "Implemented the Deep Switching State Space Model (DS³M) in PyTorch for volatility forecasting, using a 2-regime (Calm/Stress) discrete latent state and a 4-dimensional continuous latent state. The model separates structural regime shifts from within-regime fluctuations, outperforming EGARCH in capturing nonlinear dynamics and abrupt state changes. Achieved Sharpe 1.02 when used as the forecasting backbone in the vol arb strategy.",
+          "tags": ["Python", "PyTorch", "Deep Learning", "Volatility Forecasting"]
+        },
+        {
+          "title": "Quantitative Equity Portfolio Management (QEPM)",
+          "description": "Developed a market-neutral long/short equity strategy over the S&P 1500 universe, benchmarked against the S&P 500. Stocks ranked via composite Z-scores (momentum, value, size factors); expected returns from a Fama-French 3-factor model with mean-variance optimisation subject to beta-neutrality, dollar-neutrality, sector neutrality, and a 7% annualised volatility target. Added a regime gate based on an Opportunity Ratio to only deploy capital in alpha-rich environments, achieving 292% final return with 74% alpha. Presented to Deutsche Bank's Quantitative Investment Solutions team (MDs and VPs) and pitched to MCD Capital for a potential £100k allocation.",
+          "tags": ["Python", "Portfolio Optimisation", "Quantitative Finance"],
+          "link": "qepm",
+          "images": ["/assets/images/projects/qepm_book.png", "/assets/images/projects/qepm_presentation.png"]
+        },
+        {
+          "title": "Satellite Oil Trading Strategy",
+          "description": "Built an alternative data pipeline using free Sentinel-2 satellite imagery to monitor shadow levels across 97 floating-roof oil storage tanks at Cushing, OK and the US Gulf Coast. Shadow depth proxies oil inventory levels; combined with maritime AIS vessel data tracking international ballast arrivals at 5 Gulf Coast export ports, the dual-signal system generates contrarian WTI futures trades. Achieved Sharpe 0.56 and +152% total return (2018–2025) with an average out-of-sample Sharpe of 0.53 across walk-forward validation.",
+          "tags": ["Python", "Satellite Data", "Alternative Data", "Quantitative Finance"]
+        },
+        {
+          "title": "After-Hours Earnings Momentum Strategy",
+          "description": "Designed a strategy exploiting post-earnings price continuation by entering positions in the after-hours session immediately following earnings announcements. Entry signals require a meaningful EPS surprise, a minimum after-hours price move, and elevated after-hours volume relative to the 30-day median. Positions held up to 3 days with a trailing stop. Across 227 trades (2021–2026): 63% win rate, Sharpe 0.83, and 4.54x final equity.",
+          "tags": ["Python", "Earnings", "Momentum", "Quantitative Finance"]
+        },
+        {
+          "title": "FinBERT Sentiment Analysis Platform",
+          "description": "Co-authored a FinBERT sentiment analysis paper and deployed a web platform used across the society as a decision support tool for investment research.",
+          "tags": ["NLP", "Python", "Research"],
+          "link": "finbert_paper",
+          "linkUrl": "/docs/finbert_paper.pdf",
+          "images": ["/assets/images/projects/finbert_paper.png", "/assets/images/projects/sentiment_analysis_website.png"]
+        }
+      ],
+      "images": []
+    },
     {
       "title": "Financial Dashboard with Stock Predictor",
       "description": "Built a financial analytics dashboard combining time-series modelling and sentiment analysis. Implemented an LSTM model in TensorFlow and a sentiment pipeline over financial news and social media, with a JavaScript frontend and a Flask backend.",
@@ -189,23 +292,6 @@
       "tags": ["Machine Learning", "Python", "Flask", "JavaScript", "React", "Node.js"],
       "featured": false,
       "images": ["/assets/react.svg"]
-    },
-    {
-      "title": "Financial Sentiment Analysis Research & Platform",
-      "description": "Co-authored a #research paper# exploring FinBERT applications for sentiment analysis in financial markets. Independently developed and deployed a web-based sentiment analysis tool now actively used by society members as a decision support system for investment decisions and market research.",
-      "tags": ["NLP", "Python", "Research"],
-      "featured": true,
-      "link": "finbert_paper",
-      "linkUrl": "/docs/finbert_paper.pdf",
-      "images": ["/assets/images/projects/finbert_paper.png", "/assets/images/projects/sentiment_analysis_website.png"]
-    },
-    {
-      "title": "Quantitative Equity Portfolio Management Project - Deutsche Bank Collaboration",
-      "description": "Invited by the Global Head of Quantitative Investment Solutions Research at Deutsche Bank to implement strategies from Chincarini & Kim's 'Quantitative Equity Portfolio Management'. Developed and back-tested two systematic portfolio models: a market-neutral strategy eliminating market risk while maximizing alpha, and a beta-neutral strategy with strategic factor tilts to enhance returns. Presented findings to Managing Directors and VPs in Deutsche Bank's Quant team.",
-      "tags": ["Machine Learning", "Python"],
-      "featured": true,
-      "link": "qepm",
-      "images": ["/assets/images/projects/qepm_book.png", "/assets/images/projects/qepm_presentation.png"]
     },
     {
       "title": "Customising a client's data warehouse interface",

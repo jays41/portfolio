@@ -2,77 +2,76 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState, useEffect } from "react"
+import { X } from "lucide-react"
 import data from "../data/Info2.json"
+
+type Subproject = {
+  title: string
+  description: string
+  tags: string[]
+  link?: string
+  linkUrl?: string
+  images?: string[]
+}
+
+type Project = {
+  title: string
+  description: string
+  tags: string[]
+  featured: boolean
+  images: string[]
+  link?: string
+  linkUrl?: string
+  subprojects?: Subproject[]
+}
 
 export function Projects() {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null)
+  const [activeProject, setActiveProject] = useState<Project | null>(null)
 
-  // Function to open image in fullscreen
-  const openImage = (src: string, alt: string) => {
-    setSelectedImage({ src, alt })
-  }
+  const openImage = (src: string, alt: string) => setSelectedImage({ src, alt })
+  const closeImage = () => setSelectedImage(null)
 
-  // Function to close image modal
-  const closeImage = () => {
-    setSelectedImage(null)
-  }
-
-  // Handle keyboard events
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && selectedImage) {
-        closeImage()
+      if (event.key === "Escape") {
+        if (selectedImage) closeImage()
+        else if (activeProject) setActiveProject(null)
       }
     }
-
-    if (selectedImage) {
-      document.addEventListener('keydown', handleKeyDown)
-      // Prevent body scroll when modal is open
-      document.body.style.overflow = 'hidden'
+    const isOpen = !!selectedImage || !!activeProject
+    if (isOpen) {
+      document.addEventListener("keydown", handleKeyDown)
+      document.body.style.overflow = "hidden"
     }
-
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
-      document.body.style.overflow = 'unset'
+      document.removeEventListener("keydown", handleKeyDown)
+      document.body.style.overflow = "unset"
     }
-  }, [selectedImage])
-  // Function to parse description with links
+  }, [selectedImage, activeProject])
+
   const parseDescription = (description: string, link?: string, linkUrl?: string) => {
-    if (!link || !linkUrl) {
-      return <span>{description}</span>
-    }
-    
+    if (!link || !linkUrl) return <span>{description}</span>
     const start = description.indexOf("#")
     const end = description.indexOf("#", start + 1)
-    
-    if (start === -1 || end === -1) {
-      return <span>{description}</span>
-    }
-    
-    const beforeLink = description.substring(0, start)
-    const linkText = description.substring(start + 1, end)
-    const afterLink = description.substring(end + 1)
-    
+    if (start === -1 || end === -1) return <span>{description}</span>
     return (
       <span>
-        {beforeLink}
-        <a 
-          href={linkUrl} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="text-accent hover:text-accent/80 underline"
-        >
-          {linkText}
+        {description.substring(0, start)}
+        <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 underline">
+          {description.substring(start + 1, end)}
         </a>
-        {afterLink}
+        {description.substring(end + 1)}
       </span>
     )
   }
 
+  const projects = data.projects as Project[]
+
   return (
     <section id="projects" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,27 +86,20 @@ export function Projects() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {data.projects.map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ 
-                duration: 0.5, 
-                delay: index * 0.1,
-                type: "spring",
-                stiffness: 100
-              }}
-              whileHover={{ 
-                scale: 1.03, 
-                transition: { duration: 0.2 } 
-              }}
+              transition={{ duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
               viewport={{ once: true, amount: 0.1 }}
+              onClick={() => setActiveProject(project)}
+              className="cursor-pointer"
             >
-              <Card className="gradient-overlay border-2 border-border bg-card rounded-2xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:border-accent/50">
-                {/* Project Images */}
+              <Card className="gradient-overlay border-2 border-border bg-card rounded-2xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:border-accent/50 h-full">
                 {project.images && project.images.length > 0 && (
-                  <motion.div 
+                  <motion.div
                     className="p-6 pb-0"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -115,85 +107,16 @@ export function Projects() {
                     viewport={{ once: true }}
                   >
                     {project.images.length === 1 ? (
-                      <div 
-                        className="w-full aspect-video rounded-lg overflow-hidden border border-border/30 bg-muted/20 transform transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer"
-                        onClick={() => openImage(project.images[0], project.title)}
-                      >
-                        <img 
-                          src={project.images[0]} 
-                          alt={project.title}
-                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                          loading="lazy"
-                        />
-                      </div>
-                    ) : project.images.length === 2 ? (
-                      <div className="grid grid-cols-2 gap-3">
-                        {project.images.map((image, imageIndex) => (
-                          <motion.div 
-                            key={imageIndex} 
-                            className="aspect-square rounded-lg overflow-hidden border border-border/30 bg-muted/20 cursor-pointer"
-                            whileHover={{ scale: 1.03, y: -2 }}
-                            transition={{ duration: 0.2 }}
-                            onClick={() => openImage(image, `${project.title} - ${imageIndex + 1}`)}
-                          >
-                            <img 
-                              src={image} 
-                              alt={`${project.title} - ${imageIndex + 1}`}
-                              className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                              loading="lazy"
-                            />
-                          </motion.div>
-                        ))}
+                      <div className="w-full aspect-video rounded-lg overflow-hidden border border-border/30 bg-muted/20">
+                        <img src={project.images[0]} alt={project.title} className="w-full h-full object-cover" loading="lazy" />
                       </div>
                     ) : (
-                      <div className="space-y-3">
-                        {/* Main featured image */}
-                        <div 
-                          className="w-full aspect-video rounded-lg overflow-hidden border border-border/30 bg-muted/20 transform transition-transform duration-300 hover:scale-[1.02] cursor-pointer"
-                          onClick={() => openImage(project.images[0], `${project.title} - Featured`)}
-                        >
-                          <img 
-                            src={project.images[0]} 
-                            alt={`${project.title} - Featured`}
-                            className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                            loading="lazy"
-                          />
-                        </div>
-                        {/* Secondary images grid */}
-                        <div className="grid grid-cols-3 gap-2">
-                          {project.images.slice(1, 4).map((image, imageIndex) => (
-                            <motion.div 
-                              key={imageIndex + 1} 
-                              className="aspect-square rounded-md overflow-hidden border border-border/20 bg-muted/20 cursor-pointer"
-                              whileHover={{ scale: 1.05, y: -2 }}
-                              transition={{ duration: 0.2 }}
-                              onClick={() => openImage(image, `${project.title} - ${imageIndex + 2}`)}
-                            >
-                              <img 
-                                src={image} 
-                                alt={`${project.title} - ${imageIndex + 2}`}
-                                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                                loading="lazy"
-                              />
-                            </motion.div>
-                          ))}
-                          {project.images.length > 4 && (
-                            <div 
-                              className="aspect-square rounded-md overflow-hidden border border-border/20 bg-muted/50 flex items-center justify-center relative cursor-pointer"
-                              onClick={() => openImage(project.images[4], `${project.title} - More`)}
-                            >
-                              <img 
-                                src={project.images[4]} 
-                                alt={`${project.title} - More`}
-                                className="w-full h-full object-cover"
-                                loading="lazy"
-                              />
-                              <div className="absolute inset-0 bg-black/60 flex items-center justify-center hover:bg-black/50 transition-colors duration-200">
-                                <span className="text-white text-sm font-medium">+{project.images.length - 4}</span>
-                              </div>
-                            </div>
-                          )}
-                        </div>
+                      <div className="grid grid-cols-2 gap-3">
+                        {project.images.slice(0, 2).map((image, i) => (
+                          <div key={i} className="aspect-square rounded-lg overflow-hidden border border-border/30 bg-muted/20">
+                            <img src={image} alt={`${project.title} - ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                          </div>
+                        ))}
                       </div>
                     )}
                   </motion.div>
@@ -201,7 +124,7 @@ export function Projects() {
 
                 <CardHeader className="pb-4">
                   <div className="flex items-start justify-between gap-4">
-                    <motion.h3 
+                    <motion.h3
                       className="heading-elegant text-lg font-medium text-balance leading-tight text-foreground group-hover:text-accent transition-colors duration-300"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.2 }}
@@ -210,38 +133,27 @@ export function Projects() {
                     </motion.h3>
                   </div>
                 </CardHeader>
+
                 <CardContent className="space-y-6">
-                  <motion.p 
-                    className="text-refined text-muted-foreground leading-relaxed text-pretty"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: index * 0.1 + 0.4, duration: 0.4 }}
-                    viewport={{ once: true }}
-                  >
-                    {parseDescription(project.description, project.link, project.linkUrl)}
-                  </motion.p>
-                  <motion.div 
-                    className="flex flex-wrap gap-2"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 + 0.5, duration: 0.4 }}
-                    viewport={{ once: true }}
-                  >
+                  <p className="text-refined text-muted-foreground leading-relaxed text-pretty line-clamp-3">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
-                      <motion.div
+                      <Badge
                         key={tagIndex}
-                        whileHover={{ scale: 1.1, y: -2 }}
-                        transition={{ duration: 0.2 }}
+                        variant="secondary"
+                        className="bg-muted text-muted-foreground text-xs font-medium px-3 py-1"
                       >
-                        <Badge
-                          variant="secondary"
-                          className="bg-muted text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-200 text-xs font-medium px-3 py-1"
-                        >
-                          {tag}
-                        </Badge>
-                      </motion.div>
+                        {tag}
+                      </Badge>
                     ))}
-                  </motion.div>
+                  </div>
+                  {project.subprojects && project.subprojects.length > 0 && (
+                    <p className="text-xs text-accent/70 font-medium">
+                      {project.subprojects.length} strategies — click to explore
+                    </p>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>
@@ -249,11 +161,116 @@ export function Projects() {
         </div>
       </div>
 
+      {/* Project Detail Modal */}
+      <AnimatePresence>
+        {activeProject && !selectedImage && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setActiveProject(null)}
+          >
+            <motion.div
+              className="relative bg-card border border-border rounded-2xl w-full max-w-3xl max-h-[85vh] overflow-y-auto"
+              initial={{ scale: 0.92, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.92, opacity: 0, y: 20 }}
+              transition={{ duration: 0.3, type: "spring", stiffness: 300, damping: 30 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header */}
+              <div className="sticky top-0 bg-card border-b border-border px-8 py-5 flex items-start justify-between gap-4 z-10">
+                <h2 className="heading-elegant text-xl font-medium text-foreground leading-tight">{activeProject.title}</h2>
+                <button
+                  onClick={() => setActiveProject(null)}
+                  className="flex-shrink-0 w-8 h-8 rounded-full bg-muted hover:bg-accent/20 text-muted-foreground hover:text-accent flex items-center justify-center transition-colors duration-200"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              <div className="px-8 py-6 space-y-8">
+                {/* Images */}
+                {activeProject.images && activeProject.images.length > 0 && (
+                  <div className={activeProject.images.length === 1 ? "" : "grid grid-cols-2 gap-3"}>
+                    {activeProject.images.map((image, i) => (
+                      <div
+                        key={i}
+                        className="rounded-lg overflow-hidden border border-border/30 bg-muted/20 cursor-pointer"
+                        onClick={() => openImage(image, `${activeProject.title} - ${i + 1}`)}
+                      >
+                        <img src={image} alt={`${activeProject.title} - ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Description */}
+                <div className="space-y-2">
+                  <p className="text-refined text-muted-foreground leading-relaxed">
+                    {parseDescription(activeProject.description, activeProject.link, activeProject.linkUrl)}
+                  </p>
+                </div>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2">
+                  {activeProject.tags.map((tag, i) => (
+                    <Badge key={i} variant="secondary" className="bg-muted text-muted-foreground text-xs font-medium px-3 py-1">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+
+                {/* Subprojects */}
+                {activeProject.subprojects && activeProject.subprojects.length > 0 && (
+                  <div className="space-y-4">
+                    <div className="w-full h-px bg-border" />
+                    <h3 className="heading-elegant text-base font-medium text-foreground">Strategies</h3>
+                    <div className="space-y-4">
+                      {activeProject.subprojects.map((sub, i) => (
+                        <div key={i} className="rounded-xl border border-border/60 bg-muted/20 p-5 space-y-3">
+                          <h4 className="heading-elegant text-sm font-medium text-foreground">{sub.title}</h4>
+                          <p className="text-refined text-muted-foreground text-sm leading-relaxed">
+                            {parseDescription(sub.description, sub.link, sub.linkUrl)}
+                          </p>
+                          <div className="flex flex-wrap gap-1.5">
+                            {sub.tags.map((tag, ti) => (
+                              <Badge key={ti} variant="secondary" className="bg-muted/60 text-muted-foreground text-xs px-2 py-0.5">
+                                {tag}
+                              </Badge>
+                            ))}
+                          </div>
+                          {sub.images && sub.images.length > 0 && (
+                            <div className="flex gap-2 pt-1">
+                              {sub.images.map((image, ii) => (
+                                <div
+                                  key={ii}
+                                  className="w-20 h-20 rounded-lg overflow-hidden border border-border/30 cursor-pointer flex-shrink-0"
+                                  onClick={() => openImage(image, `${sub.title} - ${ii + 1}`)}
+                                >
+                                  <img src={image} alt={`${sub.title} - ${ii + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-200" loading="lazy" />
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Fullscreen Image Modal */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
-            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[60] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -268,7 +285,6 @@ export function Projects() {
               transition={{ duration: 0.4, type: "spring", stiffness: 300, damping: 30 }}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close button */}
               <motion.button
                 className="absolute top-4 right-4 z-10 w-12 h-12 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center text-xl font-bold transition-colors duration-200"
                 onClick={closeImage}
@@ -280,8 +296,6 @@ export function Projects() {
               >
                 ×
               </motion.button>
-
-              {/* Main image */}
               <motion.img
                 src={selectedImage.src}
                 alt={selectedImage.alt}
@@ -291,8 +305,6 @@ export function Projects() {
                 transition={{ delay: 0.1, duration: 0.4 }}
                 draggable={false}
               />
-
-              {/* Image title */}
               <motion.div
                 className="absolute bottom-4 left-4 bg-black/70 text-white px-4 py-2 rounded-lg backdrop-blur-sm"
                 initial={{ opacity: 0, y: 20 }}
@@ -301,8 +313,6 @@ export function Projects() {
               >
                 <p className="text-sm font-medium">{selectedImage.alt}</p>
               </motion.div>
-
-              {/* Instructions */}
               <motion.div
                 className="absolute top-4 left-4 bg-black/50 text-white px-3 py-2 rounded-lg text-sm"
                 initial={{ opacity: 0, y: -20 }}
